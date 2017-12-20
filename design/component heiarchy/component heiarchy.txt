@@ -1,0 +1,121 @@
+Functional Component Hierarchy
+Root
+  App
+    NavBar
+    MainPage
+    Footer
+
+NavBar
+  Components:
+    nav-branding:
+      App Icon
+      UltraGram Logo
+    nav-Search-Bar
+    nav-userTools
+      compass to discover people
+      heart to notifications-list
+        notification list items
+      user_page
+
+Login Page
+  central-container
+    image
+    login-container
+      Logo
+      login form
+        username
+        password
+        "login" button
+      sign_up button
+    sign-up cntainer
+      logo
+      signup form
+        email
+        username
+        password
+        login button
+      sign up button
+
+
+User Page
+  user-info-block
+    profile-picture
+    user-info-text
+      user-nav
+        username
+        context-action-A
+        context-action-B
+      stats
+        x-posts
+        y-followers
+        z-following
+      personal message
+  Images(UL)
+    Row(UL)
+      Image
+      Image
+      image
+    Row(UL)
+      Image
+      Image
+      image
+
+  Notes on User Page
+    -context actions are dependent on whether or not the user is logged in
+    if current_user=== user_page_id
+      context Action A = "edit profile"
+      context action B = settings
+    else
+      context action A = follow button
+      context action B = report/block
+    end
+
+
+Image
+  Image
+  Social-Block
+    author_info
+      author_image
+      author_username
+      current_user following author?
+    comments(UL)
+      comment
+        commenter
+        body
+      comment
+        commenter
+        body
+    like-block
+      badges
+        like button
+        comment button
+      View-count
+
+    input comment
+
+Feed
+  image-block
+    author-block
+      author_profile_picture
+      author author_username
+    image
+    social-block
+      badges
+        like button
+        comment button
+      x likes
+      time_since_post
+      add_a_comment
+  sidebar
+    userblock
+      userimage
+      username
+    stories
+      header
+        stories
+        "watch all"
+      stories-list
+        story
+          authorpic
+          author_username
+          elapsed time
