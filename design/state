@@ -1,0 +1,60 @@
+State: {
+
+  users:{
+    id:{
+      id:int,
+      username: string,
+      user_picture_id: int,
+      post_ids: [post_id, post_id],
+    },
+    id:{
+      id:int,
+      username: string,
+      user_picture_id: int,
+      post_ids: [post_id, post_id],
+      personal_statement: string
+
+      //note, the only time we need to render the personal statement is on the user's user_page. Is it necessary to fetch that data if we never see the user's page? Or is it really worth the additional workload to OPTIONALLY fetch that data when we can just optionally render it. These aren't hidef videos, they're 512-character-strings.
+    }
+
+  }
+
+  images:{
+    id:{
+      id: int,
+      author_id: int,
+      image:<image file OR hosted image>,
+      caption: string,
+      liker_ids:[user_id, user_id]
+      comment_ids:[comment_id, comment_id]
+    }
+  }
+
+
+  comments:{
+    id:{
+      id: int,
+      user_id: int,
+      body: text/string,
+      liker_ids: [user_id, user_id]
+    }
+  }
+
+
+
+  UI_errors: {
+   login: ["Incorrect username/password combination"],
+   newImage: [strings_of_error_messages],
+ }
+
+  session: {
+    current_user: {
+      current_user_id: int,
+      username:string,
+      user_picture_id: int
+      //note: in both moe's example and in the demo from the readings, it was explicated that there was no need to include the current_user in the users slice. While it seems like a modicum of additional work to keep the current user OUT of the user slice, I like the conceptual representation of the current_user as "Something different".
+
+    }
+  }
+
+}
