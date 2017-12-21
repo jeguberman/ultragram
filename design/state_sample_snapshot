@@ -35,8 +35,9 @@ State: {
       author_id: int,
       image:"https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/7/7e/Avengers_Infinity_War_SDCC_poster.jpg/revision/latest?cb=20170724003836",
       caption: "I think this is a very good picture of me.",
-      liker_ids:[1,3,11,16]
-      comment_ids:[51]
+      liker_ids:[1,3,11,16],
+      comment_ids:[51],
+      created_on: may 4 2018
     },
 
     31:{
@@ -45,10 +46,18 @@ State: {
       image:314D18_D4HWL_DG1_6.PNG
       caption: "Me in my throne room in my fabulous palace"
       liker_ids:[19],
-      comment_ids:[21]
+      comment_ids:[21],
+      created_on: sep 10 1997
+
+    3:{
+      id: 3,
+      author_id: 3,
+      image:"https://vignette.wikia.nocookie.net/whitewolf/images/1/1f/LogoBloodlineBrujahAntitribu.png/revision/latest/scale-to-width-down/200?cb=20170301195342"
+      liker_ids:[19],
+      comment_ids:[]
+      created_on: mar 19 -1721
+    }
   }
-
-
 
   comments:{
     51:{
@@ -56,7 +65,8 @@ State: {
       user_id: 1,
       body: "Great picture Thanos, keep chasing your dreams, you'll get there.",
       liker_ids: [6, 7]
-    }
+    },
+
     21:{
       id: 21,
       user_id: 19,
@@ -77,9 +87,10 @@ State: {
       current_user_id: 1,
       username: Cain,
       user_picture_id: 0
-      //note: in both moe's example and in the demo from the readings, it was explicated that there was no need to include the current_user in the users slice. While it seems like a modicum of additional work to keep the current user OUT of the user slice, I like the conceptual representation of the current_user as "Something different".
 
-      //note: user picture id can be blank. It should default to 0
+      //note: in both moe's example and in the demo from the readings, it was explicated that there was no need to include the current_user in the users slice. While it seems like a modicum of additional work to keep the current user OUT of the user slice, I like the conceptual representation of the current_user as "Something different" from the other users.
+
+      //note: user picture id can be blank. It should default to 0, which will be some sort of silhouette, a gender neutral one if possible, maybe the logo.
 
     }
   }

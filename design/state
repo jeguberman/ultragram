@@ -25,8 +25,9 @@ State: {
       author_id: int,
       image:<image file OR hosted image>,
       caption: string,
-      liker_ids:[user_id, user_id]
-      comment_ids:[comment_id, comment_id]
+      liker_ids:[user_id, user_id],
+      comment_ids:[comment_id, comment_id],
+      created_on: dateTime;
     }
   }
 
