@@ -1,98 +1,98 @@
-State: {
+      {
+      entities {
+        users:{
+          3:{
+            id:3,
+            username: "Brujah",
+            user_picture_id: 3,
+            post_ids: [3],
+            personal_statement: "Don't trust your childer, they will surely eat you"
 
-  users:{
-    3:{
-      id:3,
-      username: "Brujah",
-      user_picture_id: 3,
-      post_ids: [3],
-      personal_statement: "Don't trust your childer, they will surely eat you"
+            //note, the only time we need to render the personal statement is on the user's user_page. Is it necessary to fetch that data if we never see the user's page? Or is it really worth the additional workload to OPTIONALLY fetch that data when we can just optionally render it. These aren't hidef videos, they're 255-character-strings.
 
-      //note, the only time we need to render the personal statement is on the user's user_page. Is it necessary to fetch that data if we never see the user's page? Or is it really worth the additional workload to OPTIONALLY fetch that data when we can just optionally render it. These aren't hidef videos, they're 255-character-strings.
+          }
 
-    }
+          6:{
+            id: 6,
+            username: "Thanos",
+            user_picture_id: 44,
+            image_ids: [13, 44],
+          },
 
-    6:{
-      id: 6,
-      username: "Thanos",
-      user_picture_id: 44,
-      image_ids: [13, 44],
-    },
+          19:{
+            id: 6,
+            username: "Victor von Doom",
+            user_picture_id: 31,
+            image_ids: [12,17,18,25,31,32,35],
+            personal_statement: "A place to showcase my heretofor hidden talents at capturing the beauty of Latvia, through the lens of a superior digital camera of my own design."
+          }
 
-    19:{
-      id: 6,
-      username: "Victor von Doom",
-      user_picture_id: 31,
-      image_ids: [12,17,18,25,31,32,35],
-      personal_statement: "A place to showcase my heretofor hidden talents at capturing the beauty of Latvia, through the lens of a superior digital camera of my own design."
-    }
+        }
 
-  }
+        images:{
+          44:{
+            id: int,
+            author_id: int,
+            image:"https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/7/7e/Avengers_Infinity_War_SDCC_poster.jpg/revision/latest?cb=20170724003836",
+            caption: "I think this is a very good picture of me.",
+            liker_ids:[1,3,11,16],
+            comment_ids:[51],
+            created_on: may 4 2018
+          },
 
-  images:{
-    44:{
-      id: int,
-      author_id: int,
-      image:"https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/7/7e/Avengers_Infinity_War_SDCC_poster.jpg/revision/latest?cb=20170724003836",
-      caption: "I think this is a very good picture of me.",
-      liker_ids:[1,3,11,16],
-      comment_ids:[51],
-      created_on: may 4 2018
-    },
+          31:{
+            id: 31,
+            author_id: 19,
+            image:314D18_D4HWL_DG1_6.PNG
+            caption: "Me in my throne room in my fabulous palace"
+            liker_ids:[19],
+            comment_ids:[21],
+            created_on: sep 10 1997
 
-    31:{
-      id: 31,
-      author_id: 19,
-      image:314D18_D4HWL_DG1_6.PNG
-      caption: "Me in my throne room in my fabulous palace"
-      liker_ids:[19],
-      comment_ids:[21],
-      created_on: sep 10 1997
+          3:{
+            id: 3,
+            author_id: 3,
+            image:"https://vignette.wikia.nocookie.net/whitewolf/images/1/1f/LogoBloodlineBrujahAntitribu.png/revision/latest/scale-to-width-down/200?cb=20170301195342"
+            liker_ids:[19],
+            comment_ids:[]
+            created_on: mar 19 -1721
+          }
+        }
 
-    3:{
-      id: 3,
-      author_id: 3,
-      image:"https://vignette.wikia.nocookie.net/whitewolf/images/1/1f/LogoBloodlineBrujahAntitribu.png/revision/latest/scale-to-width-down/200?cb=20170301195342"
-      liker_ids:[19],
-      comment_ids:[]
-      created_on: mar 19 -1721
-    }
-  }
+        comments:{
+          51:{
+            id: 51,
+            user_id: 1,
+            body: "Great picture Thanos, keep chasing your dreams, you'll get there.",
+            liker_ids: [6, 7]
+          },
 
-  comments:{
-    51:{
-      id: 51,
-      user_id: 1,
-      body: "Great picture Thanos, keep chasing your dreams, you'll get there.",
-      liker_ids: [6, 7]
-    },
-
-    21:{
-      id: 21,
-      user_id: 19,
-      body: "How do you know if other users can see your posts?",
-      liker_ids: []
-    }
-  }
+          21:{
+            id: 21,
+            user_id: 19,
+            body: "How do you know if other users can see your posts?",
+            liker_ids: []
+          }
+        }
 
 
 
-  UI_errors: {
-   login: ["Incorrect username/password combination"],
-   newImage: ["An error occurred while uploading your image"],
- }
+        UI_errors: {
+         login: ["Incorrect username/password combination"],
+         newImage: ["An error occurred while uploading your image"],
+       }
 
-  session: {
-    current_user: {
-      current_user_id: 1,
-      username: Cain,
-      user_picture_id: 0
+        session: {
+          current_user: {
+            current_user_id: 1,
+            username: Cain,
+            user_picture_id: 0
 
-      //note: in both moe's example and in the demo from the readings, it was explicated that there was no need to include the current_user in the users slice. While it seems like a modicum of additional work to keep the current user OUT of the user slice, I like the conceptual representation of the current_user as "Something different" from the other users.
+            //note: in both moe's example and in the demo from the readings, it was explicated that there was no need to include the current_user in the users slice. While it seems like a modicum of additional work to keep the current user OUT of the user slice, I like the conceptual representation of the current_user as "Something different" from the other users.
 
-      //note: user picture id can be blank. It should default to 0, which will be some sort of silhouette, a gender neutral one if possible, maybe the logo.
+            //note: user picture id can be blank. It should default to 0, which will be some sort of silhouette, a gender neutral one if possible, maybe the logo.
 
-    }
-  }
+          }
+        }
 
-}
+      }
