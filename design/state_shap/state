@@ -13,8 +13,9 @@ State: {
       user_picture_id: int,
       post_ids: [post_id, post_id],
       personal_statement: string
+      location: string
 
-      //note, the only time we need to render the personal statement is on the user's user_page. Is it necessary to fetch that data if we never see the user's page? Or is it really worth the additional workload to OPTIONALLY fetch that data when we can just optionally render it. These aren't hidef videos, they're 512-character-strings.
+      //note, the only time we need to render the personal statement and location is on the user's user_page. Is it necessary to fetch that data if we never see the user's page? Or is it really worth the additional workload to OPTIONALLY fetch that data when we can just optionally render it. These aren't hidef videos, they're 512-character-strings.
     }
 
   }
