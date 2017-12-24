@@ -1,0 +1,83 @@
+
+# Mock Schema
+
+## Users
+
+| Column             | Type    | Allow_Null | Details         |
+|--------------------|---------|------------|-----------------|
+| id                 | integer | false      | primary_key     |
+| username           | string  | false      | indexed         |
+| password_digest    | string  | false      |                 |
+| email              | string  | false      | unique, indexed |
+| session_token      | string  | false      | unique, indexed |
+| profile_picture_id | integer | false      | foreign_key     |
+| personal_statement | string  | true       |                 |
+| location           | string  | true       |                 |
+| create_on          | date    | false      |                 |
+| last_updated       | date    | false      |                 ||
+
+
+
+## Images
+
+| Column       | Type    | Allow_Null | Details              |
+|--------------|---------|------------|----------------------|
+| id           | integer | false      | primary_key          |
+| author_id    | int     | false      | foreign_key, indexed |
+| image_url    | string  | false      |                      |
+| created_on   | date    | false      |                      |
+| last_updated | date    | false      |                      |
+| caption      | string  | true       |                      ||
+
+
+
+## Comments
+
+| Column       | Type    | Allow_Null | Details              |
+|--------------|---------|------------|----------------------|
+| id           | integer | false      | primary_key          |
+| author_id    | int     | false      | foreign_key          |
+| image_id     | int     | false      | foreign_key, indexed |
+| created_on   | date    | false      | indexed              |
+| last_updated | date    | false      |                      |
+| body         | string  | false      |                      ||
+
+
+
+
+
+## Image Likes
+
+| Column       | Type    | Allow_Null | Details              |
+|--------------|---------|------------|----------------------|
+| id           | integer | false      | primary_key          |
+| liker_id    | int     | false      | foreign_key          |
+| image_id     | int     | false      | foreign_key, indexed |
+| created_on   | date    | false      | indexed              |
+| last_updated | date    | false      |                      ||
+
+## Comment Likes
+| Column       | Type    | Allow_Null | Details              |
+|--------------|---------|------------|----------------------|
+| id           | integer | false      | primary_key          |
+| liker_id    | int     | false      | foreign_key          |
+| comment_id     | int     | false      | foreign_key, indexed |
+| created_on   | date    | false      | indexed              |
+| last_updated | date    | false      |                      ||
+
+## Follows
+
+| Column       | Type   | Allow_Null | Details              |
+|--------------|--------|------------|----------------------|
+| id           | int    | false      | primary_key          |
+| follower_id  | int    | false      | foreign_key, indexed |
+| followee_id  | int    | false      | foreign_key, indexed |
+| created_on   | int    | false      |                      |
+| last_updated | int    | false      |                      |
+| body         | string | false      |                      ||
+
+
+
+user_id references users
+image_id references images
+comment_id references comments (might not be necessary)
