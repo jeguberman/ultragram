@@ -4,9 +4,10 @@
           3:{
             id:3,
             username: "Brujah",
-            user_picture_id: 3,
+            user_picture: <some url>,
             post_ids: [3],
             personal_statement: "Don't trust your childer, they will surely eat you"
+
 
             //note, the only time we need to render the personal statement is on the user's user_page. Is it necessary to fetch that data if we never see the user's page? Or is it really worth the additional workload to OPTIONALLY fetch that data when we can just optionally render it. These aren't hidef videos, they're 255-character-strings.
 
@@ -15,14 +16,14 @@
           6:{
             id: 6,
             username: "Thanos",
-            user_picture_id: 44,
+            user_picture: <some_url>,
             image_ids: [13, 44],
           },
 
           19:{
             id: 6,
             username: "Victor von Doom",
-            user_picture_id: 31,
+            user_picture: <some url>,
             image_ids: [12,17,18,25,31,32,35],
             personal_statement: "A place to showcase my heretofor hidden talents at capturing the beauty of Latvia, through the lens of a superior digital camera of my own design."
           }
@@ -84,9 +85,7 @@
 
         session: {
           current_user: {
-            current_user_id: 1,
-            username: Cain,
-            user_picture_id: 0
+            current_user_id: 3,
 
             //note: in both moe's example and in the demo from the readings, it was explicated that there was no need to include the current_user in the users slice. While it seems like a modicum of additional work to keep the current user OUT of the user slice, I like the conceptual representation of the current_user as "Something different" from the other users.
 

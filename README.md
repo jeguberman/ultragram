@@ -45,18 +45,3 @@ Remember to actually submit a link to each portion of your proposal! That said, 
 The wireframes look good, but there are a couple of things I'd like you to think about. Use the wireframes to plan the React components you'll need, not just what each thing will look like. Be mindful of overreaching; you're not going to be able to implement features like notifications and user discovery before W9D5.
 
 The component hierarchy makes a good deal of sense. Use this as a guideline when you start creating your React components in your app, but know that you'll end up changing a bit as you go.
-
-
-
-
-IMPORTANT NOTE: in atom, while syntax highlighting for github markdown, "ta <enter>" will set up a table.
-
-| Header One     | Header Two     |
-| :------------- | :------------- |
-| Item One       | Item Two       |
-
-
-OPTIONAL TODOS
-
-Actual website
-* users can double click images to like them

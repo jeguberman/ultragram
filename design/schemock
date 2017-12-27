@@ -73,9 +73,7 @@
 | follower_id  | int    | false      | foreign_key, indexed |
 | followee_id  | int    | false      | foreign_key, indexed |
 | created_on   | int    | false      |                      |
-| last_updated | int    | false      |                      |
-| body         | string | false      |                      ||
-
+| last_updated | int    | false     || |
 
 
 user_id references users

@@ -1,12 +1,12 @@
 # Functional Component Hierarchy
 
-### Root
+## Root
   * App
     * NavBar
     * MainPage
     * Footer
 
-### NavBar
+## NavBar
   * Components:
     * nav-branding:
       * App Icon
@@ -18,27 +18,31 @@
         * notification list items (not implemented)
       * user_page
 
-### Login Page
-  * central-container
-    * image
-    * login-container
-      * Logo
-      * login form
-        * username
-        * password
-        * "login" button
-      * sign_up button
-    * sign-up cntainer
-      * logo
-      * signup form
-        * email
-        * username
-        * password
-        * login button
-      * sign up button
+## Login Page
+  * Route: /#/
+  * Component
+    * central-container
+      * image
+      * login-container
+        * Logo
+        * login form
+          * username
+          * password
+          * "login" button
+        * sign_up button
+      * sign-up cntainer
+        * logo
+        * signup form
+          * email
+          * username
+          * password
+          * login button
+        * sign up button
 
 
-### User Page
+## User Page
+  * route: /#/users/:userid
+  * state: session, images, users
   * user-info-block
     * profile-picture
     * user-info-text
@@ -72,7 +76,7 @@
     end
 
 
-### Image View
+## Image View
   * Image
     * from images slice
   * Social-Block
@@ -114,7 +118,7 @@
 
 
 
-### Feed
+## Feed
   * image-block (copied from image view)
     * author-block
     * image

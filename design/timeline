@@ -1,0 +1,66 @@
+Set Up Rails Server
+  before everything
+    bundle install
+    NPM install
+    configure webpack
+  Migrations & Models
+    User
+    Images
+    ImageLikes
+    Comments
+    CommentLikes
+Seeds 
+    6 users, all same password
+      Thanos
+      Dr. Doom
+      Mr. Shadow
+      CohortMate
+      Cthulu
+      Galactus, if you're just drowning in extra time, which you won't be.
+    7 images per user
+      Thanos' images are normal
+      Dr. Doom's images are culture festivals and inventions
+      Mr. Shadow's images are cosmic images (nebulae, star clusters, galaxies, jovian moons, this one is too easy to waste time on)
+      Cthulu's images are non euclidean images, MC Escher, optical illusions, magic eyes.
+    image likes
+      Nobody likes Dr Doom's images
+      try to put at least 5 likes across 2-3 images per user, except for dr. doom
+        it this proves burdensome, just set some randos. don't spend more than 45 minutes seeding likes
+    comments
+      Galactus Supports Thanos' dreams on one of thanos' pictures.
+      Dr. Doom wants to know how to tell if other people can see his images.
+      If you can make it happen in less than 10 minutes, cthulu's text should be copied from a binary file.
+      Like a few comments here and there. Dr. doom doesn't like anybody's stuff except his own. Nobody likes dr. doom.
+  Set up Database
+    be rails db:setup should create database, run migrations, and seed tables.
+  Create BackEnd Routes
+  Create Front End Routes
+
+Account Management
+  The Back End Auth Process
+  User Model
+    Validations, including password length
+    Ensure Session Token after initialize
+    FRIPE Methods
+      User.Find by credentials
+      Reset Session token
+      Is password?
+      Password=
+      Ensure Session token
+  Application Controller
+    Helper Methods: Current User, loggedIn?
+      Login
+      Logout
+      LoggedIn?
+      Current User
+      Require Login
+  Users Controller
+    Strong Params (username, password)
+    RESTFULS
+      Create
+  Sessions Controller
+    RESTFULS
+      create
+      destroy
+
+  Front End Auth Process

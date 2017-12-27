@@ -36,7 +36,7 @@
 * Smooth, bug-free navigation
 * Adequate and appropriate seeds to demonstrate the feature
 
-## 7. Follow & Photo messaging
+## 7. Follow & Photo Feed
 * users can "Follow" other users. followed_users photos will appear in current_users "photo feed"
 * Adequate styling
 * Smooth, bug-free navigation
@@ -55,7 +55,7 @@
   * The feed is the defacto "front page" for logged in users, and in fact if the user is logged in, "/" shall redirect to "/feed", or, with Circle TA's permission, "/feed" shall redirect to "/".
   * The Feed is essentially a single list. The list items are the most recent posts by other users on the current_user's followING list.
   * The list items more closely resemble the photo views themselves except for some slight restructuring of the subelements. Authorname and comments shall appear below the photograph instead of to the side.
-  * further more, comments shall initially be truncated to the n most recent comments. Users shall be able to click on a "see more comments" button to see more comments. 
+  * further more, comments shall initially be truncated to the n most recent comments. Users shall be able to click on a "see more comments" button to see more comments.
 
 
 # The User Page
