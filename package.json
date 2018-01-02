@@ -29,6 +29,10 @@
     "webpack": "webpack --watch",
     "postinstall": "webpack"
   },
+  "engines": {
+     "node": "8.7.0",
+     "npm": "5.6.0"
+   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeguberman/ultragram.git"
@@ -40,9 +44,7 @@
     "url": "https://github.com/jeguberman/ultragram/issues"
   },
   "homepage": "https://github.com/jeguberman/ultragram#readme",
-  "engines": {
-     "node": "8.7.0",
-     "npm": "5.6.0"
-   },
+
+
 
 }
