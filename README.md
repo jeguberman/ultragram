@@ -2,6 +2,24 @@
 
 A clone of instagram created as a full stack project for App Academy. I am not affiliated with instagram or facebook. This is intended to be educational. Also it's specifically for earth-shattering supervillains. ULTRAGRAM
 
+### January 2nd 2018
+* 12:15 should be able to create users at seeds and from console. Static page still not build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 I am using this space for a todo list. This todo list is not for future tasks, which are outlined in the homeworks, but documents which I came to realize should be done differently, after the fact.
 
