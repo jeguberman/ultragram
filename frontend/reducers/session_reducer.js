@@ -6,6 +6,7 @@ const _nullUser = Object.freeze({
 }); //I'm copying this from the benchbnb solutions, this is clever
 
 const sessionReducer = ( oldState = _nullUser, action ) => {
+
   let newState = oldState;
   Object.freeze(oldState);
 
@@ -17,3 +18,5 @@ const sessionReducer = ( oldState = _nullUser, action ) => {
   }
 
 };
+
+export default sessionReducer;

@@ -11,6 +11,8 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
     "webpack": "^3.10.0"
   },
   "description": "A clone of instagram created as a full stack project for App Academy. I am not affiliated with instagram or facebook. This is intended to be educational. Also it's specifically for earth-shattering supervillains. ULTRAGRAM",
