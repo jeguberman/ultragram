@@ -1,11 +1,11 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
-const _nullUser = Object.freeze({
-  currentUser: null
-}); //I'm copying this from the benchbnb solutions, this is clever
+// const _nullUser = Object.freeze({
+//   currentUser: null
+// }); //I'm copying this from the benchbnb solutions, this is clever
 
-const sessionReducer = ( oldState = _nullUser, action ) => {
+const sessionReducer = ( oldState = {currentUser:null}, action ) => {
 
   let newState = oldState;
   Object.freeze(oldState);

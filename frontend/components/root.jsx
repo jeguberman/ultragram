@@ -1,10 +1,15 @@
 import React from 'react';
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 // import { HashRouter } from 'react-router-dom';
 import App from './app';
 
-const Root = () => {
-  return (<App />);
+const Root = ({ store }) => {
+  // debugger
+  return (
+  <Provider store={store} edify="educate">
+    <App />
+  </Provider>
+  );
 };
 
 export default Root;
