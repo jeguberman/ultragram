@@ -6,6 +6,15 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 * 12:15 should be able to create users at seeds and from console. Static page still not build
     * create user from console X
     * create user from seed file X
+* 12:30 should be able to create users from static page
+  * render static page root
+  * fucking hijack that shit and make it your own
+  * create a sign up page, don't make it pretty
+    * be able to create a user from the page, check in the console
+  * make the static page render something different if user is logged in
+    * it's time to learn what bootstrapping actually is
+    * user should be logged in after signing up
+    * there should be a log out button. this will eventually be in a dropdown menu
 
 
 
