@@ -7,8 +7,8 @@ import configureStore from './store/store';
 
 
 document.addEventListener("DOMContentLoaded", ()=> {
-  // Test();
-
+  Test();
+  debugger
   const store=configureStore();
   const root = document.getElementById('root');
 
