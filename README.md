@@ -7,7 +7,7 @@ A clone of instagram created as a full stack project for App Academy. I am not a
     * create user from console X
     * create user from seed file X
 * 12:30 should be able to create users from static page
-  * render static page root
+  * render static page root X
   * fucking hijack that shit and make it your own
   * create a sign up page, don't make it pretty
     * be able to create a user from the page, check in the console
