@@ -6,7 +6,7 @@
 | Column             | Type    | Allow_Null | Details         |
 |--------------------|---------|------------|-----------------|
 | id                 | integer | false      | primary_key     |
-| username           | string  | false      | indexed         |
+| username           | string  | false      |                 |
 | password_digest    | string  | false      |                 |
 | email              | string  | false      | unique, indexed |
 | session_token      | string  | false      | unique, indexed |
@@ -51,7 +51,7 @@
 | Column       | Type    | Allow_Null | Details              |
 |--------------|---------|------------|----------------------|
 | id           | integer | false      | primary_key          |
-| liker_id    | int     | false      | foreign_key          |
+| liker_id     | int     | false      | foreign_key          |
 | image_id     | int     | false      | foreign_key, indexed |
 | created_on   | date    | false      | indexed              |
 | last_updated | date    | false      |                      ||

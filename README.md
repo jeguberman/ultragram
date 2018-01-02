@@ -10,20 +10,27 @@ Because this is a learning process, many documents will have more conflicts than
 
 
 TODO
-* redo component heiarchies and schema if you have a chance, they do not reflect . HIGH PRIORITY
+* oscar requests users can delete their own images. Somewhere in your design docs this is not implied
+  * check:
+      * back end Routes
+      * wireframes
+      * component heiarchy
+
+* DONE redo component heiarchies and schema if you have a chance, they do not reflect . DONE
 
 * clean up MVP list, make sure it consists of reasonable goals. You don't need a login from facebook button (do you?)
 
-* Clean up your schema, find out how to create a table in md documents, good god man, you could have done nothing to the same effect.
+* DONE Clean up your schema, find out how to create a table in md documents DONE
 
 * conceptualize seeds, you'll need pictures, you don't want to rush around at the eleventh hour downloading pictures.
 
-* move user_data for Current_user into users in state sample, have current_user.id in session slice. add friend_id_array to users table.
+* DONE move user_data for Current_user into users in state sample, have current_user.id in session slice. add friend_id_array to users table. DONE
 
-* start thinking about what the feed will need: this will be the most complex feature, and should be implemented LAST when you already have a grip on how to build a react website. Know what Ajax requests this will need by monday. HIGH PRIORITY
+* DONE start thinking about what the feed will need: this will be the most complex feature, and should be implemented LAST when you already have a grip on how to build a react website. Know what Ajax requests this will need by monday. DONE
 
-* make a note in design docs that edit image will edit the author's initial comment, not the image itself.
+* DONE make a note in design docs that edit image will edit the author's initial comment, not the image itself. DONE
 
+* login and sign up do NOT have their own front end routes
 
 
 Feedback from Circle ta
@@ -45,3 +52,34 @@ Remember to actually submit a link to each portion of your proposal! That said, 
 The wireframes look good, but there are a couple of things I'd like you to think about. Use the wireframes to plan the React components you'll need, not just what each thing will look like. Be mindful of overreaching; you're not going to be able to implement features like notifications and user discovery before W9D5.
 
 The component hierarchy makes a good deal of sense. Use this as a guideline when you start creating your React components in your app, but know that you'll end up changing a bit as you go.
+
+### On Timeline and first draft of design documents
+John,
+
+Nice work on the proposal! I have a few notes (and answers to your questions):
+
+You may not need a users index at all. Most of the time you'll be primarily fetching posts/images with associated user data, not the other way around.
+
+You can definitely route by username on the frontend, but you absolutely should route by id on the backend. I recommend routing by username on the frontend for this project.
+
+INSPECT THIS
+***
+Remove index from username column on users table
+change front end user route to user username for user show
+changed account edit front end route to universal route with log in requirement
+***
+
+
+I'd like users to be able to delete their own images.
+
+You're right, comments don't need their own frontend route. You will also not need a route to fetch comments for a particular image - you should get the comments when you hit the "show" controller action for an image.
+
+Make sure you don't actually generate your models to have url columns for files. We'll use Paperclip to handle that. Check out the tutorial in the curriculum. There's also a way to set a default image for users without a profile picture set.
+
+Your wireframes look great, but be careful about dead links/buttons and such. If you're not going to implement a feature (like Stories), then don't pretend that it's there. No dummy content! Empty space is better than a flimsy facade of a nonexistent feature.
+
+Your production README will likely be the last MVP you complete. You'll need to include screenshots and code snippets, which you won't have until the end. Most students do it on W9D4 or the morning of W9D5 - it only takes a couple of hours, max.
+
+I think your timeline is a little out of whack. You're not going to complete all of the Images feature by Thursday - that's not enough time. Conversely, you won't take 5 days to implement comments - that's a much smaller feature than images.
+
+Please revise your timeline and let me know if you have any questions. Great work!

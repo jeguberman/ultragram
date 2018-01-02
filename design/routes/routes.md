@@ -46,16 +46,21 @@
 
 
 * /signup
-* /users/:userid
-* /users/:userid/edit
-* /users/:userid/followers
-* /users/:userid/following
+* /users/:username
+* /users/:username/followers
+* /users/:username/following
+
+* /users/accounts/edit
+   * will require user logged in
+   * I'm like 90% sure you'll need bootstrapping for this
 
 * /images/new (not on IG website)
 * /images/:id
 * /images/:id/edit (not on IG website)
 
-* /feed (should this not be "/" if current_user === authorized?)
+* /
+  * shows feed if user is logged in
+  * redirects to signup if user not logged in
 
 
 
