@@ -8,7 +8,7 @@ export const createUser = (user) => {
   );
 };
 
-export const loginUser = (user) => {
+export const login = (user) => {
   return (
     $.ajax({
       url: 'api/session',
@@ -17,11 +17,11 @@ export const loginUser = (user) => {
   );
 };
 
-export const logoutUser = (user) => {
+export const logout = (user) => {
   return (
     $.ajax({
       url: 'api/session',
-      method: 'DESTROY'
+      method: 'DELETE'
     })
   );
 };
