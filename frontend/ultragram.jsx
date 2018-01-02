@@ -6,6 +6,9 @@ import Test from './test_suite';
 
 
 document.addEventListener("DOMContentLoaded", ()=> {
+  Test();
+  
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root />, root);
 });

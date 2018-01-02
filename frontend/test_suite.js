@@ -1,6 +1,8 @@
-import * as SessionAPIUtil from './util/session_api_utl.js';
+import * as SessionAPIUtil from './util/session_api_util.js';
 
-export default Test = () => {
+const Test = () => {
   window.createUser = SessionAPIUtil.createUser;
 
 };
+
+export default Test;
