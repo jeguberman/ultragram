@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root.jsx';
+import Test from './test_suite';
 
 
-const Brick = ()=>{
-  return (<p>from entry file</p>);
-};
 
 document.addEventListener("DOMContentLoaded", ()=> {
   const root = document.getElementById('root');
