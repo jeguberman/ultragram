@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  def login(user)
+  def login(user) #resets given user's session token and sends new session token to client. sets @current_user to given user
     user.reset_session_token!
     session[:session_token] = user.session_token
     @current_user = user

@@ -4,6 +4,8 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
 ### January 2nd 2018
 * 12:15 should be able to create users at seeds and from console. Static page still not build
+    * create user from console X
+    * create user from seed file X
 
 
 
