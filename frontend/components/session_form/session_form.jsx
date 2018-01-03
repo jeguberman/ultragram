@@ -4,7 +4,7 @@ class SessionForm extends React.Component{
   constructor(props){
     console.log(props);
     super(props);
-    this.state={username:"", password:"", formType: "signup"};
+    this.state={username:"", password:"", fullname:"", formType: "signup"};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeFormType = this.changeFormType.bind(this);
   }
@@ -26,12 +26,25 @@ class SessionForm extends React.Component{
 
   sessionImage(){
     return(
-      <div className="session-image-container session-half">
+      <div className="session-image-container session-left">
         <img className="session-image" src = {window.staticImages.sessionImage} />
       </div>
-    )
+    );
   }
 
+  fullname(){
+    if(this.state.formType==="signup"){
+      return(
+        <input className="session-input"
+            type="fullname"
+            onChange={this.update('fullname')}
+            placeholder="Fullname"
+            value={this.state.username}/>
+      );
+    }else{
+      return null;
+    }
+  }
 
 
   loginForm(){
@@ -40,24 +53,25 @@ class SessionForm extends React.Component{
         {this.sessionImage()}
 
 
-        <div className="session-container session-half">
+        <div className="session-container session-right">
           <form className="session-form" onSubmit={this.handleSubmit}>
-            <h2 className="logo" > Instagram</h2>
+            <h2 className="logo" > Ultragram</h2>
+
+            {this.fullname()}
+
+            <input className="session-input"
+              type="username"
+              onChange={this.update('username')}
+              placeholder="Username"
+              value={this.state.username}/>
 
 
-              <input className="session-input"
-                type="username"
-                onChange={this.update('username')}
-                placeholder="Username"
-                value={this.state.username}/>
 
-
-
-              <input className="session-input"
-                type="password"
-                onChange={this.update('password')}
-                placeholder="Password"
-                value={this.state.password}/>
+            <input className="session-input"
+              type="password"
+              onChange={this.update('password')}
+              placeholder="Password"
+              value={this.state.password}/>
 
 
             <input className="session-input session-button" type="submit" value={this.state.formType}/>
@@ -102,7 +116,6 @@ class SessionForm extends React.Component{
     }
   }
 
-  frontimage
 
 
 
