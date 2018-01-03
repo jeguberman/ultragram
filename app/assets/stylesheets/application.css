@@ -15,6 +15,42 @@
  */
 
 
-.loginForm{
+.session-view{
   border: 1px solid green;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.session-image{
+  border: 1px solid red;
+  display:inline-block;
+}
+
+.session-container{
+  display: inline-block;
+  border: 1px solid blue;
+}
+.session-input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 268px;
+}
+.session-view{
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 50%;
+
+
+}
+.session-half{
+  width: 350px;
+}
+.session-button{
+  background: #3897f0;
+  border-color: #3897f0;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 1px;
+  padding: 4px;
 }

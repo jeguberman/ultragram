@@ -24,30 +24,37 @@ class SessionForm extends React.Component{
     };
   }
 
+
+
   loginForm(){
     return (
-      <div>
-        <img className="sessionImage" src="app/assets/images/instagram_session.jpg" />
-        <form className="loginForm" onSubmit={this.handleSubmit}>
-          <h2 className="logo" > Ultragram</h2>
+      <div className="session-view">
 
-          <label>Username:
-            <input type="username"
-              onChange={this.update('username')}
-              value={this.state.username}/>
-          </label>
+        <img className="session-image session-half" src = {window.staticImages.sessionImage} />
 
-          <label>Password:
-            <input type="password"
-              onChange={this.update('password')}
-              value={this.state.password}/>
-          </label>
+        <div className="session-container session-half">
+          <form className="session-form" onSubmit={this.handleSubmit}>
+            <h2 className="logo" > Ultragram</h2>
 
-          <input type="submit" />
+            <label className="session-input">Username<br/>
+              <input className="session-input" type="username"
+                onChange={this.update('username')}
+                value={this.state.username}/>
+            </label>
+
+            <label className="session-input">Password<br/>
+              <input className="session-input"
+                type="password"
+                onChange={this.update('password')}
+                value={this.state.password}/>
+            </label>
+
+            <input className="session-input session-button" type="submit" value={this.state.formType}/>
 
 
-        </form>
-        {this.navLink()}
+          </form>
+          {this.navLink()}
+        </div>
       </div>
     );
   }
