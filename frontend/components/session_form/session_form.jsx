@@ -24,30 +24,41 @@ class SessionForm extends React.Component{
     };
   }
 
+  sessionImage(){
+    return(
+      <div className="session-image-container session-half">
+        <img className="session-image" src = {window.staticImages.sessionImage} />
+      </div>
+    )
+  }
+
 
 
   loginForm(){
     return (
       <div className="session-view">
+        {this.sessionImage()}
 
-        <img className="session-image session-half" src = {window.staticImages.sessionImage} />
 
         <div className="session-container session-half">
           <form className="session-form" onSubmit={this.handleSubmit}>
-            <h2 className="logo" > Ultragram</h2>
+            <h2 className="logo" > Instagram</h2>
 
-            <label className="session-input">Username<br/>
-              <input className="session-input" type="username"
+
+              <input className="session-input"
+                type="username"
                 onChange={this.update('username')}
+                placeholder="Username"
                 value={this.state.username}/>
-            </label>
 
-            <label className="session-input">Password<br/>
+
+
               <input className="session-input"
                 type="password"
                 onChange={this.update('password')}
+                placeholder="Password"
                 value={this.state.password}/>
-            </label>
+
 
             <input className="session-input session-button" type="submit" value={this.state.formType}/>
 
@@ -75,11 +86,17 @@ class SessionForm extends React.Component{
   navLink(){
     if(this.state.formType === "signup"){
       return(
-        <a href="#" onClick={this.changeFormType}>Login instead</a>
+        <div className="session-nav">
+          <div>Don't have an account?</div>
+          <a href="#"  onClick={this.changeFormType}>Login</a>
+        </div>
       );
     }else{
       return(
-        <a href="#" onClick={this.changeFormType}>Signup instead</a>
+        <div className="session-nav">
+          <div>Have an account?</div>
+          <a href="#" onClick={this.changeFormType}>Signup</a>
+        </div>
       );
     }
   }

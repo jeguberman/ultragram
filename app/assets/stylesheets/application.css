@@ -13,44 +13,120 @@
  *= require_tree .
  *= require_self
  */
-
+main {
+  width: auto;
+  height: 1000px;
+  background-color: #fa4afa;
+}
 
 .session-view{
-  border: 1px solid green;
   display: flex;
   box-sizing: content-box;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
+
+
+  border: 1px solid green;
+}
+
+.session-half{
+  width: 350px;
+  position: relative;
 }
 
 .session-image{
+  display: inline-block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   border: 1px solid red;
-  display:inline-block;
+}
+.session-image-container{
+  padding:0;
+  border:0;
+  margin:0;
 }
 
 .session-container{
-  display: inline-block;
+  display: flex;
+  /*display: inline-block;*/
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  width: auto;
+
   border: 1px solid blue;
+
 }
-.session-input {
+
+.session-form{
+  background-color: white;
+
+  border: 1px solid pink;
+  margin: 10px;
+}
+
+.session-nav{
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  border: 1px solid orange;
+  /*padding: 20px;*/
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+  width: inherit;
+  text-align: center;
+}
+
+
+
+.session-input-label {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 268px;
 }
-.session-view{
-  position: absolute;
-  margin-left: 50%;
-  margin-top: 50%;
 
+.session-input {
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 262px;
+  border-color: #fafafa;
+  background-color: #fafafa;
+  margin-top: 5px;
+  font-size: 13px;
+  padding: 2px;
+}
 
-}
-.session-half{
-  width: 350px;
-}
 .session-button{
   background: #3897f0;
   border-color: #3897f0;
   color: #fff;
   text-transform: uppercase;
-  border-radius: 1px;
+  border-radius: 2px;
   padding: 4px;
+
+
+}
+
+
+.logo{
+  text-align: center;
+  font-family: cursive;
+  font-size: 40px;
 }
