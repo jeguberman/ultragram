@@ -30,7 +30,7 @@ body {
   /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
 
 
-  border: 1px solid green;
+  /*border: 1px solid green;*/
 }
 
 .session-left{
@@ -50,16 +50,23 @@ body {
   padding:0;
   border:0;
   margin:0;
-  display:flex;
-  justify-content: center;
+  display: flex;
+  justify-content: flex-end;
+  width:100%;
+  height: auto;
 
 
-  border: 1px solid red;
-  border-radius: 20px;
-  overflow: hidden;
+  /*border: 1px solid red;*/
+
+
 }
 
 .session-image{
+  width:80%;
+  height:100%;
+
+  /*border: 1px solid red;*/
+
   display: inline-block;
 }
 
@@ -72,7 +79,7 @@ body {
   justify-content: space-between;
   /*width: auto;*/
   margin: 3px;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 
 }
 
@@ -89,7 +96,7 @@ body {
   padding-right: 20px;
   padding-bottom: 20px;
   margin-top: 12%;
-  border: 1px solid #ff4444;
+  border: 1px solid #e6e6e6;
 }
 
 .session-nav{
@@ -98,13 +105,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 70%;
   padding-top: 13px;
   padding-bottom: 13px;
   width: 100%;
 
   background-color: white;
-  border: 1px solid orange;
+  border: 1px solid #e6e6e6;
 
   display: flex;
   font-size: 13px;

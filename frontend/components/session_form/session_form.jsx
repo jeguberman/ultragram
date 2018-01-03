@@ -27,7 +27,7 @@ class SessionForm extends React.Component{
   sessionImage(){
     return(
       <div className="session-image-container session-left">
-        <img className="session-image" src = {window.staticImages.sessionImage} />
+        <img className="session-image" src = {window.staticImages.homePhones} />
       </div>
     );
   }
@@ -39,7 +39,7 @@ class SessionForm extends React.Component{
             type="fullname"
             onChange={this.update('fullname')}
             placeholder="Fullname"
-            value={this.state.username}/>
+            value={this.state.fullname}/>
       );
     }else{
       return null;
@@ -95,21 +95,21 @@ class SessionForm extends React.Component{
   }
 
   logoutButton(){
-    return(<button onClick={this.props.logout}>Logout</button>);
+    return(<button onClick={this.props.logout}>Logout: Also, you shouldn't be seeing this</button>);
   }
 
   navLink(){
     if(this.state.formType === "signup"){
       return(
         <div className="session-nav">
-          <div>Don't have an account?</div>
+          <div>Have an account?</div>
           <a href="#"  onClick={this.changeFormType}>Login</a>
         </div>
       );
     }else{
       return(
         <div className="session-nav">
-          <div>Have an account?</div>
+          <div>Don't have an account?</div>
           <a href="#" onClick={this.changeFormType}>Signup</a>
         </div>
       );
