@@ -156,3 +156,10 @@ body {
   margin-top: 0;
   margin-bottom: 5%;
 }
+
+.session-errors{
+  list-style: none;
+  font-size: 13px;
+  color: red;
+  padding:0;
+}

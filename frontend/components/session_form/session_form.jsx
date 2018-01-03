@@ -32,6 +32,24 @@ class SessionForm extends React.Component{
     );
   }
 
+  listErrors(){
+    if(this.props.errors){
+      const errorList = this.props.errors.map(
+        (error, idx) => {
+          return <li key={idx} className="session-error-item">{error}</li>;
+        }
+      );
+      return(
+        <ul className="session-errors">{errorList}</ul>
+      );
+    }else{
+      return <ul className="session-errors">
+        <li className="session-error-item">mock errors</li>
+
+        </ul>;
+    }
+  }
+
   fullname(){
     if(this.state.formType==="signup"){
       return(
@@ -57,6 +75,7 @@ class SessionForm extends React.Component{
           <form className="session-form" onSubmit={this.handleSubmit}>
             <h2 className="logo" > Ultragram</h2>
 
+
             {this.fullname()}
 
             <input className="session-input"
@@ -75,6 +94,8 @@ class SessionForm extends React.Component{
 
 
             <input className="session-input session-button" type="submit" value={this.state.formType}/>
+
+            {this.listErrors()}
 
 
           </form>

@@ -8,7 +8,7 @@ A clone of instagram created as a full stack project for App Academy. I am not a
     * create user from seed file X
 * 12:30 should be able to create users from static page
   * render static page root X
-  * fucking hijack that shit and make it your own X
+  * render to page
   * create user from chrome console with predefined ajax requests X
   * create the store X
   * create errors handling for state X
@@ -19,6 +19,12 @@ A clone of instagram created as a full stack project for App Academy. I am not a
     * it's time to learn what bootstrapping actually is
     * user should be logged in after signing up
     * there should be a log out button. this will eventually be in a dropdown menu
+
+### January 3rd 2018
+  * mostly css styling. incorporate a picture
+  * added errors
+  * the view is not centered. Part of this is the image container
+  * when the session-view component is resized, it resizes the image
 
 
 
