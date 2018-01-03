@@ -4,18 +4,20 @@ import { login, logout, creatUser } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mapStateToProps = (state, ownProps) => {
+
   return {
     loggedIn: Boolean(state.session.currentUser),
-    errors: state.errors.session
+    errors: state.errors.session,
+    formType: "signup"
   };
 };
 
-const mapDispatchToProps = (dispatch,ownProps ) => {
+const mapDispatchToProps = (dispatch, ownProps ) => {
 
   return{
     login: (userData) => dispatch(login(userData)),
     logout: () => dispatch(logout()),
-    createUser: (userData) => dispatch(userData())
+    createUser: (userData) => dispatch(createUser(userData))
   };
 
 

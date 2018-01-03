@@ -4,16 +4,17 @@ class SessionForm extends React.Component{
   constructor(props){
     console.log(props);
     super(props);
-    this.state={username:"from session form", password:""};
+    this.state={username:"", password:"", formType: "signup"};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.changeFormType = this.changeFormType.bind(this);
   }
 
   handleSubmit(e){
     e.preventDefault();
-    if (this.props.loggedIn === false){
-      this.props.logIn(this.state);
+    if (this.state.formType==="signup"){
+      this.props.createUser(this.state);
     } else {
-      this.props.signUp(this.state);
+      this.props.login(this.state);
     }
   }
 
@@ -25,25 +26,68 @@ class SessionForm extends React.Component{
 
   loginForm(){
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h1> from login form</h1>
+      <div>
+        <form className="loginForm" onSubmit={this.handleSubmit}>
+          <h2 className="logo" > Ultragram</h2>
 
-        <input type="text"
-          onChange={this.update('text')}
-          value={this.state.username}/>
+          <label>Username:
+            <input type="username"
+              onChange={this.update('username')}
+              value={this.state.username}/>
+          </label>
 
-        <input type="password"
-          onChange={this.update('password')}
-          value={this.state.password}/>
+          <label>Password:
+            <input type="password"
+              onChange={this.update('password')}
+              value={this.state.password}/>
+          </label>
 
-        <input type="submit" />
+          <input type="submit" />
 
-      </form>
+
+        </form>
+        {this.navLink()}
+      </div>
     );
   }
 
+  changeFormType(e){
+    e.preventDefault();
+    if(this.state.formType === "signup"){
+      this.setState({formType:"login"});
+    }else{
+      this.setState({formType:"signup"});
+    }
+  }
+
+  logoutButton(){
+    return(<button onClick={this.props.logout}>Logout</button>);
+  }
+
+  navLink(){
+    if(this.state.formType === "signup"){
+      return(
+        <a href="#" onClick={this.changeFormType}>Login instead</a>
+      );
+    }else{
+      return(
+        <a href="#" onClick={this.changeFormType}>Signup instead</a>
+      );
+    }
+  }
+
+  frontimage
+
+
+
   render(){
-    return(this.loginForm());
+    if(this.props.loggedIn === true){
+      return(this.logoutButton());
+    }else{
+      return(
+        this.loginForm()
+      );
+    }
   }
 
 }
