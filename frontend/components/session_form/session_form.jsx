@@ -64,6 +64,7 @@ class SessionForm extends React.Component{
 
 
           </form>
+
           {this.navLink()}
         </div>
       </div>

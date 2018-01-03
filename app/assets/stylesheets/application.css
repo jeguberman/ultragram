@@ -34,83 +34,85 @@ main {
 }
 
 .session-half{
-  width: 350px;
+
   position: relative;
+  display: flex;
+}
+
+.session-image-container{
+  flex-grow: 2;
+
+  padding:0;
+  border:0;
+  margin:0;
+  display:flex;
+  justify-content: center;
+  border: 1px solid red;
 }
 
 .session-image{
   display: inline-block;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  border: 1px solid red;
 }
-.session-image-container{
-  padding:0;
-  border:0;
-  margin:0;
-}
+
 
 .session-container{
+  flex-grow: 1;
+
   display: flex;
-  /*display: inline-block;*/
   flex-direction: column;
   justify-content: space-between;
-  height: 300px;
-  width: auto;
+
 
   border: 1px solid blue;
 
 }
 
 .session-form{
+  display: flex;
+  flex-direction: column;
   background-color: white;
-
+  flex-grow: 1;
   border: 1px solid pink;
+  /*padding: 5px;*/
+  /*padding-left: 10px;
+  padding-right: 10px;*/
   margin: 10px;
+  width: 90%;
 }
 
 .session-nav{
+
   display: flex;
   background-color: white;
   justify-content: space-around;
+  align-items: center;
   border: 1px solid orange;
   /*padding: 20px;*/
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   margin-left: auto;
   margin-right: auto;
+  font-size: 13px;
 
 
-
-  width: inherit;
+  width: 90%;
   text-align: center;
 }
 
 
 
-.session-input-label {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 268px;
-}
+
 
 .session-input {
-  box-sizing: border-box;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 262px;
+
+
   border-color: #fafafa;
   background-color: #fafafa;
   margin-top: 5px;
   font-size: 13px;
   padding: 2px;
+  width: 90%;
 }
 
 .session-button{
@@ -120,6 +122,7 @@ main {
   text-transform: uppercase;
   border-radius: 2px;
   padding: 4px;
+  width: 90%
 
 
 }
