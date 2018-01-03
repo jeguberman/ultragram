@@ -11,6 +11,7 @@ A clone of instagram created as a full stack project for App Academy. I am not a
   * fucking hijack that shit and make it your own X
   * create user from chrome console with predefined ajax requests X
   * create the store X
+  * create errors handling for state X
   * create a sign up page, don't make it pretty
     * be able to create a user from the page, check in the console
   * make the static page render something different if user is logged in
