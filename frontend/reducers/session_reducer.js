@@ -6,13 +6,12 @@ import merge from 'lodash/merge';
 // }); //I'm copying this from the benchbnb solutions, this is clever
 
 const sessionReducer = ( oldState = {currentUser:null}, action ) => {
-
   let newState = oldState;
   Object.freeze(oldState);
 
   switch(action.type){
     case RECEIVE_CURRENT_USER:
-    return { currentUser: action.user };
+      return {currentUser: action.currentUser};
     default:
     return oldState;
   }

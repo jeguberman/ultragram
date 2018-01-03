@@ -2,3 +2,10 @@
   static page, level 0<br>
   from <%= __FILE__ %>
 </main>
+
+<script type="text/javascript">
+  window.staticImages = {
+    sessionImage: "<%= asset_url("session_image.jpg") %>",
+    homePhones: "<%= asset_url("home_phones.png") %>"
+  }
+</script>

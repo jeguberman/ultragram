@@ -8,12 +8,22 @@ import configureStore from './store/store';
 
 document.addEventListener("DOMContentLoaded", ()=> {
   Test();
-  debugger
-  const store=configureStore();
+
+  let store;
+  if (window.currentUser){
+    const preloadedstate = { session: { currentUser: window.currentUser } };
+    store = configureStore(preloadedstate);
+    delete window.currentUser;
+  }else{
+    store = configureStore();
+  }
+
   const root = document.getElementById('root');
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  debugger
+
+
+
   ReactDOM.render(<Root store={store}/>, root);
-});
+}) ;

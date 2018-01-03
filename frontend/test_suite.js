@@ -1,7 +1,9 @@
-import * as SessionAPIUtil from './util/session_api_util.js';
+import * as SessionActions from './actions/session_actions.js';
 
 const Test = () => {
-  window.createUser = SessionAPIUtil.createUser;
+  window.createUser = SessionActions.createUser;
+  window.login = SessionActions.login;
+  window.logout = SessionActions.logout;
 
 };
 

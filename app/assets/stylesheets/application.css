@@ -13,3 +13,146 @@
  *= require_tree .
  *= require_self
  */
+body {
+  width: auto;
+  height: auto;
+  background-color: #fafafa;
+}
+
+.session-view{
+  display: flex;
+  box-sizing: content-box;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
+
+
+  /*border: 1px solid green;*/
+}
+
+.session-left{
+  /*flex-grow: 1;*/
+  position: relative;
+  display: flex;
+}
+.session-right{
+  /*flex-grow: 1;*/
+  position: relative;
+  display: flex;
+}
+
+.session-image-container{
+  /*flex-grow: 2;*/
+
+  padding:0;
+  border:0;
+  margin:0;
+  display: flex;
+  justify-content: flex-end;
+  width:100%;
+  height: auto;
+
+
+  /*border: 1px solid red;*/
+
+
+}
+
+.session-image{
+  width:80%;
+  height:100%;
+
+  /*border: 1px solid red;*/
+
+  display: inline-block;
+}
+
+
+.session-container{
+  /*flex-grow: 1;*/
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*width: auto;*/
+  margin: 3px;
+  /*border: 1px solid blue;*/
+
+}
+
+.session-form{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  flex-grow: 1;
+  border: 1px solid pink;
+  align-items: center;
+  /*padding: 5px;*/
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top: 12%;
+  border: 1px solid #e6e6e6;
+}
+
+.session-nav{
+  box-sizing: border-box;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 70%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  width: 100%;
+
+  background-color: white;
+  border: 1px solid #e6e6e6;
+
+  display: flex;
+  font-size: 13px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+
+.session-input {
+
+
+  border-color: #fafafa;
+  background-color: #fafafa;
+  margin-top: 5px;
+  font-size: 13px;
+  padding: 2px;
+  width: 100%;
+}
+
+.session-button{
+  background: #3897f0;
+  border-color: #3897f0;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 4px;
+  width: 105%
+
+
+}
+
+
+.logo{
+  text-align: center;
+  font-family: cursive;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 5%;
+}
