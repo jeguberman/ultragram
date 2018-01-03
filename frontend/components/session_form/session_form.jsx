@@ -27,6 +27,7 @@ class SessionForm extends React.Component{
   loginForm(){
     return (
       <div>
+        <img className="sessionImage" src="app/assets/images/instagram_session.jpg" />
         <form className="loginForm" onSubmit={this.handleSubmit}>
           <h2 className="logo" > Ultragram</h2>
 
