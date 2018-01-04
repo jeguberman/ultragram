@@ -30,9 +30,9 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
   * 10:00 styling mostly finished. still need to add a picture into cell phone image and incorporate authroutes. If there's time, do rotating pictures. Don't wast time on this.
     * authrouting
-    * login screen out of bends if window too small
+    * login screen out of bounds if window too small
     * image at log in
-    * rotating images
+
 
 
 
