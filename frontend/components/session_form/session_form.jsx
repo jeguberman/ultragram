@@ -26,10 +26,25 @@ class SessionForm extends React.Component{
 
   sessionImage(){
     return(
-      <div className="session-image-container session-left">
+      <div className="session-image-container">
         <img className="session-image" src = {window.staticImages.homePhones} />
       </div>
     );
+  }
+
+  listErrors(){
+    if(this.props.errors){
+      const errorList = this.props.errors.map(
+        (error, idx) => {
+          return <li key={idx} className="session-error-item">{error}</li>;
+        }
+      );
+      return(
+        <ul className="session-errors">{errorList}</ul>
+      );
+    }else{
+      return null;
+    }
   }
 
   fullname(){
@@ -53,9 +68,10 @@ class SessionForm extends React.Component{
         {this.sessionImage()}
 
 
-        <div className="session-container session-right">
+        <div className="session-container">
           <form className="session-form" onSubmit={this.handleSubmit}>
             <h2 className="logo" > Ultragram</h2>
+
 
             {this.fullname()}
 
@@ -75,6 +91,8 @@ class SessionForm extends React.Component{
 
 
             <input className="session-input session-button" type="submit" value={this.state.formType}/>
+
+            {this.listErrors()}
 
 
           </form>
