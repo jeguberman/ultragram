@@ -105,6 +105,7 @@ class SessionForm extends React.Component{
 
             <input className="session-input session-button" type="submit" value={this.state.formType}/>
 
+            {this.demoUser()}
             {this.listErrors()}
 
 
@@ -125,6 +126,25 @@ class SessionForm extends React.Component{
       this.setState({formType:"Sign up"});
     }
   }
+
+  demoUser(){
+    return (
+      <button className="session-input session-button"
+        type="submit"
+
+        onClick={
+          (e) => {
+            e.preventDefault();
+            return (
+              this.props.login({username:"demo", password:"password"})
+            );
+          }
+        }
+
+      />
+    );
+  }
+
 
 
   logoutButton(){
