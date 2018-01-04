@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+div, a, input, form, main, ul, li{
+  padding: 0;
+  margin: 0;
+  border: 0;
+ }
+
+
 body {
   width: auto;
   height: auto;
@@ -28,52 +36,38 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
+  /*width: 100%;*/
 
-
-  /*border: 1px solid green;*/
+  border: 1px solid green;
 }
 
-.session-left{
-  /*flex-grow: 1;*/
-  position: relative;
-  display: flex;
-}
-.session-right{
-  /*flex-grow: 1;*/
-  position: relative;
-  display: flex;
-}
+
 
 .session-image-container{
-  /*flex-grow: 2;*/
 
   padding:0;
   border:0;
   margin:0;
-  display: flex;
-  justify-content: flex-end;
-  width:100%;
-  height: auto;
 
+  display: inline;
 
-  /*border: 1px solid red;*/
-
+  border: 1px solid blue;
 
 }
 
 .session-image{
-  width:80%;
-  height:100%;
+  /*max-width: 80%;*/
+  transform: scale(0.8);
+  height: auto;
+  right:0;
 
-  /*border: 1px solid red;*/
-
-  display: inline-block;
+  border: 1px solid red;
 }
 
 
 .session-container{
   /*flex-grow: 1;*/
-
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -128,12 +122,18 @@ body {
 .session-input {
 
 
-  border-color: #fafafa;
+  border: 1px solid #f8f8f8;
   background-color: #fafafa;
   margin-top: 5px;
   font-size: 13px;
   padding: 2px;
   width: 100%;
+}
+
+.session-input:focus{
+  outline-width: 0;
+  border: 1px solid #f6f6f6;
+
 }
 
 .session-button{

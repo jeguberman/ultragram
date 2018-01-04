@@ -26,7 +26,7 @@ class SessionForm extends React.Component{
 
   sessionImage(){
     return(
-      <div className="session-image-container session-left">
+      <div className="session-image-container">
         <img className="session-image" src = {window.staticImages.homePhones} />
       </div>
     );
@@ -43,10 +43,7 @@ class SessionForm extends React.Component{
         <ul className="session-errors">{errorList}</ul>
       );
     }else{
-      return <ul className="session-errors">
-        <li className="session-error-item">mock errors</li>
-
-        </ul>;
+      return null;
     }
   }
 
@@ -71,7 +68,7 @@ class SessionForm extends React.Component{
         {this.sessionImage()}
 
 
-        <div className="session-container session-right">
+        <div className="session-container">
           <form className="session-form" onSubmit={this.handleSubmit}>
             <h2 className="logo" > Ultragram</h2>
 
