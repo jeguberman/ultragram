@@ -54,7 +54,15 @@ body {
   background-color: pink;*/
 }
 
-.session-image{
+.phoneImage-container{
+  position:relative;
+}
+
+.phoneImage{
+  position: absolute;
+}
+
+.homePhones{
   display: inline-block;
   resize:none;
   height: 100%

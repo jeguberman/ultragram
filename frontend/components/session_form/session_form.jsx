@@ -27,10 +27,21 @@ class SessionForm extends React.Component{
   sessionImage(){
     return(
       <div className="session-image-container">
-        <img className="session-image" src = {window.staticImages.homePhones} />
+        <img className="homePhones" src = {window.staticImages.homePhones} />
+
+
       </div>
     );
   }
+  // 
+  // phoneImage(){
+  //   return(
+  //     <div className="phoneImage-container">
+  //
+  //       <img className="phoneImage" src={window.staticImages.alexGrey}/>
+  //     </div>
+  //   );
+  // }
 
   listErrors(){
     if(this.props.errors){
