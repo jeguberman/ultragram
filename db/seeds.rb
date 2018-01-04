@@ -8,6 +8,7 @@
 
 User.delete_all
 
-User.create(username:"Cthulu", password:"passwordryleh")
-User.create(username:"thanos", password:"deathandjewels")
-User.create(username:"vvDoom", password:"drrichardssucks")
+User.create(username:"demo", password:"password", fullname:"demo user", personal_statement:"I am a fictitious hypothetical entitity who's existence is temporally bound between login and logout")
+User.create(username:"Cthulu", fullname:"error", password:"passwordryleh", personal_statement:"ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn")
+User.create(username:"thanos", password:"deathandjewels", fullname:"dione")
+User.create(username:"vvDoom", password:"reedrichardssucks", fullname: "Victor Van Damme")
