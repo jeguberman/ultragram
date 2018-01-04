@@ -38,59 +38,57 @@ body {
   /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
   /*width: 100%;*/
 
-  border: 1px solid green;
+
+  /*border: 1px solid green;*/
 }
 
 
 
 .session-image-container{
+  height: 460px;
+  width: 624px;
+  display: inline-block;
+  width: auto;
 
-  padding:0;
-  border:0;
-  margin:0;
-
-  display: inline;
-
-  border: 1px solid blue;
-
+  /*border: 1px solid blue;
+  background-color: pink;*/
 }
 
 .session-image{
-  /*max-width: 80%;*/
-  transform: scale(0.8);
-  height: auto;
-  right:0;
+  display: inline-block;
+  resize:none;
+  height: 100%
 
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 
 .session-container{
-  /*flex-grow: 1;*/
   position: relative;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  /*width: auto;*/
+  max-width: 250px;
   margin: 3px;
+
   /*border: 1px solid blue;*/
+
 
 }
 
 .session-form{
-  display: flex;
+
   flex-direction: column;
   background-color: white;
-  flex-grow: 1;
-  border: 1px solid pink;
+
   align-items: center;
-  /*padding: 5px;*/
+
 
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   margin-top: 12%;
   border: 1px solid #e6e6e6;
+
+  /*border: 1px solid pink;*/
 }
 
 .session-nav{
@@ -99,7 +97,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  margin-bottom: 70%;
+  margin-bottom: 30%;
   padding-top: 13px;
   padding-bottom: 13px;
   width: 100%;
@@ -122,17 +120,20 @@ body {
 .session-input {
 
 
-  border: 1px solid #f8f8f8;
+  border: 1px solid #efefef;
+  border-radius: 3px;
   background-color: #fafafa;
   margin-top: 5px;
   font-size: 13px;
   padding: 2px;
+  padding-bottom: 3px;
   width: 100%;
+  /*height: 18px;*/
 }
 
 .session-input:focus{
   outline-width: 0;
-  border: 1px solid #f6f6f6;
+  border: 1px solid #d0d0d0;
 
 }
 
@@ -140,10 +141,11 @@ body {
   background: #3897f0;
   border-color: #3897f0;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
   border-radius: 2px;
   padding: 4px;
   width: 105%
+  /*font-weight: 600;*/
 
 
 }
@@ -162,4 +164,5 @@ body {
   font-size: 13px;
   color: red;
   padding:0;
+  max-width:100%;
 }
