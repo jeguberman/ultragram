@@ -92,6 +92,7 @@ class SessionForm extends React.Component{
 
             <input className="session-input session-button" type="submit" value={this.state.formType}/>
 
+            {this.demoUser()}
             {this.listErrors()}
 
 
@@ -111,6 +112,26 @@ class SessionForm extends React.Component{
       this.setState({formType:"signup"});
     }
   }
+
+  demoUser(){
+    return (
+      <button className="session-input session-button"
+        type="submit"
+
+        onClick={
+          (e) => {
+            e.preventDefault();
+            return (
+              this.props.login({username:"demo", password:"password"})
+            );
+          }
+        }
+
+      />
+    );
+  }
+
+
 
   logoutButton(){
     return(<button onClick={this.props.logout}>Logout: Also, you shouldn't be seeing this</button>);

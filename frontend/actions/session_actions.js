@@ -24,17 +24,21 @@ export const logout = () => dispatch => (
   )
 );
 
-export const login = user => dispatch => (
-  APIUtil.login(user)
-  .then(
-    user => (
-      dispatch(receiveCurrentUser(user))
-    ),
-    err => (
-      dispatch(receiveErrors(err.responseJSON))
+export const login = user => dispatch => {
+// debugger
+console.log('login thunk hit')
+  return (
+    APIUtil.login(user)
+    .then(
+      user => (
+        dispatch(receiveCurrentUser(user))
+      ),
+      err => (
+        dispatch(receiveErrors(err.responseJSON))
+      )
     )
-  )
-);
+  );
+};
 
 export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
