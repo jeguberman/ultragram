@@ -26,6 +26,14 @@ A clone of instagram created as a full stack project for App Academy. I am not a
   * the view is not centered. Part of this is the image container
   * when the session-view component is resized, it resizes the image
 
+### January 4th 2018
+
+  * 10:00 styling mostly finished. still need to add a picture into cell phone image and incorporate authroutes. If there's time, do rotating pictures. Don't wast time on this.
+    * authrouting
+    * login screen out of bends if window too small
+    * image at log in
+    * rotating images
+
 
 
 

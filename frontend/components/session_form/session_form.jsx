@@ -2,7 +2,7 @@ import React from 'react';
 
 class SessionForm extends React.Component{
   constructor(props){
-    console.log(props);
+    // console.log(props);
     super(props);
     this.state={username:"", password:"", fullname:"", formType: "signup"};
     this.handleSubmit = this.handleSubmit.bind(this);
