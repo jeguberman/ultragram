@@ -41,6 +41,16 @@ export const receiveErrors = errors => ({
   errors
 });
 
+export const clearErrors = () =>{
+  // debugger
+  return(
+    dispatch({
+      type: RECEIVE_SESSION_ERRORS,
+      errors: null
+    })
+  );
+};
+
 
 const receiveCurrentUser = (currentUser) => {
   return {

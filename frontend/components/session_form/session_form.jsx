@@ -4,19 +4,21 @@ class SessionForm extends React.Component{
   constructor(props){
     // console.log(props);
     super(props);
-    this.state={username:"", password:"", fullname:"", formType: "signup"};
+    this.state={username:"", password:"", fullname:"", formType: "Sign up"};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeFormType = this.changeFormType.bind(this);
   }
 
   handleSubmit(e){
     e.preventDefault();
-    if (this.state.formType==="signup"){
+    if (this.state.formType==="Sign up"){
       this.props.createUser(this.state);
     } else {
       this.props.login(this.state);
     }
   }
+
+
 
   update(field){
     return (e)=>{
@@ -33,7 +35,7 @@ class SessionForm extends React.Component{
       </div>
     );
   }
-  // 
+  //
   // phoneImage(){
   //   return(
   //     <div className="phoneImage-container">
@@ -59,7 +61,7 @@ class SessionForm extends React.Component{
   }
 
   fullname(){
-    if(this.state.formType==="signup"){
+    if(this.state.formType==="Sign up"){
       return(
         <input className="session-input"
             type="fullname"
@@ -116,19 +118,22 @@ class SessionForm extends React.Component{
 
   changeFormType(e){
     e.preventDefault();
-    if(this.state.formType === "signup"){
-      this.setState({formType:"login"});
+    this.props.clearErrors();
+    if(this.state.formType === "Sign up"){
+      this.setState({formType:"Log in"});
     }else{
-      this.setState({formType:"signup"});
+      this.setState({formType:"Sign up"});
     }
   }
+
 
   logoutButton(){
     return(<button onClick={this.props.logout}>Logout: Also, you shouldn't be seeing this</button>);
   }
 
   navLink(){
-    if(this.state.formType === "signup"){
+
+    if(this.state.formType === "Sign up"){
       return(
         <div className="session-nav">
           <div>Have an account?</div>
@@ -144,6 +149,8 @@ class SessionForm extends React.Component{
       );
     }
   }
+
+
 
 
 

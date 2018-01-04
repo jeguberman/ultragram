@@ -8,7 +8,6 @@ const Auth = ( { component: Component, loggedIn } ) => {
 
     if(loggedIn){
       return (<SessionFormContainer />);
-
     }else{
       return (<SessionFormContainer />);
     }
