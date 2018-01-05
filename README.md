@@ -37,10 +37,25 @@ A clone of instagram created as a full stack project for App Academy. I am not a
   * further styling for demo user to mock instagram page
 
 ##  January 5th 2018
-  ### TODO
-    * create an auth route for feed and session
-    * sign up for paperclip
-    * create user page
+### TODO
+  * create an auth route for feed and session
+  * sign up for paperclip
+        Paperclip is now compatible with aws-sdk >= 2.0.0.
+
+        If you are using S3 storage, aws-sdk >= 2.0.0
+        requires you to make a few small changes:
+
+        You must set the `s3_region`
+        If you are explicitly setting permissions anywhere,
+        such as in an initializer,
+        note that the format of the permissions
+        changed from using an underscore to
+        using a hyphen. For example, `:public_read`
+        needs to be changed to `public-read`.
+
+        For a walkthrough of upgrading from 4 to 5 and aws-sdk >= 2.0 you can watch
+        http://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5
+  * create user page
 
 
 
