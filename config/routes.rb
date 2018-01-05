@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :show, :update]
     resource :session, only: [:create, :destroy] #why does benchbnb have a show route for sessions? their controller does not
-    resources :images
-    resources :comments
+    resources :images, only: [:create, :index, :show, :update, :destroy]
+    resources :comments, only: [:create, :index, :show, :update, :destroy]
     # resources :image_likes, only: [:create, :destroy]
     # resources :comment_likes, only: [:create, :destroy]
   end

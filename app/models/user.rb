@@ -11,6 +11,10 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :images,
+    class_name: :Image,
+    foreign_key: :author_id
+
 
 
   def self.find_by_credentials(username, password) #searches User table by username. if given password is password for user, returns user, else returns nil.

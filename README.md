@@ -39,7 +39,7 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 ##  January 5th 2018
 ### TODO
   * create an auth route for feed and session
-  * sign up for paperclip
+  * DONE sign up for paperclip
         Paperclip is now compatible with aws-sdk >= 2.0.0.
 
         If you are using S3 storage, aws-sdk >= 2.0.0
@@ -55,7 +55,9 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
         For a walkthrough of upgrading from 4 to 5 and aws-sdk >= 2.0 you can watch
         http://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5
-  * create user page
+  * Images back end cycle
+  * images front end cycle
+  * migration server size null: false validation on image_url
 
 
 
