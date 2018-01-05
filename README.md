@@ -2,7 +2,7 @@
 
 A clone of instagram created as a full stack project for App Academy. I am not affiliated with instagram or facebook. This is intended to be educational. Also it's specifically for earth-shattering supervillains. ULTRAGRAM
 
-### January 2nd 2018
+## January 2nd 2018
 * 12:15 should be able to create users at seeds and from console. Static page still not build
     * create user from console X
     * create user from seed file X
@@ -20,13 +20,13 @@ A clone of instagram created as a full stack project for App Academy. I am not a
     * user should be logged in after signing up
     * there should be a log out button. this will eventually be in a dropdown menu
 
-### January 3rd 2018
+## January 3rd 2018
   * mostly css styling. incorporate a picture
   * added errors
   * the view is not centered. Part of this is the image container
   * when the session-view component is resized, it resizes the image
 
-### January 4th 2018
+## January 4th 2018
 
   * styling mostly finished. still need to add a picture into cell phone image and incorporate authroutes. If there's time, do rotating pictures. Don't wast time on this.
     * authrouting (not with router, on account of the actual route doesn't change)
@@ -35,6 +35,12 @@ A clone of instagram created as a full stack project for App Academy. I am not a
   * updated user table, model, controller and views
   * added demo user to seeds
   * further styling for demo user to mock instagram page
+
+##  January 5th 2018
+  ### TODO
+    * create an auth route for feed and session
+    * sign up for paperclip
+    * create user page
 
 
 
@@ -68,7 +74,7 @@ TODO
 
 * DONE redo component heiarchies and schema if you have a chance, they do not reflect . DONE
 
-* clean up MVP list, make sure it consists of reasonable goals. You don't need a login from facebook button (do you?)
+* DONE clean up MVP list, make sure it consists of reasonable goals. You don't need a login from facebook button (do you?)
 
 * DONE Clean up your schema, find out how to create a table in md documents DONE
 
@@ -80,7 +86,7 @@ TODO
 
 * DONE make a note in design docs that edit image will edit the author's initial comment, not the image itself. DONE
 
-* login and sign up do NOT have their own front end routes
+* DONE login and sign up do NOT have their own front end routes
 
 
 Feedback from Circle ta
