@@ -188,13 +188,13 @@ class SessionForm extends React.Component{
 
 
   render(){
-    if(this.props.loggedIn === true){
-      return(this.logoutButton());
-    }else{
+    // if(this.props.loggedIn === true){
+      // return(this.logoutButton());
+    // }else{
       return(
         this.loginForm()
       );
-    }
+    // }
   }
 
 }
