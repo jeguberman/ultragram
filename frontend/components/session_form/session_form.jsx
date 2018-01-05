@@ -104,7 +104,7 @@ class SessionForm extends React.Component{
 
 
             <input className="session-input session-button" type="submit" value={this.state.formType}/>
-
+            {this.separatingOr()}
             {this.demoUser()}
             {this.listErrors()}
 
@@ -127,10 +127,20 @@ class SessionForm extends React.Component{
     }
   }
 
+  separatingOr(){
+    return (
+      <div className="orBorder">
+        <div className="orLine"></div>
+        <div className="orElement">OR</div>
+        <div className="orLine"></div>
+      </div>
+  );
+  }
+
   demoUser(){
     return (
-      <button className="session-input session-button"
-        type="submit"
+      <a href="#"
+        className="demo-user"
 
         onClick={
           (e) => {
@@ -141,7 +151,9 @@ class SessionForm extends React.Component{
           }
         }
 
-      />
+      >
+      Log in with Demo User
+    </a>
     );
   }
 
@@ -156,14 +168,14 @@ class SessionForm extends React.Component{
     if(this.state.formType === "Sign up"){
       return(
         <div className="session-nav">
-          <div>Have an account?</div>
+          Have an account?&nbsp;
           <a href="#"  onClick={this.changeFormType}>Login</a>
         </div>
       );
     }else{
       return(
         <div className="session-nav">
-          <div>Don't have an account?</div>
+          Don't have an account?&nbsp;
           <a href="#" onClick={this.changeFormType}>Signup</a>
         </div>
       );
