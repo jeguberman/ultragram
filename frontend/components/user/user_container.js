@@ -1,6 +1,7 @@
-import UserComponent from './user_container';
+import UserComponent from './user_component';
 import {connect} from 'react-redux';
+import { withRouter} from 'react-router-dom';
 
 
 
-export default connect(null, null)(UserComponent);
+export default withRouter(connect(null, null)(UserComponent));
