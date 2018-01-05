@@ -16,6 +16,8 @@ const Auth = ( { loggedIn } ) => {
 
 
 
+
+
 const mapStateToProps = state => {
   return {loggedIn: Boolean(state.session.currentUser)};
 };
