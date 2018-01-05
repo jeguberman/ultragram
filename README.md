@@ -28,10 +28,13 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
 ### January 4th 2018
 
-  * 10:00 styling mostly finished. still need to add a picture into cell phone image and incorporate authroutes. If there's time, do rotating pictures. Don't wast time on this.
-    * authrouting
+  * styling mostly finished. still need to add a picture into cell phone image and incorporate authroutes. If there's time, do rotating pictures. Don't wast time on this.
+    * authrouting (not with router, on account of the actual route doesn't change)
     * login screen out of bounds if window too small
-    * image at log in
+    * image at log in now has an actual image in it
+  * updated user table, model, controller and views
+  * added demo user to seeds
+  * further styling for demo user to mock instagram page
 
 
 

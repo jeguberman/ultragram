@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # copied from bench bnb solutions, edited to match my own style
   attr_reader :password
 
-  validates :username, :password_digest, :session_token, presence: true
+  validates :username, :password_digest, :session_token, :fullname, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
@@ -35,7 +35,7 @@ class User < ApplicationRecord
 
   private
 
-  def ensure_session_token 
+  def ensure_session_token
     generate_unique_session_token unless self.session_token
   end
 
