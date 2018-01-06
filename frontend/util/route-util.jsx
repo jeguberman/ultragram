@@ -5,11 +5,20 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 import SessionFormContainer from '../components/session_form/session_form_container';
 import ImageIndex from '../components/image/image_index_container';
 
-const Home = ( { loggedIn, match } ) => {
-  console.log(match);
-  debugger
+
+const mapStateToProps = (state, ownProps) => {
+
+  return {
+    loggedIn: Boolean(state.session.currentUser )
+  };
+};
+
+
+const Home = ( { loggedIn } ) => {
+  // console.log(match);
+
   if(loggedIn){
-    return (<ImageIndex {...props} />);
+    return (<ImageIndex />);
   }else{
     return (<SessionFormContainer />);
   }
@@ -20,8 +29,6 @@ const Home = ( { loggedIn, match } ) => {
 
 
 
-const mapStateToProps = state => {
-  return {loggedIn: Boolean(state.session.currentUser)};
-};
+
 
 export const HomeRoute = withRouter(connect(mapStateToProps,null)(Home)); //I am extremely unhappy calling this HomeRoute, because it doesn't use routes. But I don't know what else to call it.

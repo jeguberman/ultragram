@@ -7,7 +7,7 @@ import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 // import UserContainer from './user/user_container';
 import ImageContainer from './image/image_container';
 import ImageIndexContainer from './image/image_index_container';
-// import { HomeRoute } from '../util/route-util';
+import { HomeRoute } from '../util/route-util';
 
 
 
@@ -26,7 +26,7 @@ const App = () => {
         <Switch>
 
           <Route path="/images/:imageId" component={ImageContainer} />
-          <Route exact path="/" component={ImageIndexContainer} />
+          <Route exact path="/" component={HomeRoute} />
 
         </Switch>
 
