@@ -8,7 +8,7 @@ const fetchImages = () => {
 
 const fetchImage = (imageId) => {
   return(
-    $.get({
+    $.ajax({
       url:`api/images/${imageId}`
     })
   );
@@ -16,9 +16,12 @@ const fetchImage = (imageId) => {
 
 const fetchImageByUser = (userID) => {
   return(
-
-  )
-}
+    $.get({
+      url: `api/images`,
+      data: userID
+    })
+  );
+};
 
 const createImage = (imageData) => {
   return (

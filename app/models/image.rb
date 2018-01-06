@@ -8,4 +8,8 @@ class Image < ApplicationRecord
     class_name: :User,
     foreign_key: :author_id
 
+  def url
+    self.image_url.url
+  end
+
 end

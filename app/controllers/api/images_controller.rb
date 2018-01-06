@@ -2,8 +2,14 @@ class Api::ImagesController < ApplicationController
   # before_action: require_logged_in #I'm like 95% sure this doesn't need to be here, but if I'm wrong, I'd like anybody reviewing my code to see I didn't just forget about it.
 
   def index
-    debugger
-    @images=Image.all.order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort'
+      # debugger
+      if params["author_id"]
+        debugger
+        @images = Image.find_by({author_id: params["author_id"].to_i})
+      else
+        @images=Image.all.order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort'
+      end
+
     return @images
   end
 
@@ -29,7 +35,7 @@ class Api::ImagesController < ApplicationController
 
   def show
     @image = Image.find(params[:id])
-    render 'api/posts/show'
+    render 'api/images/show'
   end
 
   def destroy
