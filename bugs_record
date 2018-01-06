@@ -1,0 +1,15 @@
+bug: images reducer. newState = oldState; new state was taking on action? Solution was to merge oldstate with empty object, which I should have done in the first place, but I couldn't tell you why newState copied action?
+
+bug: merge is not a function in images_reducer.
+solution: used
+import {merge} from 'lodash/merge'
+ but wanted
+ import merge from 'lodash/merge'
+
+ still didn't fix solution. checked lodash docs. merge certainly exists, so ran npm install lodash. must have forgotten initially
+***********************
+ not technically a bug, but data doesn't exist where I think it should
+ WHAT I THINK SHOULD HAPPEN:
+ the image show container, before rendering, ought to fetch the image information and add it to store.state. Because image components props include this slice of state, the update should trigger a rerender
+
+ but even as I type it, that's silly. semantically it can't trigger a rerender because we haven't rendered, but more technically, it can't trigger a rerender because nothing is changing props

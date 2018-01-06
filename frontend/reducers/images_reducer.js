@@ -1,16 +1,24 @@
-import { RECEIVE_IMAGE } from '../actions/image_actions';
-import { merge } from 'lodash/merge';
+import { RECEIVE_IMAGE, RECEIVE_IMAGES, REMOVE_IMAGE } from '../actions/image_actions';
+import  merge  from 'lodash/merge';
 
 const ImageReducer = ( oldState = {}, action ) => {
-  let newState=oldState;
+
+
+  let newState = merge( {}, oldState);
   Object.freeze(oldState);
+
+  debugger
   switch(action.type){
     case RECEIVE_IMAGE:
-    console.console.log("made it this far");
-    newState[action.image.id] = action.image;
-    return newState;
+      newState[action.image.id] = action.image;
+      return newState;
+    case RECEIVE_IMAGES:
+      return action.images;
+    case REMOVE_IMAGE:
+      delete newState[action.imageId];
+      return newState;
     default:
-    return oldState;
+      return oldState;
   }
 };
 

@@ -1,7 +1,6 @@
 {
   "name": "ultragram",
   "private": true,
-
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -17,46 +16,32 @@
     "redux-thunk": "^2.2.0",
     "webpack": "^3.10.0"
   },
-
   "description": "A clone of instagram created as a full stack project for App Academy. I am not affiliated with instagram or facebook. This is intended to be educational. Also it's specifically for earth-shattering supervillains. ULTRAGRAM",
-
   "version": "1.0.0",
   "main": "webpack.config.js",
-
   "directories": {
     "lib": "lib",
     "test": "test"
   },
-
   "devDependencies": {},
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",
     "postinstall": "webpack"
   },
-
   "engines": {
-     "node": "8.7.0",
-     "npm": "5.6.0"
-   },
-
+    "node": "8.7.0",
+    "npm": "5.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeguberman/ultragram.git"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "bugs": {
     "url": "https://github.com/jeguberman/ultragram/issues"
   },
-
-
   "homepage": "https://github.com/jeguberman/ultragram#readme"
-
-
-
 }

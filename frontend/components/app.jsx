@@ -4,7 +4,8 @@ import React from 'react';
 import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 
 import SessionFormContainer from './session_form/session_form_container';
-import UserContainer from './user/user_container';
+// import UserContainer from './user/user_container';
+import ImageContainer from './image/image_container';
 import { HomeRoute } from '../util/route-util';
 
 
@@ -16,10 +17,12 @@ const App = () => {
         <Route exact path="/users" render={
           ()=>(<Redirect push to="/" />)
         } />
+      <Route exact path="/images" render={
+          ()=>(<Redirect push to="/" />)
+        } />
 
         <Switch>
-
-          <Route path="/users/5" component={UserContainer} />
+          <Route path ="/images/:imageId" component={ImageContainer} />
           <Route exact path="/" component={SessionFormContainer} />
 
         </Switch>
@@ -31,6 +34,8 @@ const App = () => {
 
 
 export default App;
+
+// <Route path="/users/:id" component={UserContainer} />
 
 // <Route exact path="/users" render={
 //     ()=>(<Redirect push to="/" />)

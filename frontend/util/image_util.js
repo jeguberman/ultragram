@@ -1,29 +1,29 @@
-const fetchImages = () => {
+export const fetchImages = () => {
   return(
-    $.get({
+    $.ajax({
       url:'api/images'
     })
   );
 };
 
-const fetchImage = (imageId) => {
+export const fetchImage = (imageId) => {
   return(
-    $.get({
+    $.ajax({
       url:`api/images/${imageId}`
     })
   );
 };
 
-const fetchImageByUser = (userID) => {
+export const fetchImageByUser = (userID) => {
   return(
-    $.get({
+    $.jax({
       url: `api/images`,
       data: userID
     })
   );
 };
 
-const postImage = (imageData) => {
+export const postImage = (imageData) => {
   return (
     $.post({
       url:`api/images`
@@ -31,7 +31,7 @@ const postImage = (imageData) => {
   );
 };
 
-const updateImage = (imageData) => {
+export const updateImage = (imageData) => {
   return (
     $.ajax({
       url:`api/images/${imageData.id}`,
@@ -40,7 +40,7 @@ const updateImage = (imageData) => {
   );
 };
 
-const deleteImage = (imageId) => {
+export const deleteImage = (imageId) => {
   return (
     $ajax({
       url:`api/images/${imageId}`,
