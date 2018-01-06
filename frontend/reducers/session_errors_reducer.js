@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS } from '../actions/session_actions';
 const SessionErrorsReducer = (oldState = null, action) => {
-  debugger
+
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
 

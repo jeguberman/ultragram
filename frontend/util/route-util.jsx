@@ -24,4 +24,4 @@ const mapStateToProps = state => {
   return {loggedIn: Boolean(state.session.currentUser)};
 };
 
-export const HomeRoute = withRouter(connect(mapStateToProps)(Home)); //I am extremely unhappy calling this HomeRoute, because it doesn't use routes. But I don't know what else to call it.
+export const HomeRoute = withRouter(connect(mapStateToProps,null)(Home)); //I am extremely unhappy calling this HomeRoute, because it doesn't use routes. But I don't know what else to call it.

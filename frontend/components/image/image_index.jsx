@@ -1,14 +1,41 @@
 import React from 'react';
 
 class ImageIndex extends React.Component{
-  construcotr(props){
+  constructor(props){
     super(props);
-    this.state = props.images;
+    this.state = {images: props.images};
+  }
+
+  componentWillMount(){
+    // debugger
+    this.props.fetchImages();
+  }
+
+  componentDidMount(){
+    // debugger
+  }
+
+  componentWillReceiveProps(){
+    // debugger
+  }
+
+  imageList(){
+    return (
+      this.props.images.map(
+        (image) => {
+          return (<li key={image.id}><img src={image.image_url}/></li>);
+        }
+      )
+    );
   }
 
 
-render(){
-  return (<div>image index</div>);
-}
+  render(){
+
+    // debugger
+    return (<ul>{this.imageList()}</ul>);
+  }
 
 }
+
+export default ImageIndex;

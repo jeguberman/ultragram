@@ -59,6 +59,7 @@ A clone of instagram created as a full stack project for App Academy. I am not a
   * images front end cycle
   * migration server size null: false validation on image_url
 
+## January 6th 2018
 
 
 
