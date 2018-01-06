@@ -9,8 +9,8 @@ export const createUser = user => dispatch =>{
     (rUser) => (
       dispatch(receiveCurrentUser(rUser))
     ),
-    err => (
-      dispatch(receiveErrors(err.responseJSON))
+    error => (
+      dispatch(receiveErrors(error.responseJSON))
     )
   );
 };
@@ -25,16 +25,14 @@ export const logout = () => dispatch => (
 );
 
 export const login = user => dispatch => {
-// debugger
-console.log('login thunk hit')
   return (
     APIUtil.login(user)
     .then(
       user => (
         dispatch(receiveCurrentUser(user))
       ),
-      err => (
-        dispatch(receiveErrors(err.responseJSON))
+      error => (
+        dispatch(receiveErrors(error.responseJSON))
       )
     )
   );
@@ -46,7 +44,6 @@ export const receiveErrors = errors => ({
 });
 
 export const clearErrors = () =>{
-  // debugger
   return(
     dispatch({
       type: RECEIVE_SESSION_ERRORS,
