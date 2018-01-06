@@ -4,11 +4,10 @@ import { withRouter } from 'react-router';
 import { fetchImage } from '../../actions/image_actions.js';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
+  
   return {
     id: ownProps.match.params.imageId,
     images: state.images
-
   };
 };
 

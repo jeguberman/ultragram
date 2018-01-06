@@ -14,4 +14,11 @@ import {merge} from 'lodash/merge'
 
  but even as I type it, that's silly. semantically it can't trigger a rerender because we haven't rendered, but more technically, it can't trigger a rerender because nothing is changing props
 
-solution: I wasn't fetching properly. For many reasons, mainly typos. I did what you always do, throw debuggers and breakpoints at every part of the path I could think of. Eventually, I bound my action creators to the window to see if my ajax requests were working. They weren't, but then neither were my action creators, nor were the actions themselves correctly made. My reducer was picture perfect, but it still received the wrong commands. Now I have to clean up the mess I made while cleaning up the mess I made
+solution: I wasn't fetching properly. For many reasons, mainly typos. I did what you always do, throw s and breakpoints at every part of the path I could think of. Eventually, I bound my action creators to the window to see if my ajax requests were working. They weren't, but then neither were my action creators, nor were the actions themselves correctly made. My reducer was picture perfect, but it still received the wrong commands. Now I have to clean up the mess I made while cleaning up the mess I made
+
+image bug part 2: the buggening
+
+No the original problem is still there, but at least now I know it can THEORETICALLY render an image. I mean I SAW it. I SAW the taijitu.
+
+  * it seems somewhere along the way of fixing this mess I created a mess in my session errors slice
+  * error message referenced an old name for a column on the users table. updated that in json.jbuilder

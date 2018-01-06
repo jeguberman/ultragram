@@ -6,6 +6,7 @@ import merge from 'lodash/merge';
 // }); //I'm copying this from the benchbnb solutions, this is clever
 
 const sessionReducer = ( oldState = {currentUser:null}, action ) => {
+
   let newState = merge({},oldState);
   Object.freeze(oldState);
 
