@@ -7,7 +7,6 @@ const ImageReducer = ( oldState = {}, action ) => {
   let newState = merge( {}, oldState);
   Object.freeze(oldState);
 
-  debugger
   switch(action.type){
     case RECEIVE_IMAGE:
       newState[action.image.id] = action.image;

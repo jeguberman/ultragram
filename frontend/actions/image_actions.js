@@ -15,15 +15,12 @@ export const fetchImages = () => dispatch => {
 };
 
 export const fetchImage = (id) => dispatch => {
-  debugger
   ImageAPI.fetchImage(id)
   .then(
     (image) => {
-      debugger
       return (dispatch(receiveImage(image)));
     },
     (error) => {
-      debugger
       return (dispatch(receiveErrors(error.responseJSON)));
     }
   );

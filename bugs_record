@@ -13,3 +13,5 @@ import {merge} from 'lodash/merge'
  the image show container, before rendering, ought to fetch the image information and add it to store.state. Because image components props include this slice of state, the update should trigger a rerender
 
  but even as I type it, that's silly. semantically it can't trigger a rerender because we haven't rendered, but more technically, it can't trigger a rerender because nothing is changing props
+
+solution: I wasn't fetching properly. For many reasons, mainly typos. I did what you always do, throw debuggers and breakpoints at every part of the path I could think of. Eventually, I bound my action creators to the window to see if my ajax requests were working. They weren't, but then neither were my action creators, nor were the actions themselves correctly made. My reducer was picture perfect, but it still received the wrong commands. Now I have to clean up the mess I made while cleaning up the mess I made
