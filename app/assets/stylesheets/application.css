@@ -28,8 +28,6 @@
   margin-right:auto;
   padding: 60px;
 
-  /*background-color: green;*/
-
 }
 
  input, textarea, .session-button, .demo-user, .session-input::placeholder, .orElement {
@@ -39,6 +37,7 @@
 Link, button, .session-button {
   cursor: pointer;
 }
+
 .header-buffer{
   height: 76px;
 }

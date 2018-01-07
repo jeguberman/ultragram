@@ -104,3 +104,11 @@ No the original problem is still there, but at least now I know it can THEORETIC
 * put the header buffer back in, set body margin to 60px as per instagram website. This things is gorgeous. Let's move on
 
 ### resolved
+<!--  -->
+
+<Signout className="nav-tool nav-user user"
+  onClick={this.props.logout}/>
+
+<Link to="/">
+  <Camera className="nav-tool nav-camera" />
+</Link>

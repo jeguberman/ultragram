@@ -70,6 +70,8 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
   * began breaking css into files. Still don't understand how to ensure a certain order on stylesheets. included a reset sheet from pokedex solutions
 
+  *
+
 
 
 
@@ -166,5 +168,4 @@ Resources
 
 Icons:
 https://github.com/gorangajic/react-icons
-But this is more searchable https://semantic-ui.com/elements/icon.html
-Note that these are not the same, merely similar databases of common icons.
+But this is more searchable https://gorangajic.github.io/react-icons/fa.html

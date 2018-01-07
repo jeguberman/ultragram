@@ -60,3 +60,36 @@
 .nav-logo {
   font-size: 25px;
 }
+
+.nav-user-tools{
+display: flex;
+/*flex-direction: column;*/
+width: 132px;
+justify-content: space-between;
+align-items: center;
+}
+
+
+
+.nav-user {
+  width: 24px;
+  height: 24px;
+  background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
+background-position-x: -391px;
+background-position-y: -130px;
+}
+
+.nav-camera {
+    background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
+    background-position: -52px -380px;
+    width: 24px;
+    height: 24px;
+}
+
+.nav-signout {
+    background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
+    background-position: -316px -315px;
+    width: 24px;
+    height: 24px;
+    border: none;
+}

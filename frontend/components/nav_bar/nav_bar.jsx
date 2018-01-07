@@ -31,17 +31,18 @@ class NavBarComponent extends React.Component{
     return (
       <div className="nav-user-tools">
 
-        <Signout className="nav-tool nav-user user"
-          onClick={this.props.logout}/>
+        <button className="nav-tool nav-signout"
+          onClick={this.props.logout}>
+        </button>
 
-        <Link className="nav-tool" to="/">
-          <Camera />
+        <Link to="/">
+          <div className="nav-tool nav-camera"></div>
         </Link>
 
-        <Link to="/"
-          className="nav-tool">
-          <User />
+        <Link to="/">
+          <div className="nav-tool  nav-user user"></div>
         </Link>
+
 
       </div>
     );
