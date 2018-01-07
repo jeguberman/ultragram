@@ -174,3 +174,11 @@
   padding:0;
   max-width:100%;
 }
+
+.session-nav-link{
+  color: #3897f0;
+}
+
+/*.session-error-item{
+  color: red;
+}*/

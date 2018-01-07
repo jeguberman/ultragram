@@ -47,14 +47,15 @@ class SessionForm extends React.Component{
 
   listErrors(){
     if(this.props.errors){
+
       const errorList = this.props.errors.map(
-        (error, idx) => {
-          return <li key={idx} className="session-error-item">{error}</li>;
-        }
+        (error, idx) => {return <li key={idx}         className="session-error-item error">{error}</li>;}
       );
+
       return(
         <ul className="session-errors">{errorList}</ul>
       );
+
     }else{
       return null;
     }
@@ -167,14 +168,14 @@ class SessionForm extends React.Component{
       return(
         <div className="session-nav">
           Have an account?&nbsp;
-          <a href="#"  onClick={this.changeFormType}>Login</a>
+          <a className="session-nav-link" href="#"  onClick={this.changeFormType}>Login</a>
         </div>
       );
     }else{
       return(
         <div className="session-nav">
           Don't have an account?&nbsp;
-          <a href="#" onClick={this.changeFormType}>Signup</a>
+          <a className="session-nav-link" href="#" onClick={this.changeFormType}>Signup</a>
         </div>
       );
     }

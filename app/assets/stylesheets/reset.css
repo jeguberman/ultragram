@@ -18,6 +18,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
   text-decoration: none;
   color: #262626;
+
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
 :focus {
@@ -34,5 +36,5 @@ ol, ul {
 }
 
 /*
-copied from pokedex. Removed anything I didn't think I'd need or understand.
+copied from pokedex. Removed anything I didn't think I'd need or didn't understand.
 */

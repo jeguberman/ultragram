@@ -74,11 +74,14 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
 ## January 7th
 ### TODO
-  * Auth Routes
+  * Auth Routes DONE
   * fix styling on log in page
   * at least 1 more image seed
-  * upload to heroku
+  * upload to heroku DONE
   * strong push into images
+
+
+
 
 
 
