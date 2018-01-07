@@ -7,6 +7,7 @@ import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 // import UserContainer from './user/user_container';
 import ImageContainer from './image/image_container';
 import ImageIndexContainer from './image/image_index_container';
+import NavBarContainer from './nav_bar/nav_bar_container';
 import { HomeRoute } from '../util/route-util';
 
 
@@ -14,7 +15,13 @@ import { HomeRoute } from '../util/route-util';
 const App = () => {
 
   return (
-    <div>
+    <div className="top-level">
+
+      <div className="header-component">
+        <NavBarContainer />
+      </div>
+
+      <div className="body-component">
 
       <Route exact path="/users" render={
           ()=>(<Redirect push to="/" />)
@@ -23,16 +30,19 @@ const App = () => {
           ()=>(<Redirect push to="/" />)
         } />
 
-        <Switch>
-
-          <Route path="/images/:imageId" component={ImageContainer} />
-          <Route exact path="/" component={HomeRoute} />
-
-        </Switch>
+      <Switch>
+        <Route path="/images/:imageId" component={ImageContainer} />
+        <Route exact path="/" component={HomeRoute} />
+      </Switch>
+      </div>
 
     </div>
   );
 };
+
+// const App = () => {
+//   return(<div>you reached the App component</div>)
+// }
 
 
 

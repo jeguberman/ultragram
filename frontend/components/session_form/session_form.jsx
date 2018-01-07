@@ -83,7 +83,7 @@ class SessionForm extends React.Component{
 
         <div className="session-container">
           <form className="session-form" onSubmit={this.handleSubmit}>
-            <h2 className="logo" > Ultragram</h2>
+            <h2 className="logo session-logo" > Ultragram</h2>
 
 
             {this.fullname()}
@@ -159,9 +159,7 @@ class SessionForm extends React.Component{
 
 
 
-  logoutButton(){
-    return(<button onClick={this.props.logout}>Logout: Also, you shouldn't be seeing this</button>);
-  }
+
 
   navLink(){
 

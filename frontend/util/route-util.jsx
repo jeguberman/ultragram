@@ -4,6 +4,7 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 
 import SessionFormContainer from '../components/session_form/session_form_container';
 import NavBarContainer from '../components/nav_bar/nav_bar_container';
+import ImageIndexContainer from '../components/image/image_index_container';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,7 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 const Home = ( { loggedIn } ) => {
 
   if(loggedIn){
-    return (<NavBarContainer />);
+    return (<ImageIndexContainer />);
   }else{
     return (<SessionFormContainer />);
   }

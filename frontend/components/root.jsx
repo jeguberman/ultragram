@@ -16,4 +16,8 @@ const Root = ({ store }) => {
   );
 };
 
+// const Root = ({store}) => {
+//   return(<div>you reached the Root component</div>)
+// }
+
 export default Root;

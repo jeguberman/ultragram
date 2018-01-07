@@ -16,6 +16,7 @@
 
 
 
+
 .session-image-container{
   height: 460px;
   width: 624px;
@@ -97,7 +98,7 @@
 
   box-sizing: border-box;
   border: 1px solid #efefef;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: #fafafa;
   margin-top: 5px;
   font-size: 12px;
@@ -114,8 +115,7 @@
 }
 
 .session-input:focus{
-  outline-width: 0;
-  border: 1px solid #d0d0d0;
+  outline: 1px solid #d0d0d0;
 
 }
 
@@ -147,22 +147,24 @@
   padding-right:20px;
   font-size: 10px;
   color: #999;
-
   font-weight: 600;
   line-height: 15px;
+}
+
+.session-logo{
+  font-size: 40px;
+  margin-bottom: 5%;
+  line-height: normal;
 }
 
 
 .demo-user{
   font-size: 12px;
-
   color: #385185;
   text-decoration: none;
   display: block;
   align-items: center;
   text-align: center;
-
-
 }
 
 .session-errors{
