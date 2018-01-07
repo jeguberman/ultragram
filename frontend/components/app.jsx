@@ -8,7 +8,7 @@ import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 import ImageContainer from './image/image_container';
 import ImageIndexContainer from './image/image_index_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
-import { HomeRoute } from '../util/route-util';
+import { HomeRoute, AuthRoute } from '../util/route-util';
 
 
 
@@ -18,7 +18,8 @@ const App = () => {
     <div className="top-level">
 
       <div className="header-component">
-        <NavBarContainer />
+
+        <AuthRoute path="/" component={NavBarContainer} />
       </div>
 
       <div className="body-component">

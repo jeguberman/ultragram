@@ -70,7 +70,16 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
   * began breaking css into files. Still don't understand how to ensure a certain order on stylesheets. included a reset sheet from pokedex solutions
 
-  *
+  * finished styling navba aroudn 1:15. Want to nail auth routes but... I should probably go to bed
+
+## January 7th
+### TODO
+  * Auth Routes
+  * fix styling on log in page
+  * at least 1 more image seed
+  * upload to heroku
+  * strong push into images
+
 
 
 

@@ -105,10 +105,3 @@ No the original problem is still there, but at least now I know it can THEORETIC
 
 ### resolved
 <!--  -->
-
-<Signout className="nav-tool nav-user user"
-  onClick={this.props.logout}/>
-
-<Link to="/">
-  <Camera className="nav-tool nav-camera" />
-</Link>

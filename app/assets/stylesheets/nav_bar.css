@@ -62,11 +62,10 @@
 }
 
 .nav-user-tools{
-display: flex;
-/*flex-direction: column;*/
-width: 132px;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  width: 132px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 

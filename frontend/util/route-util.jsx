@@ -14,6 +14,17 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
+const Auth = ({ loggedIn, component: Component, path }) => {
+  return (
+    <Route path={path} render={(props)=>{
+      if(loggedIn){
+        return <Component {...props} />
+      }else{
+        return <Redirect to="/" />
+      }
+    }}/>
+  )
+};
 
 const Home = ( { loggedIn } ) => {
 
@@ -29,6 +40,6 @@ const Home = ( { loggedIn } ) => {
 
 
 
-
+export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
 
 export const HomeRoute = withRouter(connect(mapStateToProps,null)(Home)); //I am extremely unhappy calling this HomeRoute, because it doesn't use routes. But I don't know what else to call it.
