@@ -10,7 +10,13 @@ class ImageShowComponent extends React.Component{
   }
 
   componentWillMount(){
+    // debugger
     this.props.fetchImage(this.state.id);
+    // this.props.fetchUser(this.)
+  }
+
+  componentDidMount(){
+    // debugger
   }
 
   renderImage(){
