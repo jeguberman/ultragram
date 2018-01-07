@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
 import SessionFormContainer from '../components/session_form/session_form_container';
-import ImageIndex from '../components/image/image_index_container';
+import NavBarContainer from '../components/nav_bar/nav_bar_container';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,10 +15,9 @@ const mapStateToProps = (state, ownProps) => {
 
 
 const Home = ( { loggedIn } ) => {
-  // console.log(match);
 
   if(loggedIn){
-    return (<ImageIndex />);
+    return (<NavBarContainer />);
   }else{
     return (<SessionFormContainer />);
   }

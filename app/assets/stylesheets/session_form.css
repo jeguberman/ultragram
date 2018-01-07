@@ -1,0 +1,174 @@
+
+.session-view{
+  display: flex;
+  box-sizing: content-box;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
+  /*width: 100%;*/
+
+
+  /*border: 1px solid green;*/
+}
+
+
+
+.session-image-container{
+  height: 460px;
+  width: 624px;
+  display: inline-block;
+  width: auto;
+
+  /*border: 1px solid blue;
+  background-color: pink;*/
+}
+
+.phoneImage-container{
+  position: relative;
+}
+
+.phoneImage{
+  position: absolute;
+}
+
+.homePhones{
+  display: inline-block;
+  /*resize: none;*/
+  height: 100%
+
+  /*border: 1px solid red;*/
+}
+
+
+.session-container{
+  position: relative;
+
+  max-width: 250px;
+  /*width: 250px;*/
+  margin: 3px;
+
+  /*border: 1px solid blue;*/
+
+
+}
+
+.session-form{
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top: 12%;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+
+}
+
+.session-nav{
+  box-sizing: border-box;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 30%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  width: 100%;
+
+  background-color: white;
+  border: 1px solid #e6e6e6;
+
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+
+
+}
+
+
+
+
+
+
+
+.session-input {
+
+  box-sizing: border-box;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  background-color: #fafafa;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: light;
+  padding: 2px;
+  padding-bottom: 3px;
+  width: 100%;
+  /*height: 18px;*/
+}
+
+.session-input::placeholder {
+  color: #b3b3b3;
+  font-weight: 10;
+}
+
+.session-input:focus{
+  outline-width: 0;
+  border: 1px solid #d0d0d0;
+
+}
+
+.session-button{
+  background: #3897f0;
+  border-color: #3897f0;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 2px;
+  padding: 4px;
+
+}
+
+.orBorder {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px 15px 0px;
+}
+
+.orLine{
+  border-top: 1px solid #c7c7c7;
+  flex-grow: 1;
+  height: 0;
+
+}
+
+.orElement{
+  padding-left:20px;
+  padding-right:20px;
+  font-size: 10px;
+  color: #999;
+
+  font-weight: 600;
+  line-height: 15px;
+}
+
+
+.demo-user{
+  font-size: 12px;
+
+  color: #385185;
+  text-decoration: none;
+  display: block;
+  align-items: center;
+  text-align: center;
+
+
+}
+
+.session-errors{
+  list-style: none;
+  font-size: 13px;
+  color: red;
+  padding:0;
+  max-width:100%;
+}

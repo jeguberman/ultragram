@@ -61,10 +61,12 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
 ## January 6th 2018
   * So I had made a mess of my front end routing, but it should be mostly cleared now.
+  
   * The image index is rendering, but it's _literally_ just a list of indexes. The reason this was worked on at all is because I didnt' want to abandon the paperclip lesson at the point I was at. I felt it would cost me more time in the long run. Now I feel that I am at a good stopping point.
+
   * because front end routing is essentially working (to my current needs), I am switching back to my auth branch to create the nav bar which will render on all pages when logged in. After the nav bar is done, which I assume will be well after the program at my current rate, I will swap the image index OUT and the nav bar IN at the HomeRoute util component. All other components will be put behind a **proper** AuthRoute component.
 
-
+  * I never updated my wireframes. This navbar will look very differently from it's wireframe. There shan't be a search bar at all, that will be a bonus feature. the compass shall be a logout button, the little person will still be a User Profile page. The heart shall be replaced by a camera and link to the photo upload form. Thanks to justin shieh of the oct 2017 cohort and his MemoryLane clone for this idea. Because most of those components aren't actually implented yet, they shall only be log out buttons when I upload this to heroku. I want to upload to heroku by noon on sunday.
 
 
 
