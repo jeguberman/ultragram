@@ -7,6 +7,7 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 export const fetchImages = () => dispatch => {
+
   ImageAPI.fetchImages()
   .then(
     (images) => (dispatch(receiveImages(images))),
@@ -15,6 +16,7 @@ export const fetchImages = () => dispatch => {
 };
 
 export const fetchImage = (id) => dispatch => {
+
   ImageAPI.fetchImage(id)
   .then(
     (image) => {

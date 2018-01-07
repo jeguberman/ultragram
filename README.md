@@ -75,10 +75,16 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 ## January 7th
 ### TODO
   * Auth Routes DONE
-  * fix styling on log in page
-  * at least 1 more image seed
+  * fix styling on log in page DONE
+  * at least 1 more image seed DONE
   * upload to heroku DONE
   * strong push into images
+
+### notes
+  * once again my wireframes are astonishingly bad. I'd like to say instagram just changed overnight, but mostly I believe I err'd in thinking the feed image views and single image views were similar. Truly they are actually quite different. Fortunately, the second tier sub components are still largely the same, internally, they're just in a different order of the master container. I'll be consulting instagram's website for a more accurate layout over my own wireframes, but still using my wireframes for the sub components themselves.
+
+  * for now the footer will be the image caption, but later this should be replaced with social elements. 
+
 
 
 

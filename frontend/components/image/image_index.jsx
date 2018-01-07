@@ -7,16 +7,7 @@ class ImageIndex extends React.Component{
   }
 
   componentWillMount(){
-    // debugger
     this.props.fetchImages();
-  }
-
-  componentDidMount(){
-    // debugger
-  }
-
-  componentWillReceiveProps(){
-    // debugger
   }
 
   imageList(){
@@ -31,8 +22,6 @@ class ImageIndex extends React.Component{
 
 
   render(){
-
-    // debugger
     return (<ul>{this.imageList()}</ul>);
   }
 

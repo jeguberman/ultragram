@@ -104,4 +104,34 @@ No the original problem is still there, but at least now I know it can THEORETIC
 * put the header buffer back in, set body margin to 60px as per instagram website. This things is gorgeous. Let's move on
 
 ### resolved
-<!--  -->
+
+
+## Image show, or don't, that's cool too:
+### problem: Image show isn't showing the image. error is "cannot read property of image_url of undefined.". Further, react logger is showing the "receive images" action instead of "receive image".
+
+###methods
+* I'll start by checking my action creators. I'm trying to see why the reducer is receiving the wrong action.
+* those look ok, so I'll put a debugger in the fetchImage action thunk so see if we're even hitting it
+* we aren't, nor are we hitting the fetch images, so I'll check the image show container, what action AM I hitting?
+* the container looks ok, I'll make sure I'm calling the right action in the component
+* I wasn't. I was calling "fetchPost". This is happening a lot. If I have an idea I'll check previous clones from other cohorts to see if others have tried something similar. There are many downsides to this, one of which is, I'll read what they wrote, and the words will stick in my head. However, this still isn't solving the problem:
+* I'm going to look at my image index, which IS correctly rendering. I have a feeling the problem here is my manipulation of the component with lifecycle functions, a problem I struggled with in the index.
+* I was in fact using the wrong lifecycle function, but the problem still exists. Though the image at least exists in state right now.
+* I'm going to put a breakpoint in the constructor and look at the props I'm receiving. I'll put another one in render.
+* verily, I was not correctly calling data from the state object.
+
+### resolved
+
+## only there's no image now
+### problem: no console errors but the image we're getting appears to be "broken". I'm not sure what the word for it is. There's just an icon indicating that an image SHOULD be here.
+
+### methods
+* I'm going to start by inspectin the properties of the image, see if the url is correct
+* src is (unknown). So why is this not getting it's source? Let's put a breakpoint back in the render.
+* true enough, image_url is undefined. And why shouldn't it be? It's a custom property in state. So first I'll undo that.
+* This seems to be merely a matter of being smarter about setting state at the constructor OR at component will receive props. I might need to tinker with the container as well, we'll see:
+* first I will look at props when render retriggers
+* well there's my image, let me try changing how I call it in render
+* this isn't working. I'm going to play with a few things. Because I want to achieve a kind of mental flow I won't be recording everything I try here
+...
+* Current solution: set image to images[id] at mapStateToProps, and change how I call the image at render. I also have an if statement in my render, which I'm less than comfortable with, but as I build the actual component with various methods, that will be moved out, so if it's actually a problem, soon it won't be.
