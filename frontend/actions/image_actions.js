@@ -60,10 +60,12 @@ export const deleteImage = (imageId) => dispatch => {
   );
 };
 
-const receiveImages = (images) => {
+const receiveImages = ({images, authors}) => {
+  // debugger
   return {
     type: RECEIVE_IMAGES,
-    images
+    images,
+    authors
   };
 };
 

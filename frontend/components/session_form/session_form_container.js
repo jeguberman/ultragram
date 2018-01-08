@@ -12,7 +12,6 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps ) => {
-
   return{
     login: (userData) => dispatch(login(userData)),
     logout: () => dispatch(logout()),//delete

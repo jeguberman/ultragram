@@ -2,11 +2,10 @@ class Api::ImagesController < ApplicationController
   # before_action: require_logged_in #I'm like 95% sure this doesn't need to be here, but if I'm wrong, I'd like anybody reviewing my code to see I didn't just forget about it.
 
   def index
-      if params["author_id"]
-        @images = Image.find_by({author_id: params["author_id"].to_i})
-      else
-        @images=Image.all..includes(:authors).order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort', #thanks to justin shieh for 'includes'
-      end
+    # debugger
+      # @images=Image.all.order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort',
+
+      @images=Image.all.includes(:author).order!('created_at DESC')#thanks to justin shieh for 'includes'
 
     return @images
   end
@@ -49,3 +48,14 @@ class Api::ImagesController < ApplicationController
   end
 
 end
+
+
+# def index
+#     if params["author_id"]
+#       @images = Image.find_by({author_id: params["author_id"].to_i})
+#     else
+#       @images=Image.all.includes(:authors).order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort', #thanks to justin shieh for 'includes'
+#     end
+#
+#   return @images
+# end

@@ -26,7 +26,8 @@ export const fetchImageByUser = (userID) => {
 export const postImage = (imageData) => {
   return (
     $.post({
-      url:`api/images`
+      url:`api/images`,
+      data: imageData
     })
   );
 };

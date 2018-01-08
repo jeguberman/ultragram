@@ -121,3 +121,14 @@ No the original problem is still there, but at least now I know it can THEORETIC
 * verily, I was not correctly calling data from the state object.
 
 ### resolved
+
+## I mean it isn't a bug so much as I don't understand
+### Problem. Whenever I fetch information for an image, I also want to fetch information on the author. On individual views, this isn't so much a problem, whenever I access a single image through a click event, I already have the image data. But I'll need author info for every image in the index, I can't be making an http request for every single image. I want to get all the authors at once, either with the image requests or as a separate call with an array of authors.
+
+### I've already tried a few things, and now the challenge has hit a point where I think I should make a record. Most of my efforts were disorganized, and will likely come up again.
+
+### methods:
+* first of all, I'm going to hit the button and call a TA. It might be a very long time before one comes.
+* I'm going to try and curate the data with jbuilder, using pokedex as a guide.
+* you know what... while I'm here I should properly extract the image_url with asset_path
+* a TA helped me better understand the structure of data being curated by jbuilder, I'm going to clean up my code, this should help me understand it better, then I'll finish my report

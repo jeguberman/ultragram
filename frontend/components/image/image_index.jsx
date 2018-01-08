@@ -3,23 +3,23 @@ import FeedItemContainer from './feed_item_container';
 
 class ImageIndex extends React.Component{
   constructor(props){
-
     super(props);
   }
 
   componentWillMount(){
 
     this.props.fetchImages();
-    // this.props.fetchUsersByIds(this.props.authorIds);
+
   }
 
   imageList(){
     return (
       this.props.images.map(
         (image) => {
+
           return (<li key={image.id}>
             <div>feedItem</div>
-            <FeedItemContainer image={image}/>
+            // <FeedItemContainer image={image}/>
           </li>);
         }
       )
