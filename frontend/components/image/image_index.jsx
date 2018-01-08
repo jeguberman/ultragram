@@ -4,6 +4,7 @@ import FeedItemContainer from './feed_item_container';
 class ImageIndex extends React.Component{
   constructor(props){
     super(props);
+
   }
 
   componentWillMount(){
@@ -11,8 +12,9 @@ class ImageIndex extends React.Component{
   }
 
   imageList(){
+
     return (
-      this.props.images.map(
+      this.props.images.reverse().map(
         (image) => {
 
           return (<li key={image.id}>

@@ -7,6 +7,7 @@ import { authorsOfImages } from '../../util/selectors';
 const mapStateToProps = (state, ownProps) =>{
   let images = Object.values(state.images);
   let authorIds = authorsOfImages(images);
+  
 
   return {
     images,

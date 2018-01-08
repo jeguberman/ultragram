@@ -3,9 +3,7 @@ class Api::ImagesController < ApplicationController
 
   def index
 
-      # @images=Image.all.order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort',
-
-      @images=Image.all.includes(:author).order!('created_at DESC')#thanks to justin shieh for 'includes'
+      @images=Image.all.includes(:author).order(created_at: :desc)
 
     return @images
   end
