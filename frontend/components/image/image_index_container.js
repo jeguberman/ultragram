@@ -1,20 +1,23 @@
 import {connect} from 'react-redux';
 import ImageIndexComponent from './image_index';
 import { fetchPosts } from '../../actions/image_actions.js';
-import { fetchUser } from '../../actions/user_actions';
+import { fetchUsersByIds } from '../../actions/user_actions';
+import { authorsOfImages } from '../../util/selectors';
 
 const mapStateToProps = (state, ownProps) =>{
   let images = Object.values(state.images);
+  let authorIds = authorsOfImages(images);
 
   return {
-    images
+    images,
+    authorIds
   };
 };
 
 const mapDisptchToProps = (dispatch, ownProps) => {
   return {
     fetchImages: ()=> dispatch(fetchImages()),
-    fetchUser: (id)=> dispatch(fetchUser(id))
+    fetchUsersByIds: (id)=> dispatch(fetchUsersByIds(id))
   };
 };
 

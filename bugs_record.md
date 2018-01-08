@@ -121,17 +121,3 @@ No the original problem is still there, but at least now I know it can THEORETIC
 * verily, I was not correctly calling data from the state object.
 
 ### resolved
-
-## only there's no image now
-### problem: no console errors but the image we're getting appears to be "broken". I'm not sure what the word for it is. There's just an icon indicating that an image SHOULD be here.
-
-### methods
-* I'm going to start by inspectin the properties of the image, see if the url is correct
-* src is (unknown). So why is this not getting it's source? Let's put a breakpoint back in the render.
-* true enough, image_url is undefined. And why shouldn't it be? It's a custom property in state. So first I'll undo that.
-* This seems to be merely a matter of being smarter about setting state at the constructor OR at component will receive props. I might need to tinker with the container as well, we'll see:
-* first I will look at props when render retriggers
-* well there's my image, let me try changing how I call it in render
-* this isn't working. I'm going to play with a few things. Because I want to achieve a kind of mental flow I won't be recording everything I try here
-...
-* Current solution: set image to images[id] at mapStateToProps, and change how I call the image at render. I also have an if statement in my render, which I'm less than comfortable with, but as I build the actual component with various methods, that will be moved out, so if it's actually a problem, soon it won't be.

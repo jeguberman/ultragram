@@ -10,7 +10,7 @@ class ImageIndex extends React.Component{
   componentWillMount(){
 
     this.props.fetchImages();
-    // this.props.fetchUser()
+    // this.props.fetchUsersByIds(this.props.authorIds);
   }
 
   imageList(){

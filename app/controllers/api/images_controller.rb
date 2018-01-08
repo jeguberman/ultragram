@@ -5,7 +5,7 @@ class Api::ImagesController < ApplicationController
       if params["author_id"]
         @images = Image.find_by({author_id: params["author_id"].to_i})
       else
-        @images=Image.all.order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort'
+        @images=Image.all..includes(:authors).order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort', #thanks to justin shieh for 'includes'
       end
 
     return @images
@@ -32,7 +32,7 @@ class Api::ImagesController < ApplicationController
   end
 
   def show
-    
+
     @image = Image.find(params[:id])
     render 'api/images/show'
   end
