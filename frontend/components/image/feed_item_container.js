@@ -1,7 +1,7 @@
 import FeedItemComponent from './feed_item_component';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { fetchImage } from '../../actions/image_actions.js';
+import { fetchUser } from '../../actions/user_actions';
 
 const mapStateToProps = (state, {image}) => {
 
@@ -12,7 +12,8 @@ const mapStateToProps = (state, {image}) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchImage: (id) => dispatch(fetchImage(id))
+    fetchUser: (id) => dispatch(fetchUser(id)),
+
   };
 };
 

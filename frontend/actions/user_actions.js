@@ -7,12 +7,13 @@ export const fetchUser = (id) => dispatch => {
   return (
     UserAPI.fetchUser(id).then(
       (user) => dispatch(receiveUser(user)),
-      (errors) => dispatch(receiveErrors(errors))
+      (errors) => dispatch(receiveErrors(errors.responseJSON))
     )
   );
 };
 
 const receiveUser = (user) => {
+
   return {
     type: RECEIVE_USER,
     user
@@ -20,6 +21,7 @@ const receiveUser = (user) => {
 };
 
 const receiveErrors = (errors) => {
+
   return {
     type: RECEIVE_USERS_ERRORS,
     errors

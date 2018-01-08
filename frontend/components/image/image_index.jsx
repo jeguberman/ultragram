@@ -3,13 +3,14 @@ import FeedItemContainer from './feed_item_container';
 
 class ImageIndex extends React.Component{
   constructor(props){
-    debugger
+
     super(props);
   }
 
   componentWillMount(){
-    this.props.fetchImages();
 
+    this.props.fetchImages();
+    // this.props.fetchUser()
   }
 
   imageList(){

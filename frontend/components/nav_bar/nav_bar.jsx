@@ -11,6 +11,10 @@ class NavBarComponent extends React.Component{
 
   }
 
+  componentDidMount(){
+    this.props.fetchUser(this.props.currentUserId)
+  }
+
   navBranding(){
     return(
       <Link to="/" className="nav-branding">

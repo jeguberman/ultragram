@@ -58,7 +58,7 @@ class FeedItemComponent extends React.Component{
 
 
   render(){
-    debugger
+
     if(this.props.image){
       return(
         <div className="image-index-item grey-border">
