@@ -8,7 +8,6 @@ class NavBarComponent extends React.Component{
 
   logoutButton(){
     return(<button onClick={this.props.logout}>Logout</button>);
-
   }
 
   navBranding(){

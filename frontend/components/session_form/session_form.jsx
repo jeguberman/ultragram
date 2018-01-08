@@ -2,7 +2,7 @@ import React from 'react';
 
 class SessionForm extends React.Component{
   constructor(props){
-    // console.log(props);
+
     super(props);
     this.state={username:"", password:"", fullname:"", formType: "Sign up"};
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -10,6 +10,7 @@ class SessionForm extends React.Component{
   }
 
   handleSubmit(e){
+    debugger
     e.preventDefault();
     if (this.state.formType==="Sign up"){
       this.props.createUser(this.state);
@@ -35,15 +36,7 @@ class SessionForm extends React.Component{
       </div>
     );
   }
-  //
-  // phoneImage(){
-  //   return(
-  //     <div className="phoneImage-container">
-  //
-  //       <img className="phoneImage" src={window.staticImages.alexGrey}/>
-  //     </div>
-  //   );
-  // }
+
 
   listErrors(){
     if(this.props.errors){
@@ -187,13 +180,11 @@ class SessionForm extends React.Component{
 
 
   render(){
-    // if(this.props.loggedIn === true){
-      // return(this.logoutButton());
-    // }else{
+
       return(
         this.loginForm()
       );
-    // }
+
   }
 
 }
