@@ -3,7 +3,7 @@ import * as ImageAPI from '../util/image_util';
 export const RECEIVE_IMAGES = 'RECEIVE_IMAGES';
 export const RECEIVE_IMAGE = 'RECEIVE_IMAGE';
 export const REMOVE_IMAGE = 'REMOVE_IMAGE';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_IMAGE_ERRORS = 'RECEIVE_IMAGE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 export const fetchImages = () => dispatch => {
@@ -83,7 +83,7 @@ const removeImage = (imageId) => {
 
 const receiveErrors = (errors) => {
   return {
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_IMAGE_ERRORS,
     errors
   };
 };

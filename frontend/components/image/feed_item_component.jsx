@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ImageShowComponent extends React.Component{
+class FeedItemComponent extends React.Component{
 
   constructor(props){
 
@@ -9,9 +9,9 @@ class ImageShowComponent extends React.Component{
     this.state = {id: props.id} ;
   }
 
-  componentWillMount(){
-    this.props.fetchImage(this.state.id);
-  }
+  // componentWillMount(){
+  //   this.props.fetchImage(this.state.id);
+  // }
 
   componentDidMount(){
     // debugger
@@ -28,7 +28,7 @@ class ImageShowComponent extends React.Component{
 
   userFollowed(){
     return(
-      <div className="user-followed image-show-user-followed"></div>
+      <div className="user-followed image-index-item-user-followed"></div>
     );
 
   }
@@ -74,4 +74,4 @@ class ImageShowComponent extends React.Component{
 
 }
 
-export default ImageShowComponent;
+export default FeedItemComponent;

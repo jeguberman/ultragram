@@ -1,20 +1,25 @@
 import React from 'react';
+import FeedItemContainer from './feed_item_container';
 
 class ImageIndex extends React.Component{
   constructor(props){
+    debugger
     super(props);
-    this.state = {images: props.images};
   }
 
   componentWillMount(){
     this.props.fetchImages();
+
   }
 
   imageList(){
     return (
       this.props.images.map(
         (image) => {
-          return (<li key={image.id}><img src={image.image_url}/></li>);
+          return (<li key={image.id}>
+            <div>feedItem</div>
+            <FeedItemContainer image={image}/>
+          </li>);
         }
       )
     );

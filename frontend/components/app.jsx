@@ -5,7 +5,7 @@ import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 
 // import SessionFormContainer from './session_form/session_form_container';
 // import UserContainer from './user/user_container';
-import ImageShowContainer from './image/image_show_container';
+import FeedItemContainer from './image/feed_item_container';
 import ImageIndexContainer from './image/image_index_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import { HomeRoute, AuthRoute } from '../util/route-util';
@@ -32,7 +32,7 @@ const App = () => {
         } />
 
       <Switch>
-        <Route path="/images/:imageId" component={ImageShowContainer} />
+
         <Route exact path="/" component={HomeRoute} />
       </Switch>
       </div>
@@ -48,7 +48,7 @@ const App = () => {
 
 
 export default App;
-
+// <Route path="/images/:imageId" component={ImageShowContainer} />
 // <Route path="/users/:id" component={UserContainer} />
 
 // <Route exact path="/users" render={

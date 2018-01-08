@@ -3,8 +3,11 @@ import ImageIndexComponent from './image_index';
 import { fetchPosts } from '../../actions/image_actions.js';
 
 const mapStateToProps = (state, ownProps) =>{
+  let images = Object.values(state.images);
+  let userIds = images.map((image)=>{return(image.id);});
   return {
-    images: Object.values(state.images)
+    userIds,
+    images
   };
 };
 
