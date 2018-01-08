@@ -18,8 +18,8 @@
 
 
 .top-level{
-  /*width: 100vw;
-  height: 100vh;*/
+  width: auto;
+  height: auto;
   background-color:  #fafafa;
 }
 
@@ -28,10 +28,10 @@
 }
 
 .body-component {
-  width: 935px;
-  margin-left:auto;
-  margin-right:auto;
-  padding-top: 60px;
+  /*width: 935px;*/
+  /*margin-left:auto;*/
+  /*margin-right:auto;*/
+  /*padding-top: 60px;*/
 
 }
 
