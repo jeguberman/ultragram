@@ -14,7 +14,7 @@ export const fetchUser = (id) => dispatch => {
 };
 
 export const fetchUsersByIds = (idArray) => dispatch => {
-  debugger
+
   return (
     UserAPI.fetchUsersByIds(idArray).then(
       (users) => dispatch(receiveUsers(users)),

@@ -52,3 +52,7 @@ Link, button, .session-button {
   font-family: cursive;
   font-weight: bold;
 }
+
+.user-picture{
+  border-radius: 50%;
+}

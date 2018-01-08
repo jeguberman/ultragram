@@ -7,9 +7,7 @@ class ImageIndex extends React.Component{
   }
 
   componentWillMount(){
-
     this.props.fetchImages();
-
   }
 
   imageList(){
@@ -18,8 +16,7 @@ class ImageIndex extends React.Component{
         (image) => {
 
           return (<li key={image.id}>
-            <div>feedItem</div>
-            // <FeedItemContainer image={image}/>
+            <FeedItemContainer image={image}/>
           </li>);
         }
       )

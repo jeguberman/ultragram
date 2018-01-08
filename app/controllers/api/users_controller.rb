@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
   #copied from bench bnb. to be edited after auth
 
   def index
-    # debugger
+
   end
 
   def create
@@ -17,7 +17,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    # debugger
+  
     @user = User.find(params[:id])
     if @user
       render 'api/users/show'

@@ -1,0 +1,49 @@
+.image-index-item{
+  max-width: 616px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.image{
+  border: 1px solid blue;
+  width: 100%;
+  display: block;
+}
+
+.author-info-container{
+  height: 60px;
+  width: 100%;
+  border: 1px solid red;
+  align-items: center;
+  vertical-align: middle;
+
+}
+
+
+
+.feed-author-picture{
+  height: 30px;
+  width: 30px;
+  
+  margin-top: auto;
+  margin-bottom: auto;
+
+  border: 1px solid green;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.feed-author-name{
+  display:inline-block;
+}
+
+.image-index-item{
+
+}
+
+.image-index-item-footer{
+
+  height: 60px;
+  width: 100%;
+
+}

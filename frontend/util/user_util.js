@@ -15,7 +15,7 @@ export const fetchUsers = () => {
 };
 
 export const fetchUsersByIds = (ids) => {
-  debugger
+
   return(
     $.ajax({
       url:`api/users`,

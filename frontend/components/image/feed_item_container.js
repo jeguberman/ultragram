@@ -5,16 +5,18 @@ import { fetchUser } from '../../actions/user_actions';
 
 const mapStateToProps = (state, {image}) => {
 
+  let author = state.users[image.author_id];
   return {
-    image
+    image,
+    author
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchUser: (id) => dispatch(fetchUser(id)),
+
 
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FeedItemComponent));
+export default withRouter(connect(mapStateToProps, null)(FeedItemComponent));

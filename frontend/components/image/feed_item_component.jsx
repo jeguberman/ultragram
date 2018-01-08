@@ -6,16 +6,9 @@ class FeedItemComponent extends React.Component{
 
     super(props);
 
-    this.state = {id: props.id} ;
+
   }
 
-  // componentWillMount(){
-  //   this.props.fetchImage(this.state.id);
-  // }
-
-  componentDidMount(){
-    // debugger
-  }
 
   renderImage(){
 
@@ -36,10 +29,12 @@ class FeedItemComponent extends React.Component{
 
 
   header(){
+
+    let author = this.props.author;
     return(
       <header className="author-info-container">
-        <img className="user-picture " src={window.staticImages.alexGrey} />
-        <div className="image-view-auth"></div>
+        <img className="user-picture feed-author-picture" src={author.profile_image_url} />
+        <div className="feed-author-name">{author.username}</div>
         {this.userFollowed()}
       </header>
     );
@@ -50,12 +45,6 @@ class FeedItemComponent extends React.Component{
       <footer className="image-index-item-footer image-caption">{this.props.image.caption}</footer>
     );
   }
-
-
-
-
-
-
 
   render(){
 

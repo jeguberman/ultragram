@@ -2,7 +2,7 @@ class Api::ImagesController < ApplicationController
   # before_action: require_logged_in #I'm like 95% sure this doesn't need to be here, but if I'm wrong, I'd like anybody reviewing my code to see I didn't just forget about it.
 
   def index
-    # debugger
+
       # @images=Image.all.order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort',
 
       @images=Image.all.includes(:author).order!('created_at DESC')#thanks to justin shieh for 'includes'
