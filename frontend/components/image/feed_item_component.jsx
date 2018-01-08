@@ -60,7 +60,6 @@ class FeedItemComponent extends React.Component{
   }
 
   render(){
-
     if(this.props.image){
       return(
         <div className="feed-item grey-border">
@@ -73,6 +72,8 @@ class FeedItemComponent extends React.Component{
       return(<div></div>);
     }
   }
+
+  
 
 }
 

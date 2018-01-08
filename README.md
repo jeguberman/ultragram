@@ -108,6 +108,8 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
 * now that all data is _finally_ in state, we can finish building the component and style it.
 
+* finish building and styling the feed. Begin building the form
+
 
 
 
