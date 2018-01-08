@@ -25,7 +25,7 @@ class ImageIndex extends React.Component{
 
 
   render(){
-    return (<ul>{this.imageList()}</ul>);
+    return (<ul className="feed-list">{this.imageList()}</ul>);
   }
 
 }

@@ -210,6 +210,4 @@ Please revise your timeline and let me know if you have any questions. Great wor
 
 Resources
 
-Icons:
-https://github.com/gorangajic/react-icons
-But this is more searchable https://gorangajic.github.io/react-icons/fa.html
+react-moment: https://www.npmjs.com/package/react-moment
