@@ -34,7 +34,7 @@ class FeedItemComponent extends React.Component{
     return(
       <header className="author-info-container">
         <img className="user-picture feed-author-picture" src={author.profile_image_url} />
-        <div className="feed-author-name">{author.username}</div>
+        <div className="author-name">{author.username}</div>
         {this.userFollowed()}
       </header>
     );
@@ -42,7 +42,23 @@ class FeedItemComponent extends React.Component{
 
   footer(){
     return(
-      <footer className="image-index-item-footer image-caption">{this.props.image.caption}</footer>
+      <footer className="feed-item-footer">
+        {this.imageCaption()}
+      </footer>
+    );
+  }
+
+  imageCaption(){
+    return(
+      <div className="image-caption-container">
+        <div className="author-name">{this.props.author.username}</div>
+        <div className="feed-item-comment">
+          {this.props.image.caption}
+        </div>
+        <div>{Date.now()}</div>
+        <br/>
+        <div className="elapsedTime">{this.props.image.created_at}</div>
+      </div>
     );
   }
 
