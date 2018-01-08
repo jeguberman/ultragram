@@ -12,7 +12,11 @@ class ImageShowComponent extends React.Component{
   componentWillMount(){
     // debugger
     this.props.fetchImage(this.state.id);
+<<<<<<< HEAD
     // this.props.fetchUser(this.)
+=======
+
+>>>>>>> master
   }
 
   componentDidMount(){
@@ -57,7 +61,10 @@ class ImageShowComponent extends React.Component{
 
 
 
+
+
   render(){
+    debugger
     if(this.props.image){
       return(
         <div className="image-index-item grey-border">

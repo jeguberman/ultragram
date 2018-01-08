@@ -7,7 +7,8 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     id: ownProps.match.params.imageId,
-    image: state.images[ownProps.match.params.imageId]
+    image: state.images[ownProps.match.params.imageId],
+    user: state.users
   };
 };
 
