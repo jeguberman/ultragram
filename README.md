@@ -92,14 +92,23 @@ A clone of instagram created as a full stack project for App Academy. I am not a
   * user data now has a slice (this is part of the image data in the feed). Current user if fetched from the navbar on mount and stored in... uh.. the store.
 
   * I still need to get all of the users necessary into state. I don't want to make a request for each item in the feed, that's like minimum 5 http requests when I should be making 1. This will require working with my most hated enemies: forethought and planning
-  1: begin by getting an array of all images in the feed.DONE
-  2: create a selector which will take the images array, and return an array of unique author_ids. DONE
 
-  // when you left, you had tried incorporating the "includes'association'" method in your images controller. shit is badly broken now. fixit. 
-  3: you've written a findUsersByIds ajax function, but you have no such logic on your users controller. create this logic
-  4: If you have time, fiddle with your jbuilder files to curate the user data. The feed doesn't need personal statements. But you don't know how to do this. Fortunately tomorrow is a full house.
-  5: adjust your users reducer to accept the list of users
-  6: component life cycles will hurt. This is your moment. Figure it out.
+  1: begin by getting an array of all images in the feed.DONE
+
+  2: create a selector which will take the images array, and return an array of unique author_ids. DONE
+    * next day
+
+  3: you've written a findUsersByIds ajax function, but you have no such logic on your users controller. create this logicNOPE, THANKS TO TA PATRICK'S HELP THIS IS NOW BETTER
+
+  4: If you have time, fiddle with your jbuilder files to curate the user data. The feed doesn't need personal statements. But you don't know how to do this. Fortunately tomorrow is a full house. DONE: THANKS PATRICK
+
+  5: adjust your users reducer to accept the list of usersDONE
+
+## January 8th
+
+* now that all data is _finally_ in state, we can finish building the component and style it.
+
+
 
 
 

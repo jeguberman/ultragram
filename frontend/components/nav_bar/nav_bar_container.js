@@ -4,15 +4,13 @@ import {logout} from '../../actions/session_actions';
 import {fetchUser} from '../../actions/user_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
-    currentUserId: state.session.currentUser
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    logout: ()=>dispatch(logout()),
-    fetchUser: (id)=>dispatch(fetchUser(id))
+    logout: ()=>dispatch(logout())
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBarComponent);
+export default connect(null, mapDispatchToProps)(NavBarComponent);

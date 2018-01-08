@@ -132,3 +132,5 @@ No the original problem is still there, but at least now I know it can THEORETIC
 * I'm going to try and curate the data with jbuilder, using pokedex as a guide.
 * you know what... while I'm here I should properly extract the image_url with asset_path
 * a TA helped me better understand the structure of data being curated by jbuilder, I'm going to clean up my code, this should help me understand it better, then I'll finish my report
+
+### resolved?: kind of. I mean it appears to be, but I changed so much trying to solve it, I'm afraid of something else being broken and I don't know where

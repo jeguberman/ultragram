@@ -30,6 +30,7 @@ const Home = ( { loggedIn } ) => {
 
   if(loggedIn){
     return (<ImageIndexContainer />);
+    // return (<SessionFormContainer />);
   }else{
     return (<SessionFormContainer />);
   }

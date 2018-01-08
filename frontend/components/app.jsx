@@ -18,23 +18,22 @@ const App = () => {
     <div className="top-level">
 
       <div className="header-component">
-
         <AuthRoute path="/" component={NavBarContainer} />
       </div>
 
       <div className="body-component">
 
-      <Route exact path="/users" render={
-          ()=>(<Redirect push to="/" />)
-        } />
-      <Route exact path="/images" render={
-          ()=>(<Redirect push to="/" />)
-        } />
+        <Route exact path="/users" render={
+            ()=>(<Redirect push to="/" />)
+          } />
+        <Route exact path="/images" render={
+            ()=>(<Redirect push to="/" />)
+          } />
 
-      <Switch>
+        <Switch>
+          <Route exact path="/" component={HomeRoute} />
+        </Switch>
 
-        <Route exact path="/" component={HomeRoute} />
-      </Switch>
       </div>
 
     </div>
