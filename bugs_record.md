@@ -134,3 +134,12 @@ No the original problem is still there, but at least now I know it can THEORETIC
 * a TA helped me better understand the structure of data being curated by jbuilder, I'm going to clean up my code, this should help me understand it better, then I'll finish my report
 
 ### resolved?: kind of. I mean it appears to be, but I changed so much trying to solve it, I'm afraid of something else being broken and I don't know where
+
+## Log in... ok now really log in
+### Problem: When logging out and then logging in, the view doesn't render. It renders on refresh. If you refresh after logging in, there is no problem. There are two session tokens.
+### methods:
+* let's check the application controller I guess
+* I don't think these problems are on the back end, this stuff worked before, it must have something to do with when the component mounts
+* cleaned up the file where the error was occurring but there's still a problem. There is no problem when refreshing on either the session form or the home page. The problem is clearly something to do with the cookie.
+* I changed the front end so the user data gets sent to the slice at some point BEFORE the nav bar loads. Look into that. Maybe I should put that action back on the nav bar
+* ok well, I changed "REMOVE CURRENT USER" back to "RECEIVE CURRENT USER: NULL" and now it works but.... why?

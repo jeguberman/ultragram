@@ -24,6 +24,7 @@ User.create(
   profile_image_url:
   'http://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/006/original/cthuluselfie.jpg?1515448906'
 )
+
 User.create(
   username:"thanos",
   password:"deathandjewels",

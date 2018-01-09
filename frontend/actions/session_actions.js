@@ -20,7 +20,10 @@ export const logout = () => dispatch => (
   APIUtil.logout()
   .then(
     user => (
-      dispatch(removeCurrentUser(null))
+      dispatch(receiveCurrentUser(null))
+    ),
+    errors => (
+      dispatch(receiveErrors(errors.responseJSON))
     )
   )
 );
