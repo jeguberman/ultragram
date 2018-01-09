@@ -16,8 +16,12 @@ class ImageForm extends React.Component{
     formData.append("image[image_url]", this.state.imageFile);
     formData.append("image[caption]", this.state.caption);
     this.props.postImage(formData);
-    this.props.history.push("/");
+    if(this.props.errors){
+      this.props.history.push("/");
+    }
   }
+
+
 
   handleFileChange(e){
     const reader = new FileReader();
@@ -42,18 +46,39 @@ class ImageForm extends React.Component{
   }
 
   formComponent(){
-    return (<form className="image-form form" onSubmit={this.handleSubmit}>
-      <input type="file" onChange={this.handleFileChange}/>
-      <img src={this.state.image_url} />
+    return (
+      <form className="image-form form" onSubmit={this.handleSubmit}>
 
-      <input type="text" value={this.state.caption} className="image-form-caption" placeholder="Write a caption for your image..." onChange={this.update('caption')}/>
-      <input type="submit" className="image-form-submit" value="Submit Image" />
-    </form>);
+        <input type="file" onChange={this.handleFileChange}/>
+
+        <img src={this.state.image_url} />
+
+        <input type="text" value={this.state.caption} className="image-form-caption" placeholder="Write a caption for your image..." onChange={this.update('caption')}/>
+        {this.listErrors()}
+        <input type="submit" className="image-form-submit" value="Submit Image" />
+      </form>
+    );
   }
 
   isEdit(){
     if(this.props.formType==="editImage"){
       return(<div>is edit</div>);
+    }
+  }
+
+  listErrors(){
+
+    if(this.props.errors){
+      const errorList = this.props.errors.map(
+        (error, idx) => {return <li key={idx}         className="image-form-error-item error">{error}</li>;}
+      );
+
+      return(
+        <ul className="image-form-errors">{errorList}</ul>
+      );
+
+    }else{
+      return null;
     }
   }
 
@@ -66,7 +91,6 @@ class ImageForm extends React.Component{
         {this.isEdit()}
       </div>
     );
-
   }
 }
 

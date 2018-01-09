@@ -3,11 +3,10 @@ import { postImage } from '../../actions/image_actions';
 import ImageForm from './image_form_component';
 const mapStateToProps = (state, ownProps) => {
   const formType = ownProps.formType;
-  const currentUser = state.session.currentUser.id;
-  const imageErrors = state.errors.images
+  const imageErrors = state.errors.images;
   return {
-    currentUser,
-    formType
+    formType,
+    errors: state.errors.images
   };
 };
 

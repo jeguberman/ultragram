@@ -7,11 +7,14 @@ class Api::ImagesController < ApplicationController
   end
 
   def create
+
     @image = Image.new(image_params)
+
     @image.author_id = current_user.id
     if @image.save
       render :show
     else
+      debugger
       render json: @image.errors.full_messages
     end
   end
@@ -19,6 +22,9 @@ class Api::ImagesController < ApplicationController
 
   def update
     @image = current_user.images.find(params[:id])
+    unless @image
+      render json: 'Image not found', status: 404
+    end
     if @image.update_attributes(image_params)
       render :show
     else
