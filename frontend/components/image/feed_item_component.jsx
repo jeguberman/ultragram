@@ -73,7 +73,7 @@ class FeedItemComponent extends React.Component{
     }
   }
 
-  
+
 
 }
 

@@ -144,3 +144,11 @@ No the original problem is still there, but at least now I know it can THEORETIC
 * I changed the front end so the user data gets sent to the slice at some point BEFORE the nav bar loads. Look into that. Maybe I should put that action back on the nav bar
 * ok well, I changed "REMOVE CURRENT USER" back to "RECEIVE CURRENT USER: NULL" and now it works but.... why?
 ### resolved
+
+## He just left without telling anybody?
+### problem: I want to render errors if the user tries to upload an image that... isn't there, or something, with object.errors.full_messages. But apparently, and I mean that in the most literal sense of the word, apparently, paperlip is throwing an error which causes the controller to abort. I should be able to just do error handling in my images controller. If I'm right, that'll be a lot of fun, but if I'm wrong, that'll be a really groovy mystery, although a costly one. I don't know which I want to have more.
+### methods
+* traditional ruby error handling
+* that didn't work... I've put in a question with a TA, I will try putting debuggers along the path.
+* we're like 90% sure we need to do something about paperclip's authorization on the image model. Paperclip's validation fails, so the 'new' operation doesn't complete. I'm leaving this on the table, but this is something I would like to come back to at the end of the program.
+### UNresolved :(

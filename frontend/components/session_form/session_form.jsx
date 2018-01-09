@@ -18,8 +18,6 @@ class SessionForm extends React.Component{
     }
   }
 
-
-
   update(field){
     return (e)=>{
       this.setState({[field]:e.target.value});
@@ -35,7 +33,6 @@ class SessionForm extends React.Component{
       </div>
     );
   }
-
 
   listErrors(){
     if(this.props.errors){

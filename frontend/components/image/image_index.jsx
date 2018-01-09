@@ -23,7 +23,7 @@ class ImageIndex extends React.Component{
         }
       )
     );
-    
+
   }
 
 

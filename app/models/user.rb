@@ -9,12 +9,19 @@ class User < ApplicationRecord
   has_attached_file :profile_image_url, default_url: "missing.png"
   validates_attachment_content_type :profile_image_url, content_type: /\Aimage\/.*\Z/
 
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token#, :ensure_profile_picture
 
   has_many :images,
     class_name: :Image,
     foreign_key: :author_id
 
+  # def ensure_profile_picture
+  #   self.profile_image_url ||= default_profile_image_url
+  # end
+  #
+  # def default_profile_image_url
+  #   open('http://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/013/original/anonymous.jpg?1515452445')
+  # end
 
 
   def self.find_by_credentials(username, password) #searches User table by username. if given password is password for user, returns user, else returns nil.

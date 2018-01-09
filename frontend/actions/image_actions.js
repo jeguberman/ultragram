@@ -84,6 +84,7 @@ const removeImage = (imageId) => {
 };
 
 const receiveErrors = (errors) => {
+
   return {
     type: RECEIVE_IMAGE_ERRORS,
     errors

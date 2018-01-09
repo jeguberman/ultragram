@@ -2,6 +2,7 @@ import React from 'react';
 
 class ImageForm extends React.Component{
   constructor(props){
+
     super(props);
     this.handleSubmit=this.handleSubmit.bind(this);
     this.handleFileChange=this.handleFileChange.bind(this);
@@ -16,7 +17,7 @@ class ImageForm extends React.Component{
     formData.append("image[image_url]", this.state.imageFile);
     formData.append("image[caption]", this.state.caption);
     this.props.postImage(formData);
-    if(this.props.errors){
+    if(!this.props.errors){
       this.props.history.push("/");
     }
   }
@@ -67,10 +68,12 @@ class ImageForm extends React.Component{
   }
 
   listErrors(){
-
     if(this.props.errors){
       const errorList = this.props.errors.map(
-        (error, idx) => {return <li key={idx}         className="image-form-error-item error">{error}</li>;}
+        (error, idx) => {
+          return <li key={idx}
+            className="image-form-error-item error">{error}</li>;
+        }
       );
 
       return(

@@ -15,8 +15,6 @@ const ImageReducer = ( oldState = {}, action ) => {
         (imageJSON) => (merge(newState,imageJSON))
       );
       return newState;
-    // case RECEIVE_CURRENT_USER:
-    //   newImage = action.
     case REMOVE_CURRENT_USER:
       return null;
     case REMOVE_IMAGE:
