@@ -8,7 +8,7 @@ class Api::ImagesController < ApplicationController
 
   def create
     @image = Image.new(image_params)
-    @image.author_id = current_user.id if @image.author_id == nil
+    @image.author_id = current_user.id
     if @image.save
       render :show
     else
@@ -40,18 +40,7 @@ class Api::ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:image_url, :caption, :author_id)
+    params.require(:image).permit(:image_url, :caption)
   end
 
 end
-
-
-# def index
-#     if params["author_id"]
-#       @images = Image.find_by({author_id: params["author_id"].to_i})
-#     else
-#       @images=Image.all.includes(:authors).order!('created_at DESC')#thanks to Maxine Chui of Oct '17 cohort', #thanks to justin shieh for 'includes'
-#     end
-#
-#   return @images
-# end

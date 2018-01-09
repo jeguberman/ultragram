@@ -6,9 +6,9 @@ import users from './users_reducer';
 
 const RootReducer = combineReducers(
   {
+    session,
     users,
     images,
-    session,
     errors
   }
 );

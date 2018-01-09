@@ -13,7 +13,6 @@ class ImageForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     const formData = new FormData();
-    formData.append("image[author_id]", this.props.currentUser);
     formData.append("image[image_url]", this.state.imageFile);
     formData.append("image[caption]", this.state.caption);
     this.props.postImage(formData);
@@ -35,13 +34,19 @@ class ImageForm extends React.Component{
 
   }
 
+  update(field){
+    return (e) => {
+      this.setState({[field]:e.target.value});
+    };
+  }
+
   formComponent(){
-    return (<form onSubmit={this.handleSubmit}>
+    return (<form className="image-form form" onSubmit={this.handleSubmit}>
       <input type="file" onChange={this.handleFileChange}/>
       <img src={this.state.image_url} />
 
-      <input type="text" placeholder="Caption goes here" />
-      <input type="submit" value="Submit Image" />
+      <input type="text" value={this.state.caption} className="image-form-caption" placeholder="Write a caption for your image..." onChange={this.update('caption')}/>
+      <input type="submit" className="image-form-submit" value="Submit Image" />
     </form>);
   }
 

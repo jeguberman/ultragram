@@ -110,6 +110,10 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 
 * finish building and styling the feed. Begin building the form
 
+## form submits January 9th
+* form now accepts submissions
+* spoke to TA Ommi, who reminded me how bootstrapping works. This isn't pertinent, but if I have time, this will help with normalizing state.
+
 
 
 

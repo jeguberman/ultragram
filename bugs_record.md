@@ -143,3 +143,4 @@ No the original problem is still there, but at least now I know it can THEORETIC
 * cleaned up the file where the error was occurring but there's still a problem. There is no problem when refreshing on either the session form or the home page. The problem is clearly something to do with the cookie.
 * I changed the front end so the user data gets sent to the slice at some point BEFORE the nav bar loads. Look into that. Maybe I should put that action back on the nav bar
 * ok well, I changed "REMOVE CURRENT USER" back to "RECEIVE CURRENT USER: NULL" and now it works but.... why?
+### resolved
