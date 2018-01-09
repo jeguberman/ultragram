@@ -8,6 +8,7 @@ import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 import FeedItemContainer from './image/feed_item_container';
 import ImageIndexContainer from './image/image_index_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
+import ImageFormContainer from './image/image_form_container';
 import { HomeRoute, AuthRoute } from '../util/route-util';
 
 
@@ -31,7 +32,8 @@ const App = () => {
           } />
 
         <Switch>
-          <Route exact path="/" component={HomeRoute} />
+          <AuthRoute path="/newImage" component={ ImageFormContainer } formType="newImage" />
+          <Route exact path="/" component={ HomeRoute } />
         </Switch>
 
       </div>

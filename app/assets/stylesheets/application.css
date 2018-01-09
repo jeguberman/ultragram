@@ -17,9 +17,10 @@
  */
 
 
+
 .top-level{
   width: auto;
-  height: auto;
+  height: 100%;
   background-color:  #fafafa;
 }
 

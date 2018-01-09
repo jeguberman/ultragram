@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
-import { postImage } from '';
-
+import { postImage } from '../../actions/image_actions';
+import ImageForm from './image_form_component';
 const mapStateToProps = (state, ownProps) => {
+  const formType = ownProps.formType;
   return {
-    
+    formType
   };
 };
 
@@ -14,3 +15,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     deleteImage: (imageId) => dispatch(deleteImage(imageId))
   };
 };
+
+export default connect(mapStateToProps, mapDispatchToProps)(ImageForm);

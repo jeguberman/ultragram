@@ -34,7 +34,7 @@ class NavBarComponent extends React.Component{
           onClick={this.props.logout}>
         </button>
 
-        <Link to="/">
+        <Link to="/newImage">
           <div className="nav-tool nav-camera"></div>
         </Link>
 
