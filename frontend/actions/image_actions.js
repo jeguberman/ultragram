@@ -92,7 +92,7 @@ const receiveErrors = (errors) => {
 
 const clearErrors = () => {
   return {
-    type: CLEAR_ERRORS,
+    type: CLEAR_IMAGE_ERRORS,
     errors: null
   };
 };

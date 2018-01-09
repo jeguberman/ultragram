@@ -29,7 +29,11 @@ class Api::ImagesController < ApplicationController
   def show
 
     @image = Image.find(params[:id])
-    render 'api/images/show'
+    if @image
+      render 'api/images/show'
+    else
+      render json: 'Image not found', status: 404
+    end
   end
 
   def destroy

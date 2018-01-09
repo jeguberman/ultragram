@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router';
 
 class ImageForm extends React.Component{
   constructor(props){
@@ -11,11 +10,13 @@ class ImageForm extends React.Component{
   }
 
   handleSubmit(e){
+
     e.preventDefault();
     const formData = new FormData();
     formData.append("image[image_url]", this.state.imageFile);
     formData.append("image[caption]", this.state.caption);
     this.props.postImage(formData);
+    this.props.history.push("/");
   }
 
   handleFileChange(e){
