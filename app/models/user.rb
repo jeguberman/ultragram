@@ -43,16 +43,16 @@ class User < ApplicationRecord
   private
 
   def ensure_session_token
-    generate_unique_session_token unless self.session_token
+    self.session_token ||= new_session_token
   end
 
   def new_session_token #generates a 16 digit, base 64 random string to be used as the session token. Does NOT actually create a session token
     SecureRandom.urlsafe_base64
   end
 
-  def generate_unique_session_token #sets self.session_token and returns session_token
+  def generate_unique_session_token #sets self.session_token and returns session_token. if session token exists elsewehere in the database, continues to generate new session tokens
     self.session_token = new_session_token
-    while User.find_by(session_token: self.session_token)#why is this done this way?
+    while User.find_by(session_token: self.session_token)
       self.session_token = new_session_token
     end
     self.session_token
