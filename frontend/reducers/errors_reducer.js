@@ -6,8 +6,8 @@ import ImageErrors from './image_errors_reducer.js';
 const ErrorsReducer = combineReducers(
   {
 
-    session: SessionErrors,
-    errors: ImageErrors
+    session: SessionErrors
+    // image: ImageErrors
 
   }
 );
