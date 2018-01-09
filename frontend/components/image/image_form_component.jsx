@@ -1,26 +1,22 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 
 class ImageForm extends React.Component{
   constructor(props){
     super(props);
     this.handleSubmit=this.handleSubmit.bind(this);
     this.handleFileChange=this.handleFileChange.bind(this);
-    this.state={image_url: "", imageFile: null};
+    this.state={imageUrl: "", imageFile: null, caption:""};
+
   }
 
-  renderForm(){
-    return (<form onSubmit={this.handleSubmit}>
-      <input type="file" onChange={this.handleFileChange}/>
-      <img src={this.state.image_url} />
-      
-      <input type="text" placeholder="Caption goes here" />
-    </form>);
-  }
-
-  isEdit(){
-    if(this.props.formType==="editImage"){
-      return(<div>is edit</div>);
-    }
+  handleSubmit(e){
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("image[author_id]", this.props.currentUser);
+    formData.append("image[image_url]", this.state.imageFile);
+    formData.append("image[caption]", this.state.caption);
+    this.props.postImage(formData);
   }
 
   handleFileChange(e){
@@ -39,15 +35,28 @@ class ImageForm extends React.Component{
 
   }
 
-  handleSubmit(e){
-    e.preventDefault();
+  formComponent(){
+    return (<form onSubmit={this.handleSubmit}>
+      <input type="file" onChange={this.handleFileChange}/>
+      <img src={this.state.image_url} />
+
+      <input type="text" placeholder="Caption goes here" />
+      <input type="submit" value="Submit Image" />
+    </form>);
   }
+
+  isEdit(){
+    if(this.props.formType==="editImage"){
+      return(<div>is edit</div>);
+    }
+  }
+
 
   render (){
 
     return(
       <div>
-        {this.renderForm()}
+        {this.formComponent()}
         {this.isEdit()}
       </div>
     );

@@ -2,15 +2,13 @@ class Api::ImagesController < ApplicationController
   # before_action: require_logged_in #I'm like 95% sure this doesn't need to be here, but if I'm wrong, I'd like anybody reviewing my code to see I didn't just forget about it.
 
   def index
-
-      @images=Image.all.includes(:author).order(created_at: :desc)
-
+    @images=Image.all.includes(:author).order(created_at: :desc)
     return @images
   end
 
   def create
     @image = Image.new(image_params)
-    @image.author_id = @current_user.id
+    @image.author_id = current_user.id if @image.author_id == nil
     if @image.save
       render :show
     else
@@ -42,7 +40,7 @@ class Api::ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:image_url, :caption)
+    params.require(:image).permit(:image_url, :caption, :author_id)
   end
 
 end

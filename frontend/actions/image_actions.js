@@ -36,8 +36,9 @@ export const fetchImagesByUser = (userId) => dispatch => {
   );
 };
 
-export const postImage = (imageDate) => dispatch => {
-  ImageAPI.postImage(imageDate)
+export const postImage = (imageData) => dispatch => {
+  debugger
+  ImageAPI.postImage(imageData)
   .then(
     (rImages) => (dispatch(receiveImage(rImage))),
     (error) => (dispatch(receiveErrors(error.responseJSON)))

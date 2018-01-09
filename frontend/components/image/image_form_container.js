@@ -3,7 +3,9 @@ import { postImage } from '../../actions/image_actions';
 import ImageForm from './image_form_component';
 const mapStateToProps = (state, ownProps) => {
   const formType = ownProps.formType;
+  const currentUser = state.session.currentUser.id;
   return {
+    currentUser,
     formType
   };
 };

@@ -16,7 +16,7 @@ export const fetchImage = (imageId) => {
 
 export const fetchImageByUser = (userID) => {
   return(
-    $.jax({
+    $.ajax({
       url: `api/images`,
       data: userID
     })
@@ -25,8 +25,12 @@ export const fetchImageByUser = (userID) => {
 
 export const postImage = (imageData) => {
   return (
-    $.post({
+    $.ajax({
       url:`api/images`,
+      method: 'POST',
+      processData: false,
+      contentType: false,
+      dataType: 'json',
       data: imageData
     })
   );
