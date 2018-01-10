@@ -31,7 +31,8 @@
     border: 1px solid #e6e6e6;
 }
 .header-component{
-  z-index: 100000;
+  position: relative;
+  z-index: 1;
 }
 
 .body-component {
@@ -40,7 +41,7 @@
   /*margin-right:auto;*/
   /*padding-top: 60px;*/
   width: 100vw;
-  text-align: center;
+  /*text-align: center;*/
 
 }
 

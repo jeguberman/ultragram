@@ -39,7 +39,7 @@
 
 .nav-branding{
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-around;
   width: 200px;
 
@@ -54,7 +54,6 @@
 
 .nav-icon{
   height: 30px;
-
 }
 
 .nav-logo {

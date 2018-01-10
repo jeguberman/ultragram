@@ -16,13 +16,34 @@ class ImageShow extends React.Component{
     );
   }
 
-  footer(){
-    return(
-      <footer className="item-show-footer">
-        {this.imageCaption()}
-        <Moment className="elapsed-time feed-item-comment" fromNow>{this.props.image.created_at}</Moment>
 
-      </footer>
+  authorInfo(){
+    let author = this.props.author;
+    return(
+      <header className="author-info-container comment-item">
+        <img className="user-picture image-show-author-picture" src={author.profile_image_url} />
+        <div className="author-name">{author.username}</div>
+                {this.userFollowed()}
+      </header>
+    );
+  }
+
+  userFollowed(){
+    return(null);
+  }
+
+
+  elapsedTime(){
+    return(
+      <Moment className="elapsed-time feed-item-comment" fromNow>{this.props.image.created_at}</Moment>
+    );
+  }
+
+  likes(){
+    return(
+      <div className="image-show-likes like-block">
+        <div className="image-show-view-count view-count">like block</div>
+      </div>
     );
   }
 
@@ -41,39 +62,54 @@ class ImageShow extends React.Component{
     }
   }
 
-
-
-  header(){
-    let author = this.props.author;
+  badges(){
     return(
-      <header className="author-info-container comment-item">
-        <img className="user-picture feed-author-picture" src={author.profile_image_url} />
-        <div className="author-name">{author.username}</div>
-        {this.userFollowed()}
-      </header>
-    );
+      <div className="image-show-badges">badges
+       </div>
+     );
   }
 
-  userFollowed(){
-    return(null);
-  }
+
 
   socialBlock(){
     return(
       <div className="image-show-social-block">
-        {this.header()}
-        {this.body()}
-        {this.footer()}
+        {this.authorInfo()}
+        {this.comments()}
+
+        {this.badges()}
+        {this.likes()}
+        {this.elapsedTime()}
+        <input type="text" className="comment-input" placeholder="Add a comment..."/>
       </div>
     );
   }
 
-  body(){
+  comments(){
     return(
-      <div className="image-show-body image-body">
-        <div className="comment-block"></div>
-        <div className="like-block"></div>
+
+      <div className="comment-block">
+        {this.imageCaption()}
+        <div className="comment">
+          <div className="author-name">
+            {this.props.author.username}
+          </div>
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec semper neque, id lacinia est. Nunc fringilla arcu massa. Nullam quis lacus lacinia, malesuada risus sed, scelerisque leo. Donec nec tellus vitae eros vestibulum semper. Curabitur sodales imperdiet nulla, in aliquet eros volutpat ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur dictum volutpat sapien et varius. Sed nec placerat eros. Mauris dapibus molestie enim vitae suscipit. Nunc eleifend pellentesque justo sit amet iaculis. Suspendisse nec arcu varius, convallis elit in, fermentum quam.
+
+        </div>
+
+        <div className="comment">
+          <div className="author-name">
+            {this.props.author.username}
+          </div>
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec semper neque, id lacinia est. Nunc fringilla arcu massa. Nullam quis lacus lacinia, malesuada risus sed, scelerisque leo. Donec nec tellus vitae eros vestibulum semper. Curabitur sodales imperdiet nulla, in aliquet eros volutpat ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur dictum volutpat sapien et varius. Sed nec placerat eros. Mauris dapibus molestie enim vitae suscipit. Nunc eleifend pellentesque justo sit amet iaculis. Suspendisse nec arcu varius, convallis elit in, fermentum quam.
+
+        </div>
+        
       </div>
+
     );
   }
 
