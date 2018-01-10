@@ -45,7 +45,6 @@ class FeedItemComponent extends React.Component{
         {this.imageCaption()}
         <Moment className="elapsed-time feed-item-comment" fromNow>{this.props.image.created_at}</Moment>
 
-      <Moment>{timestamp}</Moment>
       </footer>
     );
   }
