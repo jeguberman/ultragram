@@ -7,6 +7,7 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    # @user.profile_image_url =
 
     if @user.save
       login(@user)
@@ -17,7 +18,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-  
+
     @user = User.find(params[:id])
     if @user
       render 'api/users/show'
@@ -29,6 +30,6 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :fullname, :data)
+    params.require(:user).permit(:username, :password, :fullname, :profile_image_url)
   end
 end

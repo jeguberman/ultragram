@@ -16,7 +16,7 @@ const ImageReducer = ( oldState = {}, action ) => {
       );
       return newState;
     case REMOVE_CURRENT_USER:
-      return null;
+      return {};
     case REMOVE_IMAGE:
       delete newState[action.imageId];
       return newState;
