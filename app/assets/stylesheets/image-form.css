@@ -1,31 +1,35 @@
 .image-form{
     display: flex;
-    max-height: 600px;
     min-height: 100px;
     min-width: 400px;
     position: absolute;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
-    background-color: #ffffff;
     flex-direction: column;
 }
 
 .image-form-buffer{
   flex-grow: 1;
   background-color: white;
+
 }
 
 .image-form-image{
   display:block;
-
   max-height:600px;
   min-width:400px;
   max-width:600px;
   border:0;
-  /*border: 10px solid green;*/
 }
 
+.image-form-border{
+  margin-left: 16px;
+  margin-right: 16px;
+  border-bottom: 1px solid #efefef;
+  position: absolute;
+  z-index: 5;
+}
 
 .image-form-caption{
   position:relative;
@@ -33,17 +37,22 @@
   right: 50%;
   transform: translate(-50%);
 
-  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  /*border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;*/
   padding: 16px;
   overflow: wrap;
+  font-size:14px;
 }
 
 .image-form-buttons{
   display: flex;
   flex-direction: row;
   background-color: none;
+  border: 0;
   justify-content: space-around;
   font-size: 13px;
+  border-image-width: 0;
 }
 
 

@@ -21,11 +21,12 @@ class ImageForm extends React.Component{
 
   formComponent(){
     return (
-      <form className="image-form form grey-border" onSubmit={this.handleSubmit}>
+      <form className="image-form form" onSubmit={this.handleSubmit}>
 
 
         <div className="image-form-buffer"></div>
         <img className='image-form-image' src={this.state.image_url} />
+
 
 
         <input type="text" value={this.state.caption} className="image-form-caption" placeholder="Write a caption for your image..." onChange={this.update('caption')}/>

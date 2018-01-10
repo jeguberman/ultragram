@@ -40,7 +40,7 @@
   }
 
   .comment-block{
-    flex-grow:1;
+    flex-grow: 1;
     overflow: scroll;
   }
 
