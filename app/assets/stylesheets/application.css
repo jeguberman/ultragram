@@ -16,6 +16,9 @@
 
  */
 
+*{
+  border: solid red 1px;
+}
 
 
 .top-level{
@@ -27,12 +30,17 @@
 .grey-border{
     border: 1px solid #e6e6e6;
 }
+.header-component{
+  z-index: 100000;
+}
 
 .body-component {
-  /*width: 935px;*/
+  /*width: 616px;*/
   /*margin-left:auto;*/
   /*margin-right:auto;*/
   /*padding-top: 60px;*/
+  width: 100vw;
+  text-align: center;
 
 }
 

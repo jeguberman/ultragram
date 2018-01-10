@@ -6,11 +6,22 @@ import { connect } from 'react-redux';
 
 
 const mapStateToProps = (state, ownProps) => {
+  let id = ownProps.match.params.id;
+  if (Object.keys(state.images).length !== 0){
+    let image = state.images[id];
+    let author = state.users[image.author_id];
+    return {
+      id,
+      image,
+      author
+    };
+  }
+  return(
+    {id}
+  );
 
-  return {
-    id: ownProps.match.params.id,
 
-  };
+
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

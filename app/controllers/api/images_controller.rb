@@ -7,7 +7,6 @@ class Api::ImagesController < ApplicationController
   end
 
   def create
-
     @image = Image.new(image_params)
     @image.author_id = current_user.id
     if @image.save
@@ -31,15 +30,10 @@ class Api::ImagesController < ApplicationController
   end
 
   def show
-
-    @image = Image.find(params[:id])#.includes(:author)
-    # @image = Image.all.where().includes(:author).where(id: @image.author_id)
-    # debugger
+    @image = Image.find(params[:id])
     if @image
-
       render 'api/images/show'
     else
-
       render json: 'Image not found', status: 404
     end
   end

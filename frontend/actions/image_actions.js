@@ -70,7 +70,6 @@ const receiveImages = ({images, authors}) => {
 };
 
 const receiveImage = ({image, author}) => {
-  debugger
   return {
     type: RECEIVE_IMAGE,
     image,

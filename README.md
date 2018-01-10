@@ -120,6 +120,9 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 * should have: image edit form. This only needs to edit the caption, not the image itself.
 * User view: could totally stand to be a modal. I would love to experiment with NavLink, but I've already styled my feed item view. If I'm right it could save me a lot of time making a new page; if I have to spend that time anyway.
 
+## January 10th
+* style show and upload page
+
 
 
 
