@@ -26,9 +26,7 @@ class FeedItemComponent extends React.Component{
   header(){
 
     let author = this.props.author;
-    debugger
     if (author){
-      debugger
     return(
       <header className="author-info-container comment-item">
         <img className="user-picture feed-author-picture" src={author.profile_image_url} />
@@ -46,6 +44,8 @@ class FeedItemComponent extends React.Component{
       <footer className="feed-item-footer">
         {this.imageCaption()}
         <Moment className="elapsed-time feed-item-comment" fromNow>{this.props.image.created_at}</Moment>
+
+      <Moment>{timestamp}</Moment>
       </footer>
     );
   }

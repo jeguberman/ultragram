@@ -5,7 +5,6 @@ import { fetchUsersByIds } from '../../actions/user_actions';
 import { authorsOfImages } from '../../util/selectors';
 
 const mapStateToProps = (state, ownProps) =>{
-  debugger
   let images = Object.values(state.images);
   return {
     images
