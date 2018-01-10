@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className="top-level">
-
+      <div className="background-layer"></div>
       <div className="header-component">
         <AuthRoute path="/" component={NavBarContainer} />
       </div>

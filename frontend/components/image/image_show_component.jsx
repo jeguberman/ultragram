@@ -107,7 +107,7 @@ class ImageShow extends React.Component{
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec semper neque, id lacinia est. Nunc fringilla arcu massa. Nullam quis lacus lacinia, malesuada risus sed, scelerisque leo. Donec nec tellus vitae eros vestibulum semper. Curabitur sodales imperdiet nulla, in aliquet eros volutpat ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur dictum volutpat sapien et varius. Sed nec placerat eros. Mauris dapibus molestie enim vitae suscipit. Nunc eleifend pellentesque justo sit amet iaculis. Suspendisse nec arcu varius, convallis elit in, fermentum quam.
 
         </div>
-        
+
       </div>
 
     );
@@ -120,7 +120,7 @@ class ImageShow extends React.Component{
   render(){
     if(this.props.author){
       return(
-        <div className="image-show">
+        <div className="image-show grey-border">
           {this.renderImage()}
           {this.socialBlock()}
         </div>

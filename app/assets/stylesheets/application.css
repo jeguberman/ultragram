@@ -17,14 +17,26 @@
  */
 
 *{
-  border: solid red 1px;
+  /*border: solid red 1px;*/
+}
+html, body, #root{
+  height:100%;
+}
+
+.background-layer{
+  background-color:  #fa9afa;
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 
 .top-level{
   width: auto;
   height: 100%;
-  background-color:  #fafafa;
+  /*background-color:  #fa0000;*/
+  /*position: fixed;*/
 }
 
 .grey-border{
@@ -32,7 +44,7 @@
 }
 .header-component{
   position: relative;
-  z-index: 1;
+  /*z-index: 1;*/
 }
 
 .body-component {
