@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :username, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
-  has_attached_file :profile_image_url, default_url: "missing.png"
+  has_attached_file :profile_image_url, default_url: "//s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/013/original/anonymous.jpg"
   validates_attachment_content_type :profile_image_url, content_type: /\Aimage\/.*\Z/
 
   after_initialize :ensure_session_token

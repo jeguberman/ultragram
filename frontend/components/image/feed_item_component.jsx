@@ -26,6 +26,9 @@ class FeedItemComponent extends React.Component{
   header(){
 
     let author = this.props.author;
+    debugger
+    if (author){
+      debugger
     return(
       <header className="author-info-container comment-item">
         <img className="user-picture feed-author-picture" src={author.profile_image_url} />
@@ -33,6 +36,9 @@ class FeedItemComponent extends React.Component{
         {this.userFollowed()}
       </header>
     );
+  }else{
+    return null;
+  }
   }
 
   footer(){
@@ -73,7 +79,7 @@ class FeedItemComponent extends React.Component{
     }
   }
 
-  
+
 
 }
 

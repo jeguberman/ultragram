@@ -14,10 +14,10 @@ const UsersReducer = ( oldState = {}, action) => {
     case RECEIVE_USERS:
       return action.users;
     case RECEIVE_CURRENT_USER:
-      newState = merge({},newState,action.currentUser);
+      newState = merge({},newState,{[action.currentUser.id]: action.currentUser});
       return newState;
     case REMOVE_CURRENT_USER:
-      return null;
+      return {};
     case RECEIVE_IMAGES:
       action.authors.forEach(
         (imageJSON) => (merge(newState,imageJSON))
