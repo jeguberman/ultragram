@@ -32,10 +32,14 @@ class Api::ImagesController < ApplicationController
 
   def show
 
-    @image = Image.find(params[:id])
+    @image = Image.find(params[:id])#.includes(:author)
+    # @image = Image.all.where().includes(:author).where(id: @image.author_id)
+    # debugger
     if @image
+
       render 'api/images/show'
     else
+
       render json: 'Image not found', status: 404
     end
   end

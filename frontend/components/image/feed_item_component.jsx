@@ -1,5 +1,6 @@
 import React from 'react';
 import Moment from 'react-moment';
+import { Link } from 'react-router-dom';
 
 class FeedItemComponent extends React.Component{
 
@@ -9,10 +10,12 @@ class FeedItemComponent extends React.Component{
 
 
   renderImage(){
-      return(
+    return(
+      <Link to={`/images/${this.props.image.id}`}>
         <img src={this.props.image.image_url}
           className="image feed-image" />
-      );
+      </Link>
+    );
   }
 
   userFollowed(){
@@ -24,7 +27,6 @@ class FeedItemComponent extends React.Component{
 
 
   header(){
-
     let author = this.props.author;
     if (author){
     return(

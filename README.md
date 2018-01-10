@@ -113,9 +113,12 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 ## form submits January 9th
 * form now accepts submissions
 * spoke to TA Ommi, who reminded me how bootstrapping works. This isn't pertinent, but if I have time, this will help with normalizing state.
-
-
-
+* state is apparently normalized. state.session.currentuser is now merely an int.
+* users can post images.
+* new users have a default image.
+* still need: individual image view, with a delete button that only renders if image.author_id === state.session.currentUserID. That button should also verify authorId before commiting the delete but... we'll see.
+* should have: image edit form. This only needs to edit the caption, not the image itself.
+* User view: could totally stand to be a modal. I would love to experiment with NavLink, but I've already styled my feed item view. If I'm right it could save me a lot of time making a new page; if I have to spend that time anyway.
 
 
 

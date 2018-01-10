@@ -1,5 +1,5 @@
 import { RECEIVE_USER, RECEIVE_USERS } from '../actions/user_actions';
-import { RECEIVE_IMAGES } from '../actions/image_actions';
+import { RECEIVE_IMAGES, RECEIVE_IMAGE } from '../actions/image_actions';
 import {RECEIVE_CURRENT_USER, REMOVE_CURRENT_USER } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
@@ -22,6 +22,9 @@ const UsersReducer = ( oldState = {}, action) => {
       action.authors.forEach(
         (imageJSON) => (merge(newState,imageJSON))
       );
+      return newState;
+    case RECEIVE_IMAGE:
+      newState[action.author.id]=action.author;
       return newState;
     default:
       return oldState;
