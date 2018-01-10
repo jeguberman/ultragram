@@ -1,11 +1,13 @@
 import ImageShowComponent from './image_show_component';
-import {fetchImage} from '../../actions/image_actions';
-import {fetchUser} from '../../actions/user_actions';
+import { fetchImage, deleteImage } from '../../actions/image_actions';
+import { fetchUser } from '../../actions/user_actions';
 import { connect } from 'react-redux';
 
 
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
+  let currentUserID = state.session.currentUserID;
   let id = ownProps.match.params.id;
   if (Object.keys(state.images).length !== 0){
     let image = state.images[id];
@@ -27,6 +29,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchImage: (imageId)=>dispatch(fetchImage(imageId)),
+    deleteImage: (imageId)=>dispatch(deleteImage(imageId))
   };
 };
 

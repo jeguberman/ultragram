@@ -23,6 +23,7 @@ class ImageShow extends React.Component{
   }
 
 
+
   // socialBlock(){
   //   return(
   //     <div className="image-show-social-block">
@@ -51,15 +52,22 @@ class ImageShow extends React.Component{
   }
 
   authorInfo(){
-  let author = this.props.author;
-  return(
-    <header className="image-show-author-info author-info-container comment-item">
-      <img className="user-picture image-show-author-picture" src={author.profile_image_url} />
-      <div className="author-name">{author.username}</div>
-              {this.userFollowed()}
-    </header>
-  );
-    }
+    let author = this.props.author;
+    return(
+      <header className="image-show-author-info author-info-container comment-item">
+        <img className="user-picture image-show-author-picture" src={author.profile_image_url} />
+        <div className="author-name">{author.username}</div>
+                {this.userFollowed()}
+                {this.deleteButton()}
+      </header>
+    );
+  }
+
+  deleteButton(){
+    return(
+      <input type="button" className="image-show-delete session-button" value="Delete This Image"/>
+    );
+  }
 
   comments(){
     return(

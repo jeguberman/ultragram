@@ -47,7 +47,7 @@ export const updateImage = (imageData) => {
 
 export const deleteImage = (imageId) => {
   return (
-    $ajax({
+    $.ajax({
       url:`api/images/${imageId}`,
       method: 'DELETE'
     })

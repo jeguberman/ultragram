@@ -33,11 +33,20 @@
     padding-left: 0;
   }
 
-  .image-show-author-picture{
-    width:40px;
-    height:40px;
-    margin-right: 12px;
-  }
+    .image-show-author-picture{
+      width:40px;
+      height:40px;
+      margin-right: 12px;
+    }
+
+    .image-show-delete{
+      border: 1px solid #3897f0;
+      padding: 0;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 600;
+      margin-left: 10px;
+    }
 
   .comment-block{
     flex-grow: 1;
