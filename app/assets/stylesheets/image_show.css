@@ -1,7 +1,7 @@
 .image-show{
-    border: solid 3px green;
+
     display: flex;
-    margin:auto;
+
     max-height: 600px;
     position: absolute;
     left:50%;
@@ -11,7 +11,7 @@
 }
 
 .image-show-social-block{
-  border: solid 1px blue;
+
   display: flex;
   width: 335px;
   flex-direction: column;
@@ -26,10 +26,14 @@
 }
 
 .image-show-badges{
-  border: solid red 1px;
+
 }
 
-.image-show-likes{}
+.image-show-badges{
+  height: 43px;
+
+}
+
 
 .image-show-image{
   max-width: 600px;
@@ -37,6 +41,10 @@
   min-height: 100px;
   min width: 100px;
   display: inline-block;
+}
+
+.comment-input{
+  height:56px;
 }
 
 .comment{
@@ -52,7 +60,7 @@
   height:42px;
   padding-top: 2px;
   border-top: 1px;
-  border: 1px solid red;
+
 }
 .item-show-footer{
 
