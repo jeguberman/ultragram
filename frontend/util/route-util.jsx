@@ -10,7 +10,7 @@ import ImageIndexContainer from '../components/image/image_index_container';
 const mapStateToProps = (state, ownProps) => {
 
   return {
-    loggedIn: Boolean(state.session.currentUser )
+    loggedIn: Boolean(state.session.currentUserID )
   };
 };
 
