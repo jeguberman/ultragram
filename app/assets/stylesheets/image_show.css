@@ -1,6 +1,7 @@
 .image-show{
   display: flex;
   max-height: 600px;
+  min-height: 100px;
   position: absolute;
   left:50%;
   top:50%;
@@ -9,11 +10,13 @@
 }
 
 .image-show-image{
-  max-width: 600px;
   max-height: 600px;
   min-height: 100px;
+  max-width: 600px;
   min width: 100px;
   display: inline-block;
+  object-fit: contain;
+  background-color: #e6e6e6;
 }
 
 .image-show-social-block{
@@ -23,8 +26,12 @@
   height: inherit;
   box-sizing: border-box;
   padding-left: 24px;
-  padding-left: 24px;
+  padding-right: 24px;
 }
+
+  .image-show-author-info{
+    padding-left: 0;
+  }
 
   .image-show-author-picture{
     width:40px;
@@ -33,6 +40,7 @@
   }
 
   .comment-block{
+    flex-grow:1;
     overflow: scroll;
   }
 
@@ -51,5 +59,11 @@
   }
 
   .comment-input{
-    height:56px;
+    height:23px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: none;
+    border-top: 1px solid #b3b3b3;
+    font-weight: 10;
+    }
   }

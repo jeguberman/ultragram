@@ -24,7 +24,7 @@ html, body, #root{
 }
 
 .background-layer{
-  background-color:  #fa9afa;
+  background-color:  #fafafa;
   position:fixed;
   width: 100%;
   height: 100%;
@@ -42,9 +42,10 @@ html, body, #root{
 .grey-border{
     border: 1px solid #e6e6e6;
 }
+
 .header-component{
   position: relative;
-  /*z-index: 1;*/
+
 }
 
 .body-component {
@@ -57,7 +58,7 @@ html, body, #root{
 
 }
 
- input, textarea, .session-button, .demo-user, .session-input::placeholder, .orElement {
+ input, textarea, .session-button, .demo-user, input::placeholder, .orElement {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
