@@ -12,6 +12,9 @@
 .image-form-buffer{
   flex-grow: 1;
   background-color: white;
+  border-top: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
 
 }
 
@@ -38,8 +41,9 @@
   transform: translate(-50%);
 
   border-bottom: 1px solid #e6e6e6;
-  /*border-left: 1px solid #e6e6e6;
-  border-right: 1px solid #e6e6e6;*/
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-top: 0px;
   padding: 16px;
   overflow: wrap;
   font-size:14px;
