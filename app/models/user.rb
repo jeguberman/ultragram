@@ -15,13 +15,9 @@ class User < ApplicationRecord
     class_name: :Image,
     foreign_key: :author_id
 
-  # def ensure_profile_picture
-  #   self.profile_image_url ||= default_profile_image_url
-  # end
-  #
-  # def default_profile_image_url
-  #   open('http://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/013/original/anonymous.jpg?1515452445')
-  # end
+  has_many :comments
+
+
 
 
   def self.find_by_credentials(username, password) #searches User table by username. if given password is password for user, returns user, else returns nil.

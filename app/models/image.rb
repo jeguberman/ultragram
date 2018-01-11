@@ -9,6 +9,8 @@ class Image < ApplicationRecord
     class_name: :User,
     foreign_key: :author_id
 
+  has_many :comments
+
   def url
     self.image_url.url
   end
