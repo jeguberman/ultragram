@@ -12,7 +12,6 @@ const Test = () => {
   window.fetchImage = ImageActions.fetchImage;
   window.fetchImages = ImageActions.fetchImages;
   window.removeImage = ImageActions.removeImages;
-  window.fetchUsersByIds = UserActions.fetchUsersByIds;
   window.fetchUser = UserActions.fetchUser;
   window.postComment = CommentActions.postComment;
 };

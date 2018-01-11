@@ -19,20 +19,22 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    debugger
+
     if params[:username]
       @user = User.find_by(username: params[:username])
       if @user
-        @images = Image.find_by(author_id: @user.id)
+        render 'api/users/nameshow'
+      else
+        render json@user.errors.fullmessages, status: 404
       end
+
     else
       @user = User.find(params[:id])
-    end
-
-    if @user
-      render 'api/users/show'
-    else
-      render json: @user.errors.full_messages, status: 404
+      if @user
+        render 'api/users/show'
+      else
+        render json: @user.errors.full_messages, status: 404
+      end
     end
   end
 
@@ -42,4 +44,6 @@ class Api::UsersController < ApplicationController
 
     params.require(:user).permit(:username, :password, :fullname, :profile_image_url)
   end
+
+
 end

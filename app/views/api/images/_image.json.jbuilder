@@ -1,6 +1,6 @@
 
 
-  json.extract! image, :id, :image_url, :author_id, :caption, :created_at
+  json.extract! image, :id, :author_id, :caption, :created_at
   json.image_url asset_path(image.image_url)
 
   json.comments image.comments do |comment|
