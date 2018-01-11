@@ -126,8 +126,6 @@ class ImageShow extends React.Component{
     );
   }
 
-
-
   renderImage(){
     return(
         <img src={this.props.image.image_url}

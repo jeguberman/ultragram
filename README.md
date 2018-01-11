@@ -234,3 +234,4 @@ Resources
 
 react-moment: https://www.npmjs.com/package/react-moment
 text-area-autosize: https://github.com/buildo/react-autosize-textarea
+react-scrolls: https://www.npmjs.com/package/react-scroll

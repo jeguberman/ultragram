@@ -20,12 +20,13 @@ class CommentForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     this.props.postComment(this.state);
+    this.setState({ body:""});
   }
 
   handleKeyPress(e){
     if(e.key=='Enter'){
-    console.log(e.key);
-  }
+      this.handleSubmit(e);
+    }
   }
 
   render(){
