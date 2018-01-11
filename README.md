@@ -127,6 +127,7 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 do comments and likes. user page. These are not optional. Up all night if you have to.
 * I don't think comments need a back end route, they'll only be fetched in groups with images.
 * comments ship with image fetches through image show jbuilder
+<<<<<<< HEAD
 TODO:
 * Image show page
   * display comments DONE
@@ -134,6 +135,8 @@ TODO:
 * image index page
   * display comments
   * comment form
+=======
+>>>>>>> cbfb389dc10dec33b851e9ceffe37761acdf6cde
 
 
 
