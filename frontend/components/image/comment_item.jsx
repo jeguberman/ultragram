@@ -1,6 +1,6 @@
 import React from 'react';
 
-const commentItem =({ comment })=>{
+const commentItem =( { comment } )=>{
 
   return(
     <li className="comment-item">

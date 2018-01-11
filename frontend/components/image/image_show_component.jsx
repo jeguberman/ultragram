@@ -3,12 +3,14 @@ import Moment from 'react-moment';
 import CommentItem from './comment_item';
 import CommentForm from './comment_form';
 
+
+
+
 class ImageShow extends React.Component{
   constructor(props){
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
   }
-
 
   componentWillMount(){
     this.props.fetchImage(this.props.id);
@@ -33,8 +35,6 @@ class ImageShow extends React.Component{
       <div className="image-show-social-block">
         {this.authorInfo()}
         {this.comments()}
-
-
         {this.elapsedTime()}
         <CommentForm imageID={this.props.id}/>
       </div>
@@ -115,6 +115,7 @@ class ImageShow extends React.Component{
   }
 
   commentList(){
+
     return(
       <ul className="comment-list image-show-comment-list">
         {this.props.comments.map( (comment) => {
