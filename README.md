@@ -129,8 +129,11 @@ do comments and likes. user page. These are not optional. Up all night if you ha
 * comments ship with image fetches through image show jbuilder
 TODO:
 * Image show page
+  * display comments DONE
+  * comment form
 * image index page
-
+  * display comments
+  * comment form
 
 
 

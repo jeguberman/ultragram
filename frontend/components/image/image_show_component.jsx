@@ -1,6 +1,7 @@
 import React from 'react';
 import Moment from 'react-moment';
 import CommentItem from './comment_item';
+import CommentForm from './comment_form';
 
 class ImageShow extends React.Component{
   constructor(props){
@@ -26,18 +27,7 @@ class ImageShow extends React.Component{
     }
   }
 
-  commentList(){
 
-    return(
-      <ul className="comment-list image-show-comment-list">
-        {this.props.comments.map( (comment) => {
-          return (
-            <CommentItem key={comment.id} comment={comment}/>
-          );
-        })}
-      </ul>
-    );
-  }
 
 
 
@@ -63,10 +53,12 @@ class ImageShow extends React.Component{
 
 
         {this.elapsedTime()}
-        <div className="comment-input"></div>
+        <CommentForm />
       </div>
     );
   }
+
+
 
   authorInfo(){
     let author = this.props.author;
@@ -90,7 +82,6 @@ class ImageShow extends React.Component{
   }
 
   handleDelete(e){
-
     e.preventDefault();
     this.props.deleteImage(this.props.id);
     this.props.history.push("/");
@@ -118,6 +109,18 @@ class ImageShow extends React.Component{
     }else{
       return null;
     }
+  }
+
+  commentList(){
+    return(
+      <ul className="comment-list image-show-comment-list">
+        {this.props.comments.map( (comment) => {
+          return (
+            <CommentItem key={comment.id} comment={comment}/>
+          );
+        })}
+      </ul>
+    );
   }
 
 
