@@ -2,7 +2,10 @@ import React from 'react';
 import Moment from 'react-moment';
 
 class ImageShow extends React.Component{
-
+  constructor(props){
+    super(props);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
 
 
   componentWillMount(){
@@ -65,8 +68,15 @@ class ImageShow extends React.Component{
 
   deleteButton(){
     return(
-      <input type="button" className="image-show-delete session-button" value="Delete This Image"/>
+      <input type="button" className="image-show-delete session-button" value="Delete This Image" onClick={this.handleDelete.bind(this)}/>
     );
+  }
+
+  handleDelete(e){
+
+    e.preventDefault();
+    this.props.deleteImage(this.props.id);
+    this.props.history.push("/");
   }
 
   comments(){

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
+
   let currentUserID = state.session.currentUserID;
   let id = ownProps.match.params.id;
   if (Object.keys(state.images).length !== 0){
@@ -15,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
     return {
       id,
       image,
-      author
+      author,
+      currentUserID
     };
   }
   return(
