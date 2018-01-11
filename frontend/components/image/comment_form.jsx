@@ -9,10 +9,8 @@ class CommentForm extends React.Component{
     this.update = this.update.bind(this);
   }
 
-  update(){
-    return( (e) => {
-      this.setState({body:e.target.value});
-    });
+  update(e){
+    this.setState({body:e.target.value});
   }
 
   handleSubmit(e){
@@ -20,7 +18,9 @@ class CommentForm extends React.Component{
     this.props.postComment(this.state);
   }
 
-  commentForm(){
+
+
+  render(){
     return(
       <form className="commentForm" onSubmit={this.handleSubmit}>
         <input className="comment-input"
@@ -29,10 +29,6 @@ class CommentForm extends React.Component{
           onChange={this.update}/>
       </form>
     );
-  }
-
-  render(){
-    return(<div className="comment-input">comment input</div>);
   }
 }
 
