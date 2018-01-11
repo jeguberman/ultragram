@@ -4,13 +4,15 @@ import { connect } from 'react-redux';
 class CommentForm extends React.Component{
   constructor(props){
     super(props);
-    this.state = { body:"", image_id:props.image_id};
+    this.state = { body:"", image_id: props.imageID };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
 
+
+
   update(e){
-    this.setState({body:e.target.value});
+    this.setState({body:e.currentTarget.value});
   }
 
   handleSubmit(e){
