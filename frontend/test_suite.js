@@ -1,6 +1,7 @@
 import * as SessionActions from './actions/session_actions.js';
 import * as ImageActions from './actions/image_actions.js';
 import * as UserActions from './actions/user_actions.js';
+import * as CommentActions from './actions/comment_actions.js';
 
 const Test = () => {
 
@@ -13,7 +14,7 @@ const Test = () => {
   window.removeImage = ImageActions.removeImages;
   window.fetchUsersByIds = UserActions.fetchUsersByIds;
   window.fetchUser = UserActions.fetchUser;
-
+  window.postComment = CommentActions.postComment;
 };
 
 export default Test;
