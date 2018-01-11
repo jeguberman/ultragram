@@ -123,6 +123,9 @@ A clone of instagram created as a full stack project for App Academy. I am not a
 ## January 10th
 * style show and upload page
 
+* january 11th
+do comments and likes. user page. These are not optional. Up all night if you have to.
+
 
 
 
