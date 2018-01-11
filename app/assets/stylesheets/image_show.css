@@ -27,10 +27,12 @@
   box-sizing: border-box;
   padding-left: 24px;
   padding-right: 24px;
+  border: 1px solid red;
 }
 
   .image-show-author-info{
     padding-left: 0;
+    border: 1px solid green;
   }
 
     .image-show-author-picture{
@@ -51,10 +53,12 @@
   .comment-block{
     flex-grow: 1;
     overflow: scroll;
+    border: 1px solid blue;
   }
 
-    .comment{
-      padding-bottom: 10px;
+    .comment-item{
+
+      /*border: 1px solid red;*/
     }
 
   .image-show-badges{
@@ -68,10 +72,16 @@
   }
 
   .comment-input{
-    height:23px;
+    width: 100%;
+    min-height:23px;
     padding-top: 16px;
     padding-bottom: 16px;
     border: none;
     border-top: 1px solid #b3b3b3;
-    font-weight: 10;
+    font-size: 14px;
+    font-weight: 400;
+    border: solid red 1px;
+    display: flex;
+    resize:none;
+    overflow: auto;
   }

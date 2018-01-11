@@ -25,10 +25,11 @@ class CommentForm extends React.Component{
   render(){
     return(
       <form className="commentForm" onSubmit={this.handleSubmit}>
-        <input className="comment-input"
+        <textarea className="comment-input"
           type="text"
           value={this.state.body}
-          onChange={this.update}/>
+          onChange={this.update}
+          placeholder="Add a comment..."/>
       </form>
     );
   }
