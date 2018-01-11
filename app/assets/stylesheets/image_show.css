@@ -84,4 +84,5 @@
     display: flex;
     resize:none;
     overflow: auto;
+    max-height: 80px;
   }

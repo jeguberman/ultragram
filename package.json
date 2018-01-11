@@ -9,6 +9,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
     "react": "^16.2.0",
+    "react-autosize-textarea": "^3.0.1",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
     "react-moment": "^0.6.8",

@@ -1,6 +1,6 @@
 class Api::CommentsController < ApplicationController
   def create
-    # debugger
+
     comment = Comment.new(comment_params)
     comment.author_id = current_user.id
     if comment.save!
@@ -18,7 +18,6 @@ class Api::CommentsController < ApplicationController
   end
 
   def comment_params
-    # debugger
     params.require(:comment).permit(:image_id, :body)
   end
 end

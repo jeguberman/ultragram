@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import TextareaAutosize from 'react-autosize-textarea';
 
 class CommentForm extends React.Component{
   constructor(props){
@@ -7,6 +8,7 @@ class CommentForm extends React.Component{
     this.state = { body:"", image_id: props.imageID };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
 
@@ -20,15 +22,20 @@ class CommentForm extends React.Component{
     this.props.postComment(this.state);
   }
 
-
+  handleKeyPress(e){
+    if(e.key=='Enter'){
+    console.log(e.key);
+  }
+  }
 
   render(){
     return(
       <form className="commentForm" onSubmit={this.handleSubmit}>
-        <textarea className="comment-input"
+        <TextareaAutosize className="comment-input"
           type="text"
           value={this.state.body}
           onChange={this.update}
+          onKeyPress={this.handleKeyPress}
           placeholder="Add a comment..."/>
       </form>
     );
