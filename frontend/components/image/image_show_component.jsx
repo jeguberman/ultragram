@@ -67,9 +67,12 @@ class ImageShow extends React.Component{
   }
 
   deleteButton(){
-    return(
-      <input type="button" className="image-show-delete session-button" value="Delete This Image" onClick={this.handleDelete.bind(this)}/>
-    );
+
+    if(this.props.currentUserID === this.props.author.id){
+      return(
+        <input type="button" className="image-show-delete session-button" value="Delete This Image" onClick={this.handleDelete.bind(this)}/>
+      );
+    }
   }
 
   handleDelete(e){
