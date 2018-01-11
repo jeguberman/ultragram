@@ -28,15 +28,14 @@ class SessionForm extends React.Component{
     return(
       <div className="session-image-container">
         <img className="homePhones" src = {window.staticImages.homePhones} />
-
-
       </div>
     );
   }
 
   listErrors(){
-    if(this.props.errors){
 
+    if(this.props.errors.lenght > 0){
+      debugger
       const errorList = this.props.errors.map(
         (error, idx) => {return <li key={idx}         className="session-error-item error">{error}</li>;}
       );
