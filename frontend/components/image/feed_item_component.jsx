@@ -45,7 +45,7 @@ class FeedItemComponent extends React.Component{
     return(
       <footer className="feed-item-footer">
         {this.imageCaption()}
-        <Moment className="elapsed-time feed-item-comment" fromNow>{this.props.image.created_at}</Moment>
+        <Moment className="elapsed-time comment-item" fromNow>{this.props.image.created_at}</Moment>
 
       </footer>
     );
@@ -55,7 +55,7 @@ class FeedItemComponent extends React.Component{
     if(this.props.image.caption){
     return(
       <div className="image-caption-container">
-        <div className="feed-item-comment">
+        <div className="comment-item">
           <div className="author-name">{this.props.author.username}</div>   &nbsp;
           {this.props.image.caption}
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Moment from 'react-moment';
+import CommentItem from './comment_item';
 
 class ImageShow extends React.Component{
   constructor(props){
@@ -23,6 +24,19 @@ class ImageShow extends React.Component{
     }else{
       return(null);
     }
+  }
+
+  commentList(){
+
+    return(
+      <ul className="comment-list image-show-comment-list">
+        {this.props.comments.map( (comment) => {
+          return (
+            <CommentItem key={comment.id} comment={comment}/>
+          );
+        })}
+      </ul>
+    );
   }
 
 
@@ -84,12 +98,10 @@ class ImageShow extends React.Component{
 
   comments(){
     return(
-
       <div className="comment-block">
         {this.imageCaption()}
-
+        {this.commentList()}
       </div>
-
     );
   }
 
@@ -97,8 +109,8 @@ class ImageShow extends React.Component{
     if(this.props.image.caption){
     return(
       <div className="image-caption-container">
-        <div className="feed-item-comment">
-          <div className="author-name">{this.props.author.username}</div>   &nbsp;
+        <div className="comment-item">
+          <div className="author-name">{this.props.author.username}</div>&nbsp;
           {this.props.image.caption}
         </div>
       </div>
@@ -107,6 +119,8 @@ class ImageShow extends React.Component{
       return null;
     }
   }
+
+
 
   renderImage(){
     return(
@@ -132,7 +146,7 @@ class ImageShow extends React.Component{
 
   elapsedTime(){
     return(
-      <Moment className="elapsed-time feed-item-comment" fromNow>{this.props.image.created_at}</Moment>
+      <Moment className="elapsed-time comment-item" fromNow>{this.props.image.created_at}</Moment>
     );
   }
 
