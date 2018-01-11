@@ -14,8 +14,7 @@ const mapDispatchToProps = (dispatch, ownProps ) => {
   return{
     login: (userData) => dispatch(login(userData)),
     logout: () => dispatch(logout()),//delete
-    createUser: (userData) => dispatch(createUser(userData)),
-    clearErrors: () => clearErrors()
+    createUser: (userData) => dispatch(createUser(userData))
   };
 
 };

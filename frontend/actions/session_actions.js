@@ -42,19 +42,14 @@ export const login = user => dispatch => {
   );
 };
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_SESSION_ERRORS,
-  errors
-});
-
-export const clearErrors = () =>{
-  return(
-    dispatch({
-      type: RECEIVE_SESSION_ERRORS,
-      errors: null
-    })
-  );
+export const receiveErrors = errors => {
+  return {
+    type: RECEIVE_SESSION_ERRORS,
+    errors
+  };
 };
+
+
 
 const removeCurrentUser = () => {
   return {

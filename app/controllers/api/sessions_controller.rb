@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
       params[:user][:username],
       params[:user][:password]
     )
-    debugger
+
     if @user
       login(@user)
       render "api/users/show"
@@ -24,4 +24,5 @@ class Api::SessionsController < ApplicationController
       render json: ["Must be loggined to logout"], status: 404 #404 not find
     end
   end
+  
 end

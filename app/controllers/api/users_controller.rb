@@ -13,7 +13,8 @@ class Api::UsersController < ApplicationController
       login(@user)
       render "api/users/show"
     else
-      render json: @user.errors.full_messages, status: 422 #unprocessable entity
+      render json: @user.errors.full_messages, status: 422
+      #unprocessable entity
     end
   end
 

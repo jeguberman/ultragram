@@ -4,7 +4,7 @@ class SessionForm extends React.Component{
   constructor(props){
 
     super(props);
-    this.state={username:"", password:"", fullname:"", formType: "Sign up"};
+    this.state={username:"", password:"", fullname:"", formType: "Log in"};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeFormType = this.changeFormType.bind(this);
   }
@@ -34,8 +34,8 @@ class SessionForm extends React.Component{
 
   listErrors(){
 
-    if(this.props.errors.lenght > 0){
-      debugger
+    if(this.props.errors.length > 0){
+
       const errorList = this.props.errors.map(
         (error, idx) => {return <li key={idx}         className="session-error-item error">{error}</li>;}
       );
@@ -108,7 +108,6 @@ class SessionForm extends React.Component{
 
   changeFormType(e){
     e.preventDefault();
-    this.props.clearErrors();
     if(this.state.formType === "Sign up"){
       this.setState({formType:"Log in"});
     }else{
