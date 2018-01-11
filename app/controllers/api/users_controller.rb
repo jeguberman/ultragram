@@ -19,8 +19,16 @@ class Api::UsersController < ApplicationController
   end
 
   def show
+    debugger
+    if params[:username]
+      @user = User.find_by(username: params[:username])
+      if @user
+        @images = Image.find_by(author_id: @user.id)
+      end
+    else
+      @user = User.find(params[:id])
+    end
 
-    @user = User.find(params[:id])
     if @user
       render 'api/users/show'
     else

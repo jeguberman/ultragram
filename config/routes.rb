@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :images, only: [:create, :index, :show, :update, :destroy]
     resources :comments, only: [:create, :destroy]
 
+    get ':username', to: 'users#show', as: :username
   end
 
   root "static_pages#root"
