@@ -7,8 +7,7 @@ export const RECEIVE_USERS_ERRORS = 'RECEIVE_USERS_ERRORS';
 export const fetchUser = (id) => dispatch => {
   return (
     UserAPI.fetchUser(id).then(
-      (user) => dispatch(receiveUser(user)),
-      (errors) => dispatch(receiveErrors(errors.responseJSON))
+      (user) => dispatch(receiveUser(user))
     )
   );
 };
@@ -19,6 +18,14 @@ export const fetchUsersByIds = (idArray) => dispatch => {
     UserAPI.fetchUsersByIds(idArray).then(
       (users) => dispatch(receiveUsers(users)),
       (errors) => dispatch(receiveErrors(errors.responseJSON))
+    )
+  );
+};
+
+export const updateUser = (user) => dispatch => {
+  return (
+    UserAPI.updateUser(user).then(
+      (rUser) => dispatch(receiveUser(user))
     )
   );
 };

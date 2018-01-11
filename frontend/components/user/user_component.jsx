@@ -1,8 +1,14 @@
 import React from 'react';
 
-export default ()=> {
+class UserComponent extends React.Component{
 
-    return (
-      <div>from user component</div>
-    );
-};
+  componentWillMount(){
+    this.props.fetchUser(this.props.userId);
+  }
+
+  render(){
+    return(<div>from user component</div>);
+  }
+
+}
+export default UserComponent;

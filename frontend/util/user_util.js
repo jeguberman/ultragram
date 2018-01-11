@@ -14,6 +14,15 @@ export const fetchUsers = () => {
   );
 };
 
+export const updateUser = (user) => {
+  return (
+    $.ajax({
+      url: `api/users/${id}`,
+      method: 'PATCH'
+    })
+  );
+};
+
 export const fetchUsersByIds = (ids) => {
 
   return(

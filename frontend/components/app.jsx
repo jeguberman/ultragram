@@ -4,7 +4,7 @@ import React from 'react';
 import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 
 // import SessionFormContainer from './session_form/session_form_container';
-// import UserContainer from './user/user_container';
+import UserContainer from './user/user_container';
 import FeedItemContainer from './image/feed_item_container';
 import ImageIndexContainer from './image/image_index_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
@@ -34,6 +34,7 @@ const App = () => {
 
         <Switch>
           <AuthRoute path="/newImage" component={ ImageFormContainer } formType="newImage" />
+          <AuthRoute path="/users/:id" component={ UserContainer } />
           <AuthRoute path="/images/:id" component={ ImageShowContainer } />
           <Route exact path="/" component={ HomeRoute } />
         </Switch>
@@ -44,9 +45,7 @@ const App = () => {
   );
 };
 
-// const App = () => {
-//   return(<div>you reached the App component</div>)
-// }
+
 
 
 

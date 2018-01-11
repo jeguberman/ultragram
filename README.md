@@ -130,10 +130,9 @@ do comments and likes. user page. These are not optional. Up all night if you ha
 TODO:
 * Image show page
   * display comments DONE
-  * comment form
-* image index page
-  * display comments
-  * comment form
+  * comment form DONE
+* User page
+* likes
 
 
 
@@ -234,4 +233,3 @@ Resources
 
 react-moment: https://www.npmjs.com/package/react-moment
 text-area-autosize: https://github.com/buildo/react-autosize-textarea
-react-scrolls: https://www.npmjs.com/package/react-scroll
