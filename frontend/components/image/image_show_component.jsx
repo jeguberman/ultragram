@@ -45,27 +45,6 @@ class ImageShow extends React.Component{
   }
 
 
-
-
-
-  // socialBlock(){
-  //   return(
-  //     <div className="image-show-social-block">
-  //       {this.authorInfo()}
-  //       {this.comments()}
-  //
-  //       {this.badges()}
-  //       {this.likes()}
-  //       {this.elapsedTime()}
-  //       <input type="text" className="comment-input" placeholder="Add a comment..."/>
-  //     </div>
-  //   );
-  // }
-
-
-
-
-
   authorInfo(){
     let author = this.props.author;
     return(
