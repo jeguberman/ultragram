@@ -49,10 +49,6 @@ class NavBarComponent extends React.Component{
           <div className="nav-tool nav-camera"></div>
         </Link>
 
-        <Link to={`/${this.state.user.username}`}>
-          <div className="nav-tool  nav-user user"></div>
-        </Link>
-
       </div>
     );
   }

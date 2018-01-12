@@ -44,11 +44,26 @@ class FeedItemComponent extends React.Component{
   footer(){
     return(
       <footer className="feed-item-footer">
+        {this.commentCount()}
         {this.imageCaption()}
         <Moment className="elapsed-time comment-item" fromNow>{this.props.image.created_at}</Moment>
 
       </footer>
     );
+  }
+
+  commentCount(){
+    if(this.props.image.comments.length>1){
+      return(
+        <div className="comment-count author-name">{this.props.image.comments.length}&nbsp;comments</div>
+      );
+    }else if (this.props.image.comments.length === 1){
+      return(
+        <div className="comment-count author-name">{this.props.image.comments.length}&nbsp;comment</div>
+      );
+    }else{
+      return null;
+    }
   }
 
   imageCaption(){
