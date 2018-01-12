@@ -1,5 +1,6 @@
 import ImageShowComponent from './image_show_component';
 import { fetchImage, deleteImage } from '../../actions/image_actions';
+import {updateUser} from '../../actions/user_actions';
 import { connect } from 'react-redux';
 
 
@@ -31,7 +32,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchImage: (imageId)=>dispatch(fetchImage(imageId)),
-    deleteImage: (imageId)=>dispatch(deleteImage(imageId))
+    deleteImage: (imageId)=>dispatch(deleteImage(imageId)),
+    updateUser: (user)=>dispatch(updateUser)
   };
 };
 

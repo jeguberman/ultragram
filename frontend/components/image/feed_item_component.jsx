@@ -32,7 +32,7 @@ class FeedItemComponent extends React.Component{
       return(
         <header className="author-info-container comment-item">
           <img className="user-picture feed-author-picture" src={author.profile_image_url} />
-          <div className="author-name">{author.username}</div>
+          <Link to={`/${author.username}`}  className="author-name">{author.username}</Link>
           {this.userFollowed()}
         </header>
       );

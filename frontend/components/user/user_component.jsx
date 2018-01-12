@@ -2,6 +2,7 @@ import React from 'react';
 
 class UserComponent extends React.Component{
   constructor(props){
+
     super(props);
     this.state={images:[], user:this.props.user};
   }
@@ -11,11 +12,14 @@ class UserComponent extends React.Component{
   }
 
   componentWillReceiveProps(nextProps){
+    // debugger
     const nextImages = nextProps.images.filter(
       (image) => image.author_id === nextProps.user.id
     );
     this.setState({images: nextImages, user: nextProps.user});
   }
+
+
 
   // shouldComponentUpdate(nextProps, nextState){
   //   // super();
@@ -25,12 +29,13 @@ class UserComponent extends React.Component{
 
 
   imageList(){
+    let i =1;
     return(
       this.state.images.reverse().map(
         (image)=> {
           return (
 
-              <img className="user-show-image" src={image.image_url} />
+              <img key= {i++}className="user-show-image" src={image.image_url} />
 
           );
         }
