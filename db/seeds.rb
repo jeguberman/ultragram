@@ -14,29 +14,28 @@ User.create!(
   password:"password",
   fullname:"demo user",
   personal_statement:"I am a fictitious hypothetical entitity who's existence is temporally bound between login and logout",
-  profile_image_url:'https://s3.amazonaws.com/ULTRAGRAM-PRO/images/image_urls/000/000/018/original/The-Neverending-Dreamer1.jpg'
+  profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/The-Neverending-Dreamer1.jpg'
 )
 
 User.create!(
   username:"Cthulu",
   fullname:"error", password:"passwordryleh",
   personal_statement:"̶͉y̴̧̨͍͚͉̥̐̐̊̌̅̅̋̽͜é̴̡̼̤̖̮͇͊̽̒̏̕͞",
-  profile_image_url:
-  'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/006/original/cthuluselfie.jpg'
+  profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/cthuluselfie.jpg'
 )
 
 User.create!(
   username:"thanos",
   password:"deathandjewels",
   fullname:"dione",
-  profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/005/original/thanos1.png'
+  profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/thanos1.png'
 )
 
 User.create!(
   username:"monkeyking",
   password:"journeytothewest",
   fullname:"SunWukong",
-  profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/005/original/thanos1.png'
+  profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/sunwukong3.jpg'
 )
 
 
@@ -45,42 +44,46 @@ User.create!(
 #
 Image.create!(
   author_id: User.find_by(username:"demo").id,
-  image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/004/original/anonymous.jpg?1515375149',
+  image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/anonymous.jpg',
   caption:'For a time, I existed in order to bind a datapoint on a foreign table to something tangible. Once the image is mounting to an anchor in reality, I am no longer needed. When that happens, I will be destroyed.',
 )
 #
-Image.create!( author_id: User.find_by(username:"thanos").id, image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/005/original/thanos1.png?1515438059')
+Image.create!( author_id: User.find_by(username:"thanos").id, image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/thanos1.png')
 
 
-Image.create!( author_id: User.find_by(username:"demo").id, image_url: 'https://s3.amazonaws.com/ULTRAGRAM-PRO/images/image_urls/000/000/018/original/The-Neverending-Dreamer1.jpg?1515762943')
+Image.create!( author_id: User.find_by(username:"demo").id, image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/The-Neverending-Dreamer1.jpg')
+
+Image.create!( author_id: User.find_by(username:"demo").id, image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/Alex-Grey-Wallpapers-013.jpg')
+
+Image.create!( author_id: User.find_by(username:"demo").id, image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/birdart.jpg')
 
 Image.create!(
   author_id: User.find_by(username:"monkeyking").id,
-  image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/077/original/sonwukong1.jpg?1515762062',
+  image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/sonwukong1.jpg',
   caption: 'I am the great Monkey King, Sun Wukong! I have bested the armies of heaven and hell alike! I will face any challenger!'
 )
 
 Image.create!(
   author_id: User.find_by(username:"monkeyking").id,
-  image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/075/original/sunwukong3.jpg',
+  image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/sunwukong3.jpg',
   caption: 'My golden armor is shines so brightly it makes the sun jealous!'
 )
 
 Image.create!(
   author_id: User.find_by(username:"demo").id,
-  image_url:'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/003/original/Oversoul---Poster---Alex-Grey_x1000.png?1515356976',
+  image_url:'https://s3.amazonaws.com/ULTRAGRAM-DEV/Oversoul---Poster---Alex-Grey_x1000.png',
   caption:'All who experience are the universe experiencing itself. Therefor, is my life, though fleeting, eternal? Am I my predecessor and my successor?'
 )
 
 Image.create!(
   author_id: User.find_by(username:"monkeyking").id,
-  image_url: 'http://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/076/original/sonwukong2.jpg?1515762027',
+  image_url: 'http://s3.amazonaws.com/ULTRAGRAM-DEV/sonwukong2.jpg',
   caption:'I am Sun Wukong, tormentor of the Beuracracy of Heaven. Three times I am immortal I will never know the touch of death!'
 )
 
 Image.create!(
   author_id: User.find_by(username:"thanos").id,
-  image_url:'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/002/original/infinity-gauntlet.jpg?1515189277',
+  image_url:'https://s3.amazonaws.com/ULTRAGRAM-DEV/infinity-gauntlet.jpg',
   caption:'This is a relic from a really great time I had on earth once. I still have the glove but the jewels are gone.'
 )
 
@@ -92,7 +95,7 @@ Image.create!(
 
 Image.create!(
 author_id: User.find_by(username:"Cthulu").id,
-image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/006/original/cthuluselfie.jpg?1515448906',
+image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/cthuluselfie.jpg',
 caption: '.
 .
 C̸̛̘̹͕̱̞͙͇͗̓̈͐͋̀̈͡͞t̷̛͚͚̺͍͕̦̹͕̾͗̀͋̂̒ḧ̶̰̩̭͓͙̭̺́̆̆̃̇͟͢͜ t̨͙͎̰̪̓̒̏́̑͌͐̏̎͊ô̶̥̤̦̳̘̓̃̈̀͋̚͠p̧̛̯̺̼̺͉̔͒̃̚̕͘͘ f̵̹͈̙͍̋͐̀̓̿̓͐̏͒́͢ţ̨̛̻̞͔̖͔͕̈́̉̐̃̀͂̀͘͜r̢͍̱̝͈̟͈̘͒̽̍̑̄͛͆͑̿͜͝ͅo̡͍͚̣̩͆̅̈͛̂̂̀̑͘  l̤̻̤̣͕̮̅̀̎͐́͋̏̕͜o̷̢̢̨̙̯̦͛̊̚͞͡ŗ̶̥͉͖̲̫̠̟̯̭̋́̀͗̐p͉̝̤̬͎̱̩̳̀̑͋̑̏̑̌̀́͡ͅ t͙̻̣͕̥̼͉̓͆̓̕͘͟͝r̴̨̢̼͉̞̋͂́̋̽̃̏̚͢͞o̳̗̲͉̗̺̟͖̗͛̋̆̓̃̊̀̆̒͞ͅḑ̖̝̫͗̎̇̒̀͆̑ͅ r̛̫͈͍̤̼̫̪̹͎̼̃̍̅̽͊̈̄̚͡ l̶̤͚͙̹̺̖͕͙͉̍͗̀͊̈̚͜y̴̧̨͍͚͉̥̐̐̊̌̅̅̋̽͜é̴̡̼̤̖̮͇͊̽̒̏̕͞ḩ̘̭̦̘͙̹̱̈́͂̐̈͘͟ ţ̴̪̣̻͙̞̞̩͕̓̓͗͋͜͝h̨͖͍̙͖̍͒̑́̄͑͡ȯ̠̻̠̞̝͈̖̣̹͎̐̇̒̌͗̑̈́͠t̸̨̛̗̳̩͈̳͙̳̳̿͒͑̐̔͊͘h̬̰̜̹͍̪̦̬̄̓́͋͗́͆͘͜͠͝ d͇̟͔̦̠̤̭̍̀̌̓̊̽̆́ͅơ̛̮͍̻̠͓̈́̓̒͞r̨̞̬̅̔̀̆͛̀̊͌̒͟͜͡ ţ̳̤̫̩͈̍̑̌́̄́̋̃́͝h̷̖̝̠̬̮͇̔͛̌̿̉͂ó̖̳̼̗̥͈̼̂̆̔͒̊̚t̴̰̯̭̮̬͙̞̬̃̊̾̃́͊͂̕h̶̡̯͕̦̦͍̠̙̗̆̂̐́̀̊͢ n̢̨̘̱̰̪̳̰̎̾̄͋͛͛͢į̙̣̱̦̘̓̃͑̄͋͜͟͟͠ͅȇ̡̺͖̭̘̮͓̻̈͆̅́͜͢͞g̨̧̛͓̣̞͈̅̐̑̾̈́ḩ̦̜̖͎̺̃̿̋͂̓͆̆̿̿̅͟ r͍̜̞̱͐̈̓̔̀̌͢ l̵̡̢͍̘͇͇͐̿̒̋́̏̉̀̕͠y̶̨̡̱̠͚͉̞̦̥̏̏̎̋͒̾è̷̢̘̭͙̮̓̏́͝͡h̴̢͔̝̪̖̗̭̣͕͌͌͂̽͑̚
@@ -102,7 +105,7 @@ C̸̛̘̹͕̱̞͙͇͗̓̈͐͋̀̈͡͞t̷̛͚͚̺͍͕̦̹͕̾͗̀͋̂̒ḧ́̆̆̃�
 
 Image.create!(
   author_id: User.find_by(username:"demo").id,
-  image_url:'https://s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/001/original/taijitu.png?1515187267',
+  image_url:'https://s3.amazonaws.com/ULTRAGRAM-DEV/taijitu.png',
   caption:'The distinction between being and not is merely an illusion of the mind. It is imperative to release all anxiety.'
 )
 

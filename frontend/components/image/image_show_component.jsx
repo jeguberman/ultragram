@@ -32,7 +32,6 @@ class ImageShow extends React.Component{
     }
   }
 
-   
 
   socialBlock(){
     return(
