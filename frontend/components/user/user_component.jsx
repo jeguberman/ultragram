@@ -74,12 +74,6 @@ class UserComponent extends React.Component{
     }
   }
 
-  componentDidMount(){
-    const nextImages = this.state.images.filter(
-      (image) => image.author_id === this.state.user.id
-    );
-    this.setState({images: nextImages, user: this.state.user});
-  }
 
 }
 export default UserComponent;

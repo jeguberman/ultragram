@@ -4,7 +4,7 @@ import {RECEIVE_CURRENT_USER, REMOVE_CURRENT_USER } from '../actions/session_act
 import merge from 'lodash/merge';
 
 const UsersReducer = ( oldState = {}, action) => {
-
+debugger
   let newState = merge({}, oldState);
   Object.freeze(oldState);
   switch(action.type){
