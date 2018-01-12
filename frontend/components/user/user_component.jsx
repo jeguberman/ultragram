@@ -29,9 +29,9 @@ class UserComponent extends React.Component{
       this.state.images.reverse().map(
         (image)=> {
           return (
-            <li key={image.id} className="user-show-image">
+
               <img className="user-show-image" src={image.image_url} />
-            </li>
+
           );
         }
       )
@@ -50,7 +50,7 @@ class UserComponent extends React.Component{
       <div className="user-show-userblock">
         <img className="user-picture user-show-user-picture"
           src={this.state.user.profile_image_url} />
-        <div className="user-show-user-block">
+        <div className="user-show-info">
 
           <div className="user-show-name">{this.state.user.username}</div>
 

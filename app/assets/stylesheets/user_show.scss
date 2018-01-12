@@ -1,11 +1,9 @@
 .user-show{
-  position: absolute;
-  left:50%;
-  // z-index: -1;
-  transform: translate(-50%);
+  width: 935px;
+  margin-left: auto;
+  margin-right: auto;
 
-  display: flex;
-  flex-direction: column;
+
 
 
 
@@ -14,10 +12,9 @@
 .user-show-userblock{
   display:flex;
   padding-top: 60px;
-  padding-left: 139px;
+
   padding-bottom: 44px;
-  position: relative;
-  right: 0;
+
 }
 
 .user-show-user-picture{
@@ -25,9 +22,12 @@
   width: 152px;
   object-fit: cover;
   position: inherit;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 83.5px;
+  margin-right: 83.5px;
+
 }
+
+
 
 .user-show-name{
   font-size: 32px;
@@ -53,8 +53,12 @@
 }
 //
 .image-list{
-  display:grid;
+  display: grid;
   grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  align-items: center;
+  grid-gap: 14px 14px;
+
 }
 //
 // .image-list{
@@ -66,5 +70,6 @@
   width: 293px;
   height: 293px;
   object-fit: cover;
-  margin: 14px;
+  padding: 14px;
+
 }
