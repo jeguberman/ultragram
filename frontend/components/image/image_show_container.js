@@ -1,6 +1,5 @@
 import ImageShowComponent from './image_show_component';
 import { fetchImage, deleteImage } from '../../actions/image_actions';
-import { fetchUser } from '../../actions/user_actions';
 import { connect } from 'react-redux';
 
 

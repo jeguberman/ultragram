@@ -132,7 +132,9 @@ TODO:
   * display comments DONE
   * comment form DONE
 * User page
+* let's fix the log in page! For old time's sake! (doesn't change on log in for demo at least)
 * likes
+
 
 
 

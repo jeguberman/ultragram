@@ -1,7 +1,10 @@
-export const fetchUser = (id) => {
+export const fetchUser = (username) => {
+
   return (
     $.ajax({
-      url: `api/users/${id}`
+      url: `api/${username}`,
+      data: username,
+      username: username
     })
   );
 };
@@ -19,16 +22,6 @@ export const updateUser = (user) => {
     $.ajax({
       url: `api/users/${user.id}`,
       method: 'PATCH'
-    })
-  );
-};
-
-export const fetchUsersByIds = (ids) => {
-
-  return(
-    $.ajax({
-      url:`api/users`,
-      data: ids
     })
   );
 };

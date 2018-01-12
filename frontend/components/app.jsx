@@ -34,7 +34,7 @@ const App = () => {
 
         <Switch>
           <AuthRoute path="/newImage" component={ ImageFormContainer } formType="newImage" />
-          <AuthRoute path="/users/:id" component={ UserContainer } />
+          <AuthRoute path="/username" component={ UserContainer } />
           <AuthRoute path="/images/:id" component={ ImageShowContainer } />
           <Route exact path="/" component={ HomeRoute } />
         </Switch>
