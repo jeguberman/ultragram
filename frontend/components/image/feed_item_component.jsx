@@ -56,7 +56,7 @@ class FeedItemComponent extends React.Component{
     return(
       <div className="image-caption-container">
         <div className="comment-item">
-          <div className="author-name">{this.props.author.username}</div>   &nbsp;
+          <Link to={`/${this.props.author.username}`}  className="author-name">{this.props.author.username}</Link>   &nbsp;
           {this.props.image.caption}
         </div>
       </div>

@@ -2,14 +2,14 @@ import React from 'react';
 import Moment from 'react-moment';
 import CommentItem from './comment_item';
 import CommentForm from './comment_form';
-
-
+import { Link } from 'react-router-dom';
 
 
 class ImageShow extends React.Component{
   constructor(props){
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
+    this.updateImage = this.updateImage.bind(this);
   }
 
   componentWillMount(){
@@ -68,9 +68,10 @@ class ImageShow extends React.Component{
     return(
       <header className="image-show-author-info author-info-container comment-item">
         <img className="user-picture image-show-author-picture" src={author.profile_image_url} />
-        <div className="author-name">{author.username}</div>
+        <Link to={`/${author.username}`}  className="author-name">{author.username}</Link>
                 {this.userFollowed()}
                 {this.deleteButton()}
+
       </header>
     );
   }
@@ -82,6 +83,24 @@ class ImageShow extends React.Component{
         <input type="button" className="image-show-delete session-button" value="Delete This Image" onClick={this.handleDelete.bind(this)}/>
       );
     }
+  }
+
+  updateButton(){
+
+    if(this.props.currentUserID === this.props.author.id){
+      return(
+        <input type="button" className="image-show-delete session-button"
+           value="Make this my profile picture"
+           onClick={this.updateImage.bind(this)}/>
+      );
+    }
+  }
+
+  updateImage(e){
+    e.preventDefault();
+    let userTemp = this.props.author;
+    userTemp.profile_image_url = this.props.image.image_url;
+    this.props.updateUser(userTemp);
   }
 
   handleDelete(e){
@@ -104,7 +123,7 @@ class ImageShow extends React.Component{
     return(
       <div className="image-caption-container">
         <div className="comment-item">
-          <div className="author-name">{this.props.author.username}</div>&nbsp;
+          <Link to={`/${this.props.author.username}`}  className="author-name">{this.props.author.username}</Link>&nbsp;
           {this.props.image.caption}
         </div>
       </div>
