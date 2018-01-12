@@ -5,6 +5,9 @@ import CommentForm from './comment_form';
 import { Link } from 'react-router-dom';
 
 
+
+
+
 class ImageShow extends React.Component{
   constructor(props){
     super(props);
