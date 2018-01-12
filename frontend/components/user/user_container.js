@@ -10,26 +10,27 @@ import forOwn from 'lodash/forOwn';
 const mapStateToProps = (state,ownProps) => {
 
   let userlist = Object.values(state.users);
+  let images = Object.values(state.images);
+  let user;
 
-  userlist = users.filter(
+  userlist = userlist.filter(
     (user) => {
       return user.username==="demo";
     }
   );
 
   if( userlist.length !== 0 ){
-    let user = userlist[0];
-    let images = Object.values(state.images);
+    user = userlist[0];
     images = images.filter(
-      (image) => {
-        return image.author = user;
-      }
-    )
+      (image) => image.author.id===user.id
+    );
   }
 
+  //hey fuck javascript sometimes, amirite?
   return {
     username: ownProps.match.params.username,
-    images: state.images
+    user,
+    images
   };
 };
 
