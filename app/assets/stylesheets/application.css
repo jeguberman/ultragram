@@ -77,4 +77,5 @@ Link, button, .session-button {
 
 .user-picture{
   border-radius: 50%;
+  border: 1px solid #e6e6e6;
 }

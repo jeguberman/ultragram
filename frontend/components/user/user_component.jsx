@@ -26,7 +26,7 @@ class UserComponent extends React.Component{
 
   imageList(){
     return(
-      this.state.images.map(
+      this.state.images.reverse().map(
         (image)=> {
           return (
             <li key={image.id} className="user-show-image">
@@ -51,8 +51,18 @@ class UserComponent extends React.Component{
         <img className="user-picture user-show-user-picture"
           src={this.state.user.profile_image_url} />
         <div className="user-show-user-block">
+
           <div className="user-show-name">{this.state.user.username}</div>
-          <div className="user-show-personal">{this.state.user.personal_statement}</div>
+
+          <div className="user-show-post-count"><div className="posts">{this.state.images.length}</div>&nbsp;posts</div>
+
+
+          <div className="author-name"> {this.state.user.fullname} </div>
+&nbsp;
+          <div className="user-show-personal comment-item">
+            {this.state.user.personal_statement}
+          </div>
+
         </div>
       </div>
     );
@@ -63,7 +73,7 @@ class UserComponent extends React.Component{
   render(){
 
     if(this.props.user){
-      return(<div className="user-show grey-border">
+      return(<div className="user-show">
 
       {this.userBlock()}
       {this.imageListContainer()}

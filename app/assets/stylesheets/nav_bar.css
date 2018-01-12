@@ -34,6 +34,7 @@
   margin-right: auto;
   width: 935px;
   box-sizing: content-box;
+  z-index: 2;
 }
 
 
