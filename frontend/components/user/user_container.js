@@ -2,10 +2,7 @@ import UserComponent from './user_component';
 import {connect} from 'react-redux';
 import { withRouter} from 'react-router-dom';
 import { fetchUser, updateUser } from '../../actions/user_actions';
-import find from 'lodash/find';
-import pickBy from 'lodash/pickby';
-import startsWith from 'lodash/startsWith';
-import forOwn from 'lodash/forOwn';
+
 
 const mapStateToProps = (state,ownProps) => {
 
