@@ -1,14 +1,34 @@
 import React from 'react';
 
 class UserComponent extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={images:[]};
+  }
 
   componentWillMount(){
     this.props.fetchUser(this.props.username);
+
   }
+
+  componentWillReceiveProps(nextProps){
+    const nextImages = nextProps.images.filter(
+      (image) => image.author_id === nextProps.user.id
+    );
+    debugger
+    this.setState({images: nextImages});
+  }
+
+  // shouldComponentUpdate(nextProps, nextState){
+  //   // super();
+  //   debugger
+  // }
+
+
 
   imageList(){
     return(
-      this.props.images.map(
+      this.state.images.map(
         (image)=> {
           return (
             <li key={image.id} className="user-show-image">

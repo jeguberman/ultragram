@@ -13,11 +13,6 @@ const mapStateToProps = (state,ownProps) => {
   let images = Object.values(state.images);
   let user = userlist.find((u)=>u.username=ownProps.match.params.username);
 
-  userlist = userlist.filter(
-    (user) => {
-      return user.username==="demo";
-    }
-  );
 
 
   return {
