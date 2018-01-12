@@ -3,16 +3,17 @@ import {connect} from 'react-redux';
 import { withRouter} from 'react-router-dom';
 import { fetchUser, updateUser } from '../../actions/user_actions';
 const mapStateToProps = (state,ownProps) => {
-  debugger
+
   return {
-    userId: ownProps.match.params.id
+    username: ownProps.match.params.username,
+    images: state.images
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     updateUser: (user) => dispatch(updateUser(user)),
-    fetchUser: (id) => dispatch(fetchUser(id))
+    fetchUser: (username) => dispatch(fetchUser(username))
   };
 };
 
