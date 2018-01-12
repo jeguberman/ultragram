@@ -15,7 +15,7 @@
   max-width: 600px;
   min-width: 100px;
   display: inline-block;
-  object-fit: cover;
+  object-fit: contain;
   background-color: #e6e6e6;
 }
 

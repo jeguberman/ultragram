@@ -54,9 +54,9 @@ class NavBarComponent extends React.Component{
   }
 
   navUser(){
-    debugger
+
     if(this.props.user){
-      debugger
+  
       return(
         <Link to={`/${this.props.user.username}`}>
           <div className="nav-tool nav-user user"></div>
