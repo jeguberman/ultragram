@@ -7,19 +7,15 @@ import User from 'react-icons/lib/fa/user';
 class NavBarComponent extends React.Component{
   constructor(props){
     super(props);
-    this.state={user:""};
-  }
 
+  }
   logoutButton(){
     return(<button onClick={this.props.logout}>Logout</button>);
   }
 
 
-  componentWillReceiveProps(nextProps){
-    this.setState(
-      {user:nextProps.user}
-    );
-  }
+
+
 
   navBranding(){
     return(
@@ -38,6 +34,7 @@ class NavBarComponent extends React.Component{
   }
 
   navUserTools(){
+
     return (
       <div className="nav-user-tools">
 
@@ -49,12 +46,26 @@ class NavBarComponent extends React.Component{
           <div className="nav-tool nav-camera"></div>
         </Link>
 
+        {this.navUser()}
+
+
       </div>
     );
   }
 
-  render(){
+  navUser(){
+    if(this.props.user){
+      return(
+        <Link to={`/${this.props.user.username}`}>
+          <div className="nav-tool nav-user user"></div>
+        </Link>
+      );
+    }else{
+      return null;
+    }
+  }
 
+  render(){
     return(
       <div>
 
@@ -69,7 +80,6 @@ class NavBarComponent extends React.Component{
 
       </div>
     );
-
   }
 }
 

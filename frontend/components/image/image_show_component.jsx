@@ -30,7 +30,6 @@ class ImageShow extends React.Component{
   }
 
   socialBlock(){
-    // debugger
     return(
       <div className="image-show-social-block">
         {this.authorInfo()}

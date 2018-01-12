@@ -53,18 +53,20 @@ class FeedItemComponent extends React.Component{
   }
 
   commentCount(){
-    if(this.props.image.comments.length>1){
-      return(
-        <div className="comment-count author-name">{this.props.image.comments.length}&nbsp;comments</div>
-      );
-    }else if (this.props.image.comments.length === 1){
-      return(
-        <div className="comment-count author-name">{this.props.image.comments.length}&nbsp;comment</div>
-      );
-    }else{
-      return null;
+    if(this.props.image.comments){
+      if(this.props.image.comments.length>1){
+        return(
+          <div className="comment-count author-name">{this.props.image.comments.length}&nbsp;comments</div>
+        );
+      }else if (this.props.image.comments.length === 1){
+        return(
+          <div className="comment-count author-name">{this.props.image.comments.length}&nbsp;comment</div>
+        );
+      }
     }
+    return null;
   }
+
 
   imageCaption(){
     if(this.props.image.caption){

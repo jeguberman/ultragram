@@ -12,7 +12,7 @@ class UserComponent extends React.Component{
   }
 
   componentWillReceiveProps(nextProps){
-    // debugger
+
     const nextImages = nextProps.images.filter(
       (image) => image.author_id === nextProps.user.id
     );
@@ -21,10 +21,6 @@ class UserComponent extends React.Component{
 
 
 
-  // shouldComponentUpdate(nextProps, nextState){
-  //   // super();
-  //   debugger
-  // }
 
 
 
