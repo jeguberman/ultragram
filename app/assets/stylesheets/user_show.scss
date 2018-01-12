@@ -9,6 +9,7 @@
 .user-show-user-picture{
   height: 152px;
   width: 152px;
+  object-fit:cover;
 }
 
 .image-list{
@@ -19,5 +20,5 @@
 .user-show-image{
   width: 293px;
   height: 293px;
-  object-fit: contain;
+  object-fit: cover;
 }

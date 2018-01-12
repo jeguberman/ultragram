@@ -3,7 +3,7 @@ import React from 'react';
 class UserComponent extends React.Component{
   constructor(props){
     super(props);
-    this.state={images:[]};
+    this.state={images:[], user:this.props.user};
   }
 
   componentWillMount(){
@@ -15,8 +15,7 @@ class UserComponent extends React.Component{
     const nextImages = nextProps.images.filter(
       (image) => image.author_id === nextProps.user.id
     );
-    debugger
-    this.setState({images: nextImages});
+    this.setState({images: nextImages, user: nextProps.user});
   }
 
   // shouldComponentUpdate(nextProps, nextState){
@@ -51,10 +50,10 @@ class UserComponent extends React.Component{
     return(
       <div className="user-show-userblock">
         <img className="user-picture user-show-user-picture"
-          src={this.props.user.profile_image_url} />
+          src={this.state.user.profile_image_url} />
         <div className="user-show-user-block">
-          <div className="user-show-name">{this.props.user.username}</div>
-          <div className="user-show-personal">{this.props.user.personal_statement}</div>
+          <div className="user-show-name">{this.state.user.username}</div>
+          <div className="user-show-personal">{this.state.user.personal_statement}</div>
         </div>
       </div>
     );
@@ -63,6 +62,7 @@ class UserComponent extends React.Component{
 
 
   render(){
+
     if(this.props.user){
       return(<div className="user-show grey-border">
 
@@ -75,7 +75,10 @@ class UserComponent extends React.Component{
   }
 
   componentDidMount(){
-
+    const nextImages = this.state.images.filter(
+      (image) => image.author_id === this.state.user.id
+    );
+    this.setState({images: nextImages, user: this.state.user});
   }
 
 }
