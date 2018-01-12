@@ -1,6 +1,14 @@
 # README
 
-A clone of instagram created as a full stack project for App Academy. I am not affiliated with instagram or facebook. This is intended to be educational. Also it's specifically for earth-shattering supervillains. ULTRAGRAM
+A clone of instagram created as a full stack project for App Academy. I am not affiliated with instagram or facebook. This is intended to be educational. Also it's specifically for earth-shattering supervillains.
+
+https://ultragram.herokuapp.com/#/
+
+Resources
+
+react-moment: https://www.npmjs.com/package/react-moment
+text-area-autosize: https://github.com/buildo/react-autosize-textarea
+
 
 ## January 2nd 2018
 * 12:15 should be able to create users at seeds and from console. Static page still not build

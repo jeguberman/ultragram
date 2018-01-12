@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class UserComponent extends React.Component{
   constructor(props){
@@ -23,16 +24,16 @@ class UserComponent extends React.Component{
 
 
 
-
   imageList(){
     let i =1;
     return(
       this.state.images.reverse().map(
         (image)=> {
           return (
-
-              <img key= {i++}className="user-show-image" src={image.image_url} />
-
+            <Link key={image.id} to={`/images/${image.id}`}>
+              <img className="user-show-image"
+                src={image.image_url} />
+            </Link>
           );
         }
       )
