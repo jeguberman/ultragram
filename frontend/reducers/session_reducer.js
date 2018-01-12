@@ -2,9 +2,11 @@ import { RECEIVE_CURRENT_USER, REMOVE_CURRENT_USER } from '../actions/session_ac
 
 import merge from 'lodash/merge';
 
+const defaultState = {
+  currentUserID: null,
+};
 
-
-const sessionReducer = ( oldState = {currentUser:null}, action ) => {
+const sessionReducer = ( oldState = defaultState, action ) => {
   let newState = merge({},oldState);
   Object.freeze(oldState);
 
@@ -12,7 +14,7 @@ const sessionReducer = ( oldState = {currentUser:null}, action ) => {
     case RECEIVE_CURRENT_USER:
       return { currentUserID: action.currentUser.user.id };
     case REMOVE_CURRENT_USER:
-      return {};
+      return defaultState;
     default:
     return oldState;
   }

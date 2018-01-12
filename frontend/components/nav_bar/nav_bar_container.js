@@ -4,8 +4,9 @@ import {logout} from '../../actions/session_actions';
 import {fetchUser} from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
   return {
-    currentUserID:state.session.currentUserID,
+    currentUserID: state.session.currentUserID,
     user: state.users[state.session.currentUserID]
   };
 };

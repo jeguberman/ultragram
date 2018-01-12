@@ -13,7 +13,7 @@ const UsersReducer = ( oldState = {}, action) => {
     case RECEIVE_USERS:
       return action.users;
     case RECEIVE_CURRENT_USER:
-      newState[action.currentUser.id] = action.currentUser;
+      newState[action.currentUser.user.id] = action.currentUser.user;
       return newState;
     case REMOVE_CURRENT_USER:
       return {};
