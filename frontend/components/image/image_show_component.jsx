@@ -29,6 +29,8 @@ class ImageShow extends React.Component{
     }
   }
 
+   
+
   socialBlock(){
     return(
       <div className="image-show-social-block">

@@ -134,6 +134,7 @@ TODO:
 * User page
 * let's fix the log in page! For old time's sake! (doesn't change on log in for demo at least)
 * likes
+* ok so I don't have likes. But I think everything else works. I'm mostly editing this document cause I'm trying to find hacky solutions to git weirdness
 
 
 
