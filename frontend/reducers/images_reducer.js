@@ -5,6 +5,7 @@ import  merge  from 'lodash/merge';
 
 const ImageReducer = ( oldState = {}, action ) => {
 
+
   let newState = merge( {}, oldState);
   Object.freeze(oldState);
   switch(action.type){
@@ -19,7 +20,9 @@ const ImageReducer = ( oldState = {}, action ) => {
     case REMOVE_CURRENT_USER:
       return {};
     case RECEIVE_USER:
-      newState = merge({},newState,action.images);
+      action.images.forEach(
+        (image)=>newState[image.id]=image
+      );
       return newState;
     case REMOVE_IMAGE:
       delete newState[action.imageId];

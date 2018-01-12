@@ -7,29 +7,11 @@ import pickBy from 'lodash/pickby';
 import startsWith from 'lodash/startsWith';
 import forOwn from 'lodash/forOwn';
 
-const mapStateToProps = (state,ownProps) => {
+const mapStateToProps = ({users, images},ownProps) => {
 
-  let userlist = Object.values(state.users);
-  let images = Object.values(state.images);
-  let user;
-
-  userlist = userlist.filter(
-    (user) => {
-      return user.username==="demo";
-    }
-  );
-
-  if( userlist.length !== 0 ){
-    user = userlist[0];
-    images = images.filter(
-      (image) => image.author.id===user.id
-    );
-  }
-
-  //hey fuck javascript sometimes, amirite?
   return {
     username: ownProps.match.params.username,
-    user,
+    users,
     images
   };
 };
@@ -42,3 +24,25 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserComponent);
+
+
+// const users = state
+
+// let userlist = Object.values(state.users);
+// let images = Object.values(state.images);
+// let user;
+//
+// userlist = userlist.filter(
+//   (user) => {
+//     return user.username==="demo";
+//   }
+// );
+//
+// if( userlist.length !== 0 ){
+//   user = userlist[0];
+//   images = images.filter(
+//     (image) => image.author.id===user.id
+//   );
+// }
+//
+// //hey fuck javascript sometimes, amirite?

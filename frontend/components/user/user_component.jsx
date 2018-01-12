@@ -11,8 +11,8 @@ class UserComponent extends React.Component{
       this.props.images.map(
         (image)=> {
           return (
-            <li key={image.id}>
-              <img src={image.image_url} />
+            <li key={image.id} className="user-show-image">
+              <img className="user-show-image" src={image.image_url} />
             </li>
           );
         }
@@ -26,13 +26,32 @@ class UserComponent extends React.Component{
     );
   }
 
+  userBlock(){
+
+    return(
+      <div className="user-show-userblock">
+        <img className="user-picture user-show-user-picture"
+          src={this.props.user.profile_image_url} />
+        <div className="user-show-user-block">
+          <div className="user-show-name">{this.props.user.username}</div>
+          <div className="user-show-personal">{this.props.user.personal_statement}</div>
+        </div>
+      </div>
+    );
+  }
+
 
 
   render(){
-    return(<div className="user-show">
-    here
-    {this.imageListContainer()}
-    </div>);
+    if(this.props.user){
+      return(<div className="user-show grey-border">
+
+      {this.userBlock()}
+      {this.imageListContainer()}
+      </div>);
+    }else{
+      return (null);
+    }
   }
 
   componentDidMount(){

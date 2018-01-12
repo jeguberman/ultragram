@@ -1,0 +1,23 @@
+.user-show{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+
+.user-show-user-picture{
+  height: 152px;
+  width: 152px;
+}
+
+.image-list{
+  display:grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.user-show-image{
+  width: 293px;
+  height: 293px;
+  object-fit: contain;
+}
