@@ -8,7 +8,6 @@ class UserComponent extends React.Component{
 
   componentWillMount(){
     this.props.fetchUser(this.props.username);
-
   }
 
   componentWillReceiveProps(nextProps){

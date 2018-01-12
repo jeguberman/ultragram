@@ -4,6 +4,8 @@ import {logout} from '../../actions/session_actions';
 import {fetchUser} from '../../actions/user_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
+    user: state.users[state.session.currentUserID],
+    users: state.users
   };
 };
 
@@ -13,4 +15,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(NavBarComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(NavBarComponent);

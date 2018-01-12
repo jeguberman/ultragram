@@ -100,12 +100,12 @@ handleSubmit(e){
 handleFileChange(e){
   const reader = new FileReader();
   const file = e.currentTarget.files[0];
-
   reader.onloadend = () => {
     return( this.setState(
       {image_url: reader.result, imageFile: file}
     ));
   };
+  //this is where you will make image stay the same if file is not select
 
   if(file){
     reader.readAsDataURL(file);

@@ -5,9 +5,20 @@ import Signout from 'react-icons/lib/fa/sign-out';
 import User from 'react-icons/lib/fa/user';
 
 class NavBarComponent extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={user:""};
+  }
 
   logoutButton(){
     return(<button onClick={this.props.logout}>Logout</button>);
+  }
+
+
+  componentWillReceiveProps(nextProps){
+    this.setState(
+      {user:nextProps.user}
+    );
   }
 
   navBranding(){
@@ -38,10 +49,9 @@ class NavBarComponent extends React.Component{
           <div className="nav-tool nav-camera"></div>
         </Link>
 
-        <Link to="/">
+        <Link to={`/${this.state.user.username}`}>
           <div className="nav-tool  nav-user user"></div>
         </Link>
-
 
       </div>
     );
