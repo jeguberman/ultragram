@@ -135,37 +135,37 @@ Comment.create!(
 
 Comment.create!(
   author_id: User.find_by(username:"monkeyking").id,
-  image_id: User.find_by(username:"demo").images[4].id,
+  image_id: Image.last.id,
   body:"Taoism, huh? I tried taoism, but then Lao Tzu tried to boil me in a celestial cauldron for 11 days. Buddhism is the way to be"
 )
 
 Comment.create!(
   author_id: User.find_by(username:"demo").id,
-  image_id: User.find_by(username:"demo").images[4].id,
+  image_id:  Image.last.id,
   body:"what?"
 )
 
 Comment.create!(
   author_id: User.find_by(username:"monkeyking").id,
-  image_id: User.find_by(username:"demo").images[4].id,
+  image_id:  Image.last.id,
   body:"I'm saying the buddha holds all of creation in his hand, his fingers are the pillar of the universe, that is how I peed on his thumb when I jumped to the farthest corners of the cosmos"
 )
 
 Comment.create!(
   author_id: User.find_by(username:"thanos").id,
-  image_id: User.find_by(username:"demo").images[4].id,
+  image_id:  Image.last.id,
   body:"dude, are you on drugs?"
 )
 
 Comment.create!(
   author_id: User.find_by(username:"demo").id,
-  image_id: User.find_by(username:"demo").images[4].id,
+  image_id:  Image.last.id,
   body:"Who are you people? Are you my friends? Do we like each other?"
 )
 
 Comment.create!(
   author_id: User.find_by(username:"Cthulu").id,
-  image_id: User.find_by(username:"demo").images[4].id,
+  image_id:  Image.last.id,
   body:".
 .
 t̡̡̫̪̭̹̦̆́̔͗͐́͠h̨̡͉̠̮͍̮͒̒͊̄̆̐̂ȏ̶͉͙̬̮̟͕̺͖͔̂̔͐̈́̓̚͠͞t̮͚̳͈͊̉̉̿͟͞h̻̪̳̦͛͑́̐͐̽̊͢͜͢ͅ l͕͎̦̟̺̠̗͊̀̉̇̐̔͂́̕̚ͅo̤͍͙̺̭̱̖͔̺̿̀͐͗̋͐̂̽͝k̨̝̖͔͔̯͔̻̓̐́̀̚͟͜i̦͕̣̠̻̝̍̇̾̐̄̐͢ t͉͕̱̰̪̠̞͆͆͋̐̚͘ȇ̷̹̟̠̞͈̯͍͇̥͇̊͂̆͒̇̋͡ĺ̡̛̞͓̝͇͊̄̕o̶̧̺͙̩̞͕̤͇͚̘̿́̋͂̑̃̕͘̚͝r̶̳̝͓̤̙̰̙̳̦̉̎̈́́̉̇̿͂͟ f̨͙̻̗͇̓̐̂́͂͘̚͜͠͡r̷̡̬̤͕͕̫̲̅̄̇̈̈́̔̚͢͡͝͡ẽ̵̡͙̳͓͓̟̳̅̒͂̔y̸͕͇̩͔̱̌͛͑̔̉̒́͘͡ẻ̷͎̺̩̘͇̮͍̖̈́̍́͒͞ͅr̡͓̠̖͈̝̔̇͛̊͡ w̸͎̙͇͖͋̒͗̔͊̈́͛͌̉̏ͅo̸̪͚̰̳͇͂̈́̔̐̇̄̄̕͜͡ṯ̢̛͖̫̇̋͢͝͡ą̷̙̟̦͎̥̯̾͋́̎̐̔̅͜͝͝͠ͅn̵̳̰͕̜̲̜͓͈̳͙͗͛̂͂̏ h̵̢̥̺̥̗̯̹̪͆̉̿̏̾̑̒͑͜͜͡ȩ͖̣̹̲̣̲͗́͑́́͘̕͘͟͝l̨̜̗̤͒̎̋̾̇̋͘͜͞ b̸̧̠̜̤̻̠̼́̀̋̑͋̾̕͠a̯̪̜͎̣͎̝͆̋̊̈̂̀̀̕͢l̡̨̡̻̻̘͓̄̊̒̓͠͠ m͓̯̻̣̰̮̣͍̖͌̆͑͒̀̀̔͘͞ė̶͉͎̞̤̜̣̺́͒̏̈́͗͆̾l̵͔̮̺̞̣͆̋͗͆͌̑̌͢͝͡ơ̢̠̞̟̙̞͋͐̃̏̍̓r͈͇̦̟̘̜̹̎̎̀͌͋͜͜͝͞
@@ -175,7 +175,7 @@ t̡̡̫̪̭̹̦̆́̔͗͐́͠h̨̡͉̠̮͍̮͒̒͊̄̆̐̂ȏ͉̂̔͐̈́̓̚͠͞�
 
 Comment.create!(
   author_id: User.find_by(username:"monkeyking").id,
-  image_id: User.find_by(username:"demo").images[4].id,
+  image_id:  Image.last.id,
   body:"I am not afraid of you purple man. I am he who feasted on the peaches of the heavenly orchards"
 )
 

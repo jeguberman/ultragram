@@ -23,6 +23,7 @@ html, body, #root{
   height:100%;
 }
 
+
 .background-layer{
   background-color:  #fafafa;
   position:fixed;
@@ -40,7 +41,7 @@ html, body, #root{
 }
 
 .grey-border{
-    border: 1px solid #e6e6e6;
+  border: 1px solid #e6e6e6;
 }
 
 .header-component{
@@ -48,12 +49,9 @@ html, body, #root{
 }
 
 .body-component {
-  /*width: 616px;*/
-  /*margin-left:auto;*/
-  /*margin-right:auto;*/
-  /*padding-top: 60px;*/
-  width: 100vw;
-  /*text-align: center;*/
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
