@@ -116,16 +116,19 @@ class ImageShow extends React.Component{
   }
 
   commentList(){
-
-    return(
-      <ul className="comment-list image-show-comment-list">
-        {this.props.comments.map( (comment) => {
-          return (
-            <CommentItem key={comment.id} comment={comment}/>
-          );
-        })}
-      </ul>
-    );
+    if(this.props.comments){
+      return(
+        <ul className="comment-list image-show-comment-list">
+          {this.props.comments.map( (comment) => {
+            return (
+              <CommentItem key={comment.id} comment={comment}/>
+            );
+          })}
+        </ul>
+      );
+    }else{
+      return null;
+    }
   }
 
   renderImage(){

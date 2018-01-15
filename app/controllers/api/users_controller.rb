@@ -19,23 +19,20 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-
+    @with_images = false
     if params[:username]
       @user = User.find_by(username: params[:username])
-      if @user
-        render 'api/users/nameshow'
-      else
-        render json@user.errors.fullmessages, status: 404
-      end
-
+      @with_images = true
     else
       @user = User.find(params[:id])
-      if @user
-        render 'api/users/show'
-      else
-        render json: @user.errors.full_messages, status: 404
-      end
     end
+    
+    if @user
+      render 'api/users/show'
+    else
+      render json @user.errors.fullmessages, status: 404
+    end
+
   end
 
   private

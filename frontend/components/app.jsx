@@ -19,25 +19,25 @@ const App = () => {
   return (
     <div className="top-level">
       <div className="background-layer"></div>
-      <div className="header-component">
-        <AuthRoute path="/" component={NavBarContainer} />
-      </div>
+        <div className="header-component">
+          <AuthRoute path="/" component={NavBarContainer} />
+        </div>
 
-      <div className="body-component">
+        <div className="body-component">
 
-        <Route exact path="/users" render={
-            ()=>(<Redirect push to="/" />)
-          } />
-        <Route exact path="/images" render={
-            ()=>(<Redirect push to="/" />)
-          } />
+          <Route exact path="/users" render={
+              ()=>(<Redirect push to="/" />)
+            } />
+          <Route exact path="/images" render={
+              ()=>(<Redirect push to="/" />)
+            } />
 
-        <Switch>
-          <AuthRoute path="/newImage" component={ ImageFormContainer } formType="newImage" />
-          <AuthRoute exact path="/:username" component={ UserContainer } />
-          <AuthRoute path="/images/:id" component={ ImageShowContainer } />
-          <Route exact path="/" component={ HomeRoute } />
-        </Switch>
+          <Switch>
+            <AuthRoute path="/newImage" component={ ImageFormContainer } formType="newImage" />
+            <AuthRoute exact path="/:username" component={ UserContainer } />
+            <AuthRoute path="/images/:id" component={ ImageShowContainer } />
+            <Route exact path="/" component={ HomeRoute } />
+          </Switch>
 
       </div>
 
