@@ -26,7 +26,7 @@ class Api::UsersController < ApplicationController
     else
       @user = User.find(params[:id])
     end
-    
+
     if @user
       render 'api/users/show'
     else
@@ -40,6 +40,10 @@ class Api::UsersController < ApplicationController
   def user_params
 
     params.require(:user).permit(:username, :password, :fullname, :profile_image_url)
+  end
+
+  def he_comes
+    @user.personal_statement=Zalgo.he_comes(@user.personal_statement) if current_user.username == "Cthulu"
   end
 
 

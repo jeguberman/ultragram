@@ -1,3 +1,4 @@
+require 'zalgo'
 class Api::ImagesController < ApplicationController
   # before_action: require_logged_in #I'm like 95% sure this doesn't need to be here, but if I'm wrong, I'd like anybody reviewing my code to see I didn't just forget about it.
 
@@ -5,6 +6,7 @@ class Api::ImagesController < ApplicationController
     @images=Image.all.includes(:author).order(created_at: :desc)
     return @images
   end
+
 
   def create
     @image = Image.new(image_params)
@@ -47,6 +49,10 @@ class Api::ImagesController < ApplicationController
 
   def image_params
     params.require(:image).permit(:image_url, :caption)
+  end
+
+  def he_comes
+    @image.caption=Zalgo.he_comes(@image.caption) if current_user.username == "Cthulu"
   end
 
 end

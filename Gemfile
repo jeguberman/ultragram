@@ -32,6 +32,7 @@ gem 'paperclip', '~> 5.1.0'
 gem 'aws-sdk', '< 3.0'
 gem 'pry-rails'
 gem 'figaro'
+gem 'zalgo'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
