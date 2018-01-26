@@ -35,15 +35,12 @@ class SessionForm extends React.Component{
   listErrors(){
 
     if(this.props.errors.length > 0){
-
       const errorList = this.props.errors.map(
         (error, idx) => {return <li key={idx}         className="session-error-item error">{error}</li>;}
       );
-
       return(
         <ul className="session-errors">{errorList}</ul>
       );
-
     }else{
       return null;
     }
@@ -107,6 +104,7 @@ class SessionForm extends React.Component{
   }
 
   changeFormType(e){
+    this.props.clearSessionErrors();
     e.preventDefault();
     if(this.state.formType === "Sign up"){
       this.setState({formType:"Log in"});

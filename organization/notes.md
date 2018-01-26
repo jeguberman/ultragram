@@ -140,6 +140,10 @@ TODO:
 * likes
 * ok so I don't have likes. But I think everything else works. I'm mostly editing this document cause I'm trying to find hacky solutions to git weirdness
 
+## Jan 25
+* aaaaand we're back. We're gonna check off the simpler things of ommi's todo list to clean out the day
+    * change logout icon from compass to logout
+
 
 
 

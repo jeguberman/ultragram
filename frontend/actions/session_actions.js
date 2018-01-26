@@ -42,7 +42,11 @@ export const login = user => dispatch => {
   );
 };
 
-export const receiveErrors = errors => {
+export const clearSessionErrors = () => dispatch => {
+    dispatch(receiveErrors([]));
+};
+
+const receiveErrors = errors => {
   return {
     type: RECEIVE_SESSION_ERRORS,
     errors

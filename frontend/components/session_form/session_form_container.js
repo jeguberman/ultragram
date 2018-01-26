@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 // import {with router}
-import { login, logout, creatUser, clearErrors } from '../../actions/session_actions';
+import { login, logout, creatUser, clearSessionErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mapStateToProps = (state, ownProps) => {
@@ -14,7 +14,8 @@ const mapDispatchToProps = (dispatch, ownProps ) => {
   return{
     login: (userData) => dispatch(login(userData)),
     logout: () => dispatch(logout()),//delete
-    createUser: (userData) => dispatch(createUser(userData))
+    createUser: (userData) => dispatch(createUser(userData)),
+    clearSessionErrors: () => dispatch(clearSessionErrors())
   };
 
 };
