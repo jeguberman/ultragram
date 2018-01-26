@@ -12,7 +12,7 @@ var prodPlugins = [
   }),
   new webpack.optimize.UglifyJsPlugin({
     compress: {
-      warnings: structures}
+      warnings: true}
     })
   ];
 
