@@ -4,8 +4,8 @@
   box-sizing: content-box;
 
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 39%;
+  left: 47%;
   transform: translate(-50%, -50%);
   /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
   /*width: 100%;*/
@@ -38,7 +38,7 @@
 .homePhones{
   display: inline-block;
   /*resize: none;*/
-  height: 100%
+  height: 618px;
 
   /*border: 1px solid red;*/
 }
@@ -50,9 +50,9 @@
   max-width: 250px;
   /*width: 250px;*/
   margin: 3px;
+  margin-left: 0px;
 
   /*border: 1px solid blue;*/
-
 
 }
 
@@ -64,7 +64,9 @@
   margin-top: 12%;
   border: 1px solid #e6e6e6;
   text-align: center;
-
+  width: 350px;
+  box-sizing: border-box;
+  height: 100%
 }
 
 .session-nav{
@@ -76,7 +78,7 @@
   margin-bottom: 30%;
   padding-top: 13px;
   padding-bottom: 13px;
-  width: 100%;
+  width: 350px;
 
   background-color: white;
   border: 1px solid #e6e6e6;
@@ -103,10 +105,11 @@
   margin-top: 5px;
   font-size: 12px;
   font-weight: light;
-  padding: 2px;
-  padding-bottom: 3px;
+  padding: 12px;
+  /* padding-bottom: 3px; */
   width: 100%;
   /*height: 18px;*/
+
 }
 
 .session-input::placeholder {
@@ -125,7 +128,11 @@
   color: #fff;
   text-transform: capitalize;
   border-radius: 2px;
-  padding: 4px;
+  font-size: 14;
+  font-weight: 600;
+  padding: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
 
 }
 
@@ -155,6 +162,7 @@
   font-size: 40px;
   margin-bottom: 5%;
   line-height: normal;
+  margin-top: 10%
 }
 
 
