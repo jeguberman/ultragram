@@ -13,12 +13,14 @@ const mapStateToProps = (state, ownProps) => {
     let image = state.images[id];
     let author = state.users[image.author_id];
     let comments = state.images[id].comments;
+    let likes = state.images[id].likes;
     return {
       id,
       image,
       author,
       currentUserID,
-      comments
+      comments,
+      likes
     };
   }
   return(

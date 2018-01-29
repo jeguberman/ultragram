@@ -38,12 +38,25 @@ class ImageShow extends React.Component{
       <div className="image-show-social-block">
         {this.authorInfo()}
         {this.comments()}
+        {this.likes()}
         {this.elapsedTime()}
         <CommentForm imageID={this.props.id}/>
       </div>
     );
   }
 
+  likeBlock(){
+    this.likes();
+  }
+
+  likes(){
+    var likes = this.props.likes.length;
+    return(
+      <div className="image-show-likes like-block">
+        <div className="image-show-view-count view-count">{likes} {likes === 1 ? "like" : "likes"}</div>
+      </div>
+    );
+  }
 
   authorInfo(){
     let author = this.props.author;
@@ -145,13 +158,7 @@ class ImageShow extends React.Component{
      );
    }
 
-  likes(){
-    return(
-      <div className="image-show-likes like-block">
-        <div className="image-show-view-count view-count">like block</div>
-      </div>
-    );
-  }
+
 
   elapsedTime(){
     return(

@@ -10,6 +10,7 @@ class Image < ApplicationRecord
     foreign_key: :author_id
 
   has_many :comments
+  has_many :likes
 
   def url
     self.image_url.url

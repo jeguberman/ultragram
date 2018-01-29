@@ -52,7 +52,7 @@ class Api::ImagesController < ApplicationController
   end
 
   def he_comes
-    @image.caption=Zalgo.he_comes(@image.caption) if current_user.username == "Cthulu"
+    @image.caption = Zalgo.he_comes(@image.caption) if current_user.username == "Cthulu"
   end
 
 end

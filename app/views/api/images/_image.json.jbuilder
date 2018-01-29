@@ -7,3 +7,7 @@
     json.extract! comment, :body, :id, :image_id
     json.extract! comment.author, :username
   end
+
+  json.likes image.likes do |like|
+    json.extract! like.liker, :username
+  end
