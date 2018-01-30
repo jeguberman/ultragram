@@ -1,6 +1,7 @@
 
 class Like < ApplicationRecord
   validates :image_id, :user_id, presence: true
+  validates_uniqueness_of :user_id, :scope => [:image_id]
 
   belongs_to :image
 
