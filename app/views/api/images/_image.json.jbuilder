@@ -9,5 +9,5 @@
   end
 
   json.likes image.likes do |like|
-    json.extract! like.liker, :username
+    json.extract! like.liker, :username, :id
   end

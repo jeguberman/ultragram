@@ -13,7 +13,11 @@ class ImageShow extends React.Component{
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
     this.updateImage = this.updateImage.bind(this);
+    this.handleLike = this.handleLike.bind(this);
   }
+
+
+
 
   componentWillMount(){
     this.props.fetchImage(this.props.id);
@@ -38,18 +42,34 @@ class ImageShow extends React.Component{
       <div className="image-show-social-block">
         {this.authorInfo()}
         {this.comments()}
-        {this.likes()}
+        {this.likeButton()}
+        {this.likesCount()}
         {this.elapsedTime()}
         <CommentForm imageID={this.props.id}/>
       </div>
     );
   }
 
-  likeBlock(){
-    this.likes();
+  handleLike(e){
+
+    e.preventDefault();
+    const derlike = {user_id: this.props.currentUserID, image_id: this.props.id};
+    if(this.props.liked){
+      this.props.deleteLike(derlike);
+    }else{
+      this.props.postLike(derlike);
+    }
   }
 
-  likes(){
+  likeButton(){
+    if(this.props.liked){
+      return(<button className="dislike-button" onClick={this.handleLike}>true</button>);
+    }else{
+      return(<button className="like-button" onClick={this.handleLike}>false</button>);
+    }
+  }
+
+  likesCount(){
     var likes = this.props.likes.length;
     return(
       <div className="image-show-likes like-block">

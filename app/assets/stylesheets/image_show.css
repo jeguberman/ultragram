@@ -75,6 +75,22 @@
     border-top: 1px;
   }
 
+  .like-button{
+    height: 24px;
+    width: 24px;
+    border: none;
+    background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
+    background-position: -52px -358px;
+  }
+
+  .dislike-button{
+    height: 24px;
+    width: 24px;
+    border: none;
+    background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
+    background-position: -104px -358px;
+  }
+
   .comment-input{
     width: 100%;
     min-height:23px;

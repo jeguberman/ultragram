@@ -69,7 +69,10 @@ const receiveImages = ({images, authors}) => {
   };
 };
 
-export const receiveImage = ({image, author}) => {
+export const receiveImage = (response) => {
+
+  let image = response.image;
+  let author = response.author;
   return {
     type: RECEIVE_IMAGE,
     image,

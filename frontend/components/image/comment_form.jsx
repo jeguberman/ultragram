@@ -11,8 +11,6 @@ class CommentForm extends React.Component{
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
-
-
   update(e){
     this.setState({body:e.currentTarget.value});
   }
