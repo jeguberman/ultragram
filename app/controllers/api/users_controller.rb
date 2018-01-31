@@ -1,3 +1,4 @@
+require 'zalgo'
 class Api::UsersController < ApplicationController
   #copied from bench bnb. to be edited after auth
 
@@ -7,7 +8,7 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    # @user.profile_image_url =
+
 
     if @user.save
       login(@user)

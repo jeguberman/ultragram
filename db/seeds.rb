@@ -20,7 +20,7 @@ User.create!(
 User.create!(
   username:"Cthulu",
   fullname:"error", password:"passwordryleh",
-  personal_statement:"̶͉y̴̧̨͍͚͉̥̐̐̊̌̅̅̋̽͜é̴̡̼̤̖̮͇͊̽̒̏̕͞",
+  personal_statement:"I am a priest of higher dimensional entities, I will destroy the world merely by awakening from my millienia long slumber.",
   profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/cthuluselfie.jpg'
 )
 
@@ -96,11 +96,7 @@ Image.create!(
 Image.create!(
 author_id: User.find_by(username:"Cthulu").id,
 image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/cthuluselfie.jpg',
-caption: '.
-.
-C̸̛̘̹͕̱̞͙͇͗̓̈͐͋̀̈͡͞t̷̛͚͚̺͍͕̦̹͕̾͗̀͋̂̒ḧ̶̰̩̭͓͙̭̺́̆̆̃̇͟͢͜ t̨͙͎̰̪̓̒̏́̑͌͐̏̎͊ô̶̥̤̦̳̘̓̃̈̀͋̚͠p̧̛̯̺̼̺͉̔͒̃̚̕͘͘ f̵̹͈̙͍̋͐̀̓̿̓͐̏͒́͢ţ̨̛̻̞͔̖͔͕̈́̉̐̃̀͂̀͘͜r̢͍̱̝͈̟͈̘͒̽̍̑̄͛͆͑̿͜͝ͅo̡͍͚̣̩͆̅̈͛̂̂̀̑͘  l̤̻̤̣͕̮̅̀̎͐́͋̏̕͜o̷̢̢̨̙̯̦͛̊̚͞͡ŗ̶̥͉͖̲̫̠̟̯̭̋́̀͗̐p͉̝̤̬͎̱̩̳̀̑͋̑̏̑̌̀́͡ͅ t͙̻̣͕̥̼͉̓͆̓̕͘͟͝r̴̨̢̼͉̞̋͂́̋̽̃̏̚͢͞o̳̗̲͉̗̺̟͖̗͛̋̆̓̃̊̀̆̒͞ͅḑ̖̝̫͗̎̇̒̀͆̑ͅ r̛̫͈͍̤̼̫̪̹͎̼̃̍̅̽͊̈̄̚͡ l̶̤͚͙̹̺̖͕͙͉̍͗̀͊̈̚͜y̴̧̨͍͚͉̥̐̐̊̌̅̅̋̽͜é̴̡̼̤̖̮͇͊̽̒̏̕͞ḩ̘̭̦̘͙̹̱̈́͂̐̈͘͟ ţ̴̪̣̻͙̞̞̩͕̓̓͗͋͜͝h̨͖͍̙͖̍͒̑́̄͑͡ȯ̠̻̠̞̝͈̖̣̹͎̐̇̒̌͗̑̈́͠t̸̨̛̗̳̩͈̳͙̳̳̿͒͑̐̔͊͘h̬̰̜̹͍̪̦̬̄̓́͋͗́͆͘͜͠͝ d͇̟͔̦̠̤̭̍̀̌̓̊̽̆́ͅơ̛̮͍̻̠͓̈́̓̒͞r̨̞̬̅̔̀̆͛̀̊͌̒͟͜͡ ţ̳̤̫̩͈̍̑̌́̄́̋̃́͝h̷̖̝̠̬̮͇̔͛̌̿̉͂ó̖̳̼̗̥͈̼̂̆̔͒̊̚t̴̰̯̭̮̬͙̞̬̃̊̾̃́͊͂̕h̶̡̯͕̦̦͍̠̙̗̆̂̐́̀̊͢ n̢̨̘̱̰̪̳̰̎̾̄͋͛͛͢į̙̣̱̦̘̓̃͑̄͋͜͟͟͠ͅȇ̡̺͖̭̘̮͓̻̈͆̅́͜͢͞g̨̧̛͓̣̞͈̅̐̑̾̈́ḩ̦̜̖͎̺̃̿̋͂̓͆̆̿̿̅͟ r͍̜̞̱͐̈̓̔̀̌͢ l̵̡̢͍̘͇͇͐̿̒̋́̏̉̀̕͠y̶̨̡̱̠͚͉̞̦̥̏̏̎̋͒̾è̷̢̘̭͙̮̓̏́͝͡h̴̢͔̝̪̖̗̭̣͕͌͌͂̽͑̚
-.
-.'
+caption: 'I still have this sweater.'
 )
 
 Image.create!(
@@ -166,11 +162,7 @@ Comment.create!(
 Comment.create!(
   author_id: User.find_by(username:"Cthulu").id,
   image_id:  Image.last.id,
-  body:".
-.
-t̡̡̫̪̭̹̦̆́̔͗͐́͠h̨̡͉̠̮͍̮͒̒͊̄̆̐̂ȏ̶͉͙̬̮̟͕̺͖͔̂̔͐̈́̓̚͠͞t̮͚̳͈͊̉̉̿͟͞h̻̪̳̦͛͑́̐͐̽̊͢͜͢ͅ l͕͎̦̟̺̠̗͊̀̉̇̐̔͂́̕̚ͅo̤͍͙̺̭̱̖͔̺̿̀͐͗̋͐̂̽͝k̨̝̖͔͔̯͔̻̓̐́̀̚͟͜i̦͕̣̠̻̝̍̇̾̐̄̐͢ t͉͕̱̰̪̠̞͆͆͋̐̚͘ȇ̷̹̟̠̞͈̯͍͇̥͇̊͂̆͒̇̋͡ĺ̡̛̞͓̝͇͊̄̕o̶̧̺͙̩̞͕̤͇͚̘̿́̋͂̑̃̕͘̚͝r̶̳̝͓̤̙̰̙̳̦̉̎̈́́̉̇̿͂͟ f̨͙̻̗͇̓̐̂́͂͘̚͜͠͡r̷̡̬̤͕͕̫̲̅̄̇̈̈́̔̚͢͡͝͡ẽ̵̡͙̳͓͓̟̳̅̒͂̔y̸͕͇̩͔̱̌͛͑̔̉̒́͘͡ẻ̷͎̺̩̘͇̮͍̖̈́̍́͒͞ͅr̡͓̠̖͈̝̔̇͛̊͡ w̸͎̙͇͖͋̒͗̔͊̈́͛͌̉̏ͅo̸̪͚̰̳͇͂̈́̔̐̇̄̄̕͜͡ṯ̢̛͖̫̇̋͢͝͡ą̷̙̟̦͎̥̯̾͋́̎̐̔̅͜͝͝͠ͅn̵̳̰͕̜̲̜͓͈̳͙͗͛̂͂̏ h̵̢̥̺̥̗̯̹̪͆̉̿̏̾̑̒͑͜͜͡ȩ͖̣̹̲̣̲͗́͑́́͘̕͘͟͝l̨̜̗̤͒̎̋̾̇̋͘͜͞ b̸̧̠̜̤̻̠̼́̀̋̑͋̾̕͠a̯̪̜͎̣͎̝͆̋̊̈̂̀̀̕͢l̡̨̡̻̻̘͓̄̊̒̓͠͠ m͓̯̻̣̰̮̣͍̖͌̆͑͒̀̀̔͘͞ė̶͉͎̞̤̜̣̺́͒̏̈́͗͆̾l̵͔̮̺̞̣͆̋͗͆͌̑̌͢͝͡ơ̢̠̞̟̙̞͋͐̃̏̍̓r͈͇̦̟̘̜̹̎̎̀͌͋͜͜͝͞
-.
-."
+  body:"I find your universe to be small and uncomplicated, though I find a pleasure in permitting a portion of myself to intersect with the dimensions you call \"space\""
 )
 
 Comment.create!(
@@ -178,21 +170,3 @@ Comment.create!(
   image_id:  Image.last.id,
   body:"I am not afraid of you purple man. I am he who feasted on the peaches of the heavenly orchards"
 )
-
-# Comment.create!(
-#   author_id: User.find_by(username:"demo").id,
-#   image_id: User.find_by(username:"demo").images[4].id,
-#   body:""
-# )
-#
-# Comment.create!(
-#   author_id: User.find_by(username:"").id,
-#   image_id: User.find_by(username:"demo").images[4].id,
-#   body:""
-# )
-#
-# Comment.create!(
-#   author_id: User.find_by(username:"").id,
-#   image_id: User.find_by(username:"demo").images[4].id,
-#   body:""
-# )
