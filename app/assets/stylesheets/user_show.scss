@@ -3,10 +3,6 @@
   margin-left: auto;
   margin-right: auto;
 
-
-
-
-
 }
 
 .user-show-userblock{
@@ -35,6 +31,7 @@
   line-height: 40px;
   margin-bottom: 20px;
 }
+
 
 .posts{
   font-weight:700;
@@ -71,5 +68,17 @@
   height: 293px;
   object-fit: cover;
   padding: 14px;
+
+}
+
+.no-posts{
+  display: flex;
+  height: 52vh;
+  background: white;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
 
 }

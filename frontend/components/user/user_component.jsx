@@ -41,9 +41,13 @@ class UserComponent extends React.Component{
   }
 
   imageListContainer(){
-    return(
-      <ol className="image-list">{this.imageList()}</ol>
-    );
+    if(this.state.images.length === 0){
+      return(<div className="no-posts grey-border">No posts yet.</div>)
+    }else{
+      return(
+        <ol className="image-list">{this.imageList()}</ol>
+      );
+  }
   }
 
   userBlock(){
