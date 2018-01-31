@@ -35,13 +35,6 @@ ol, ul {
   list-style: none;
 }
 
-.user-show-name{
-  font-size: 32px;
-  weight: 200;
-  line-height: 40px;
-  margin-bottom: 20px;
-}
-
 /*
 copied from pokedex. Removed anything I didn't think I'd need or didn't understand.
 */

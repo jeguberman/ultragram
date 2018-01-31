@@ -77,10 +77,3 @@ Link, button, .session-button {
   border-radius: 50%;
   border: 1px solid #e6e6e6;
 }
-
-.user-show-name{
-  font-size: 32px;
-  weight: 100;
-  line-height: 40px;
-  margin-bottom: 20px;
-}
