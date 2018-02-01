@@ -15,8 +15,29 @@ class User < ApplicationRecord
     class_name: :Image,
     foreign_key: :author_id
 
-  has_many :comments
+  has_many :comments,
+    class_name: :Comment,
+    foreign_key: :author_id
+
   has_many :likes
+
+
+  has_many :following_associations,
+    class_name: :Follow,
+    foreign_key: :follower_id
+
+  has_many :following, through: :following_associations,
+    source: :followee
+
+
+  has_many :followed_by_associations,
+    class_name: :Follow,
+    foreign_key: :followee_id
+  #
+  has_many :followed_by, through: :followed_by_associations,
+    source: :follower
+
+
 
 
 
