@@ -10,15 +10,29 @@ const mapStateToProps = (state,ownProps) => {
   let images = Object.values(state.images);
   let user = userlist.find((u)=>u.username===ownProps.match.params.username);
   let currentUserID = state.session.currentUserID;
-
-
-
-  return {
-    username: ownProps.match.params.username,
-    user,
-    images,
-    currentUserID
-  };
+  // if (user){
+  //
+  //   let followers = user.followed_by;
+  //   let following = user.following;
+  //   let followedByCurrentUser = followers.some( (el) => el === currentUserID);
+  //   return {
+  //     username: ownProps.match.params.username,
+  //     user,
+  //     images,
+  //     currentUserID,
+  //     followers,
+  //     following,
+  //     followedByCurrentUser
+  //   };
+  //
+  // }else{
+    return {
+      username: ownProps.match.params.username,
+      user,
+      images,
+      currentUserID
+    };
+  // }
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
