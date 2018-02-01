@@ -76,11 +76,12 @@
   }
 
   .like-button{
-    height: 24px;
+    height: 25px;
     width: 24px;
     border: none;
     background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
     background-position: -52px -358px;
+    /* border: 1px solid red; */
   }
 
   .dislike-button{

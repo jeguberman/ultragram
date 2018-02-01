@@ -45,6 +45,8 @@ class FeedItemComponent extends React.Component{
   footer(){
     return(
       <footer className="feed-item-footer">
+        {this.likeButton()}
+        {this.likesCount()}
         {this.commentCount()}
         {this.imageCaption()}
         <Moment className="elapsed-time comment-item" fromNow>{this.props.image.created_at}</Moment>
@@ -97,7 +99,7 @@ class FeedItemComponent extends React.Component{
 
   likeButton(){
     if(this.props.liked){
-      return(<button className="dislike-button" onClick={this.handleLike}></button>);
+      return(<button className="dislike-button like-button" onClick={this.handleLike}></button>);
     }else{
       return(<button className="like-button" onClick={this.handleLike}></button>);
     }
@@ -107,7 +109,7 @@ class FeedItemComponent extends React.Component{
     var likes = this.props.likes.length;
     return(
       <div className="image-show-likes like-block">
-        <div className="image-show-view-count view-count">{likes} {likes === 1 ? "like" : "likes"}</div>
+        <div className="image-show-view-count view-count author-name comment-count">{likes} {likes === 1 ? "like" : "likes"}</div>
       </div>
     );
   }
@@ -118,8 +120,6 @@ class FeedItemComponent extends React.Component{
         <div className="feed-item grey-border">
           {this.header()}
           {this.renderImage()}
-          {this.likeButton()}
-          {this.likesCount()}
           {this.footer()}
         </div>
       );
