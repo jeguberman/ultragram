@@ -4,14 +4,8 @@ json.user do
 
 end
 
-
-if @with_images
-
-  json.images do
-    json.array! @user.images do |image|
-      json.extract! image, :id, :author_id
-      json.image_url asset_path(image.image_url)
-    end
+json.images @user.images.each do |image|
+  json.set! image.id do
+    json.partial! 'api/images/image', image: image
   end
-
 end

@@ -6,6 +6,7 @@ class FeedItemComponent extends React.Component{
 
   constructor(props){
     super(props);
+    this.handleLike = this.handleLike.bind(this);
   }
 
 
@@ -83,12 +84,42 @@ class FeedItemComponent extends React.Component{
     }
   }
 
+  handleLike(e){
+
+    e.preventDefault();
+    const derlike = {user_id: this.props.currentUserID, image_id: this.props.image.id};
+    if(this.props.liked){
+      this.props.deleteLike(derlike);
+    }else{
+      this.props.postLike(derlike);
+    }
+  }
+
+  likeButton(){
+    if(this.props.liked){
+      return(<button className="dislike-button" onClick={this.handleLike}></button>);
+    }else{
+      return(<button className="like-button" onClick={this.handleLike}></button>);
+    }
+  }
+
+  likesCount(){
+    var likes = this.props.likes.length;
+    return(
+      <div className="image-show-likes like-block">
+        <div className="image-show-view-count view-count">{likes} {likes === 1 ? "like" : "likes"}</div>
+      </div>
+    );
+  }
+
   render(){
     if(this.props.image){
       return(
         <div className="feed-item grey-border">
           {this.header()}
           {this.renderImage()}
+          {this.likeButton()}
+          {this.likesCount()}
           {this.footer()}
         </div>
       );

@@ -63,9 +63,9 @@ class ImageShow extends React.Component{
 
   likeButton(){
     if(this.props.liked){
-      return(<button className="dislike-button" onClick={this.handleLike}>true</button>);
+      return(<button className="dislike-button" onClick={this.handleLike}></button>);
     }else{
-      return(<button className="like-button" onClick={this.handleLike}>false</button>);
+      return(<button className="like-button" onClick={this.handleLike}></button>);
     }
   }
 

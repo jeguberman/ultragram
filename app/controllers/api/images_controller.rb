@@ -3,7 +3,9 @@ class Api::ImagesController < ApplicationController
   # before_action: require_logged_in #I'm like 95% sure this doesn't need to be here, but if I'm wrong, I'd like anybody reviewing my code to see I didn't just forget about it.
 
   def index
-    @images=Image.all.includes(:author).order(created_at: :desc)
+    @images = current_user.following.map { |user| user.images }.reduce(:+)
+
+    # @images=Image.all.includes(:author).order(created_at: :desc)
     return @images
   end
 

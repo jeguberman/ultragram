@@ -31,3 +31,6 @@ inciting_action
 act_two
 
 climax
+
+everyone = User.all.map { |user| user.id}
+everyone.each { |id| Follow.create!(follower_id: User.find_by(username:"demo").id,followee_id: id)}

@@ -2,9 +2,7 @@ export const fetchUser = (username) => {
 
   return (
     $.ajax({
-      url: `api/${username}`,
-      data: username,
-      username: username
+      url: `api/${username}`
     })
   );
 };

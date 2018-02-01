@@ -312,10 +312,5 @@ def climax
     body:"Who are you people? Are you my friends? Do we like each other?"
   )
 
-  User.all do |user|
-    Follow.new(
-      follower_id: User.find_by(username:"demo").id,
-      followee_id: user.id
-    )
-  end
+
 end

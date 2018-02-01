@@ -21,7 +21,7 @@ const ImageReducer = ( oldState = {}, action ) => {
       return {};
     case RECEIVE_USER:
       action.images.forEach(
-        (image)=>newState[image.id]=image
+        (imageJSON) => (merge(newState,imageJSON))
       );
       return newState;
     case REMOVE_IMAGE:
