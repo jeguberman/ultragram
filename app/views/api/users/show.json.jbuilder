@@ -1,6 +1,8 @@
 json.user do
 
   json.partial! 'api/users/user', user: @user
+  json.followed_by @user.followed_by
+  json.following @user.following
 
 end
 

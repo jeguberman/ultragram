@@ -4,6 +4,7 @@ import * as ImageActions from './actions/image_actions.js';
 import * as UserActions from './actions/user_actions.js';
 import * as CommentActions from './actions/comment_actions.js';
 import * as LikeActions from './actions/like_actions.js';
+import * as FollowActions from './actions/follow_actions.js';
 
 
 const Test = () => {
@@ -19,6 +20,8 @@ const Test = () => {
   window.postComment = CommentActions.postComment;
   window.postLike = LikeActions.postLike;
   window.deleteLike = LikeActions.deleteLike;
+  window.postFollow = FollowActions.postFollow;
+  window.deleteFollow = FollowActions.deleteFollow;
 };
 
 export default Test;

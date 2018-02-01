@@ -40,6 +40,7 @@
       width:40px;
       height:40px;
       margin-right: 12px;
+      object-fit: cover;
     }
 
     .image-show-delete{
@@ -76,15 +77,18 @@
   }
 
   .like-button{
-    height: 25px;
+    height: 24px;
     width: 24px;
     border: none;
     background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
     background-position: -52px -358px;
-    /* border: 1px solid red; */
+
+    padding:0;
+    box-sizing: content-box;
   }
 
   .dislike-button{
+
 
     background-position: -104px -358px;
   }
@@ -104,3 +108,7 @@
     overflow: auto;
     max-height: 80px;
   }
+
+  /* .like-block{
+      margin-top: 50px;
+  } */

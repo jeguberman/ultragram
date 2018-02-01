@@ -73,7 +73,7 @@ class ImageShow extends React.Component{
     var likes = this.props.likes.length;
     return(
       <div className="image-show-likes like-block">
-        <div className="image-show-view-count view-count">{likes} {likes === 1 ? "like" : "likes"}</div>
+        <div className="image-show-view-count view-count author-name comment-count">{likes} {likes === 1 ? "like" : "likes"}</div>
       </div>
     );
   }

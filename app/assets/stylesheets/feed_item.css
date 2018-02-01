@@ -37,6 +37,7 @@
   margin-right: 12px;
   display:inline-block;
   vertical-align: middle;
+  object-fit: cover;
 }
 
 .author-name{
