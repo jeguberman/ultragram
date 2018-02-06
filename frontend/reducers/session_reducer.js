@@ -4,6 +4,7 @@ import merge from 'lodash/merge';
 
 const defaultState = {
   currentUserID: null,
+  currentUserFollowing: []
 };
 
 const sessionReducer = ( oldState = defaultState, action ) => {
@@ -12,7 +13,10 @@ const sessionReducer = ( oldState = defaultState, action ) => {
 
   switch(action.type){
     case RECEIVE_CURRENT_USER:
-      return { currentUserID: action.currentUser.user.id };
+      return {
+        currentUserID: action.currentUser.user.id,
+        currentUserFollowing: action.currentUser.user.following.map((el)=>el.id)
+      };
     case REMOVE_CURRENT_USER:
       return defaultState;
     default:

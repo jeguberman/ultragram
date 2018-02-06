@@ -26,3 +26,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FeedItemComponent));
+
+// export default withRouter(connect(null, null)(FeedItemComponent));
