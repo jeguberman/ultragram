@@ -39,8 +39,10 @@
   display: inline;
 }
 
-.user-show-post-count{
+.user-show-count{
     margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 40px;
 }
 
 
@@ -48,6 +50,7 @@
 
 .user-show-personal{
   display: inline;
+  font-size: 16px;
 }
 //
 .image-list{
