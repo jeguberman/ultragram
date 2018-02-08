@@ -4,7 +4,10 @@ import { fetchPosts } from '../../actions/image_actions.js';
 import { postLike, deleteLike } from '../../actions/like_actions.js';
 
 const mapStateToProps = (state, ownProps) =>{
-  let images = Object.values(state.images);//.filter( (img) => {  });
+  let images = Object.values(state.images);
+  let following = state.users[state.session.currentUserID].following.map(user=>user.id);
+  images = images.filter(img => following.includes(img.author_id));
+
   return {
     images
   };

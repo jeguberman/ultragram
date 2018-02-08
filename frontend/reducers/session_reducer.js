@@ -14,8 +14,7 @@ const sessionReducer = ( oldState = defaultState, action ) => {
   switch(action.type){
     case RECEIVE_CURRENT_USER:
       return {
-        currentUserID: action.currentUser.user.id,
-        currentUserFollowing: action.currentUser.user.following.map((el)=>el.id)
+        currentUserID: action.currentUser.user.id
       };
     case REMOVE_CURRENT_USER:
       return defaultState;

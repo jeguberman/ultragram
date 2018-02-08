@@ -28,7 +28,11 @@ class ImageIndex extends React.Component{
 
 
   render(){
-    return (<ul className="feed-list">{this.imageList()}</ul>);
+    if(this.props.images.length > 0){
+      return (<ul className="feed-list">{this.imageList()}</ul>);
+    }else{
+      return(<div className="no-posts grey-border">Not following anybody yet.</div>);
+    }
   }
 
 }

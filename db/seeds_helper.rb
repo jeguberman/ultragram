@@ -35,6 +35,13 @@ def create_users
     personal_statement: "I'm Rick Sanchez from universe D-42, I enjoy scientific engineering and forming meaningful human connections through internet social media!",
     profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/schwifty.jpg'
   )
+
+  User.create!(
+    username:"void",
+    password:"password",
+    fullname:"null",
+    personal_statement: "I am a nonexistent entity who's purpose is to remain disconnected from all others"
+  )
 end
 
 def intro_demo_and_thanos
