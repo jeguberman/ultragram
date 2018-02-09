@@ -5,23 +5,12 @@ class UserComponent extends React.Component{
   constructor(props){
 
     super(props);
-    // this.state={images:[], user:this.props.user};
+    this.state = props.following;
   }
 
   componentWillMount(){
     this.props.fetchUser(this.props.username);
   }
-
-  componentWillReceiveProps(nextProps){
-    //
-    // const nextImages = nextProps.images.filter(
-    //   (image) => image.author_id === nextProps.user.id
-    // );
-    // this.setState({images: nextImages, user: nextProps.user});
-  }
-
-
-
 
 
   imageList(){
@@ -50,8 +39,15 @@ class UserComponent extends React.Component{
   }
   }
 
-  userBlock(){
+  followButton(){
+    if(this.props.following){
+      return (<div className="user-following">following</div>);
+    }else{
+      return (<div className="user-following">not following</div>);
+    }
+  }
 
+  userBlock(){
     return(
       <div className="user-show-userblock">
         <img className="user-picture user-show-user-picture"
@@ -59,6 +55,8 @@ class UserComponent extends React.Component{
         <div className="user-show-info">
 
           <div className="user-show-name">{this.props.user.username}</div>
+
+          {this.followButton()}
 
           <div className="user-show-count"><div className="posts">{this.props.images.length}</div>&nbsp;posts</div>
 

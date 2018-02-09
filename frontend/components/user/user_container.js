@@ -12,13 +12,18 @@ const mapStateToProps = (state,ownProps) => {
   let images = Object.values(state.images);
   images = images.filter(img=>img.author_id===user.id);
   let currentUserID = state.session.currentUserID;
-  let following = state.users[currentUserID].following;
-
+  let following;
+  if(user){
+    following = state.users[currentUserID].following;
+    debugger
+    following = following.includes( (userID => userID === user.id));
+  }
     return {
       username: ownProps.match.params.username,
       user,
       images,
-      currentUserID
+      currentUserID,
+      following
     };
 };
 
