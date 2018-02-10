@@ -121,7 +121,7 @@ class ImageShow extends React.Component{
   handleDelete(e){
     e.preventDefault();
     this.props.deleteImage(this.props.id);
-    this.props.history.push("/");
+    this.props.history.push(this.props.history[this.props.history.length-2]);
   }
 
   comments(){

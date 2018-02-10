@@ -5,11 +5,16 @@ class UserComponent extends React.Component{
   constructor(props){
 
     super(props);
-    this.state = props.following;
+    this.handleFollow = this.handleFollow.bind(this);
+    this.followState = this.followState.bind(this);
   }
 
   componentWillMount(){
     this.props.fetchUser(this.props.username);
+  }
+
+  followState(){
+    return this.props.currentUserFollowing.includes(this.props.user.id);
   }
 
 
@@ -40,10 +45,29 @@ class UserComponent extends React.Component{
   }
 
   followButton(){
-    if(this.props.following){
-      return (<div className="user-following">following</div>);
+
+    if(this.followState()){
+
+      return (<button className="follow-button session-button" onClick={this.handleFollow}>Following</button>);
+
     }else{
-      return (<div className="user-following">not following</div>);
+
+      return (<button className="session-button" onClick={this.handleFollow}>Follow</button>);
+
+    }
+  }
+
+  handleFollow(e){
+
+    e.preventDefault();
+    if(this.props.currentUserID !== this.props.user.id){
+      const dasFolgende= {follower_id: this.props.currentUserID, followee_id: this.props.user.id};
+
+      if(this.followState()){
+        this.props.deleteFollow(dasFolgende);
+      }else{
+        this.props.postFollow(dasFolgende);
+      }
     }
   }
 
@@ -80,7 +104,7 @@ class UserComponent extends React.Component{
 
 
   render(){
-
+    debugger
     if(this.props.user){
       return(<div className="user-show">
 

@@ -31,7 +31,7 @@ export const updateUser = (user) => dispatch => {
   );
 };
 
-const receiveUser = ( {user, images} ) => {
+export const receiveUser = ( {user, images} ) => {
 
   return {
     type: RECEIVE_USER,
