@@ -1,5 +1,4 @@
 export const postFollow = (username) => {
-  debugger
   return (
     $.ajax({
       url:`api/${username}/follows`,
@@ -8,12 +7,11 @@ export const postFollow = (username) => {
   );
 };
 
-export const deleteFollow = (follow) => {
+export const deleteFollow = (username) => {
   return (
     $.ajax({
-      url:`api/follows`,
-      method: 'DELETE',
-      data: { follow }
+      url:`api/${username}/follows`,
+      method: 'DELETE'
     })
   );
 };

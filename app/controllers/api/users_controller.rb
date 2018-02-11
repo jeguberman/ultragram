@@ -37,17 +37,18 @@ class Api::UsersController < ApplicationController
 
   end
 
-  def create_follow
+  def create_follow # you are making this a standard for delete and create. You will pass the method you want to this or... something... I dunno, these are so similar, find a way to keep your code dry
+    @user = current_user
     followee_id = User.find_by(username: params[:username]).id
     follower_id = current_user.id
     follow = Follow.new(followee_id: followee_id, follower_id: follower_id)
     if follow.save!
-      @user = current_user
       render :show
     else
       render json: follow.errors.full_messages
     end
   end
+
 
   private
 
