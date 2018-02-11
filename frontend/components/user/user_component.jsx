@@ -45,15 +45,12 @@ class UserComponent extends React.Component{
   }
 
   followButton(){
-
-    if(this.followState()){
-
-      return (<button className="follow-button session-button" onClick={this.handleFollow}>Following</button>);
-
-    }else{
-
-      return (<button className="session-button" onClick={this.handleFollow}>Follow</button>);
-
+    if(this.props.currentUserID !== this.props.user.id){
+      if(this.followState()){
+        return (<button className="follow-button session-button" onClick={this.handleFollow}>Following</button>);
+      }else{
+        return (<button className="session-button" onClick={this.handleFollow}>Follow</button>);
+      }
     }
   }
 
@@ -61,10 +58,8 @@ class UserComponent extends React.Component{
 
     e.preventDefault();
     if(this.props.currentUserID !== this.props.user.id){
-      const dasFolgende= {follower_id: this.props.currentUserID, followee_id: this.props.user.id};
-
       if(this.followState()){
-        this.props.deleteFollow(dasFolgende);
+        this.props.deleteFollow(this.props.username);
       }else{
         this.props.postFollow( this.props.username);
       }
@@ -104,7 +99,6 @@ class UserComponent extends React.Component{
 
 
   render(){
-    debugger
     if(this.props.user){
       return(<div className="user-show">
 

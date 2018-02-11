@@ -8,8 +8,8 @@ export const postFollow = username => {
   );
 };
 
-export const deleteFollow = followData => {
-  FollowAPI.deleteFollow(followData)
+export const deleteFollow = username => {
+  FollowAPI.deleteFollow(username)
   .then(
     (response) => (dispatch(receiveUser(response)))
   );
