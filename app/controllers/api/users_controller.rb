@@ -30,11 +30,23 @@ class Api::UsersController < ApplicationController
     end
 
     if @user
-      render 'api/users/show'
+      render :show
     else
       render json @user.errors.fullmessages, status: 404
     end
 
+  end
+
+  def create_follow
+    followee_id = User.find_by(username: params[:username]).id
+    follower_id = current_user.id
+    follow = Follow.new(followee_id: followee_id, follower_id: follower_id)
+    if follow.save!
+      @user = current_user
+      render :show
+    else
+      render json: follow.errors.full_messages
+    end
   end
 
   private

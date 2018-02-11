@@ -4,8 +4,6 @@ class Api::ImagesController < ApplicationController
 
   def index
     @images = current_user.following.map { |user| user.images }.reduce(:+)
-
-    # @images=Image.all.includes(:author).order(created_at: :desc)
     return @images
   end
 

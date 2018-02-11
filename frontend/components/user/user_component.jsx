@@ -66,7 +66,7 @@ class UserComponent extends React.Component{
       if(this.followState()){
         this.props.deleteFollow(dasFolgende);
       }else{
-        this.props.postFollow(dasFolgende);
+        this.props.postFollow( this.props.username);
       }
     }
   }
