@@ -49,7 +49,7 @@ html, body, #root{
 }
 
 .body-component {
-  width: 50vw;
+box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
 
