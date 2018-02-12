@@ -14,12 +14,11 @@ class UserComponent extends React.Component{
   }
 
   followState(){
-    return this.props.currentUserFollowing.includes(this.props.user.id);
+    return this.props.currentUserFollowing.includes( this.props.user.id );
   }
 
 
   imageList(){
-
     return(
       this.props.images.reverse().map(
         (image)=> {
@@ -79,9 +78,9 @@ class UserComponent extends React.Component{
 
           <div className="user-show-count"><div className="posts">{this.props.images.length}</div>&nbsp;posts</div>
 
-          <div className="user-show-count"><div className="posts">{this.props.images.length}</div>&nbsp;followers</div>
+          <div className="user-show-count"><div className="posts">{this.props.user.followed_by.length}</div>&nbsp;followers</div>
 
-          <div className="user-show-count"><div className="posts">{this.props.images.length}</div>&nbsp;following</div>
+          <div className="user-show-count"><div className="posts">{this.props.user.following.length}</div>&nbsp;following</div>
 
         <br/>
 
@@ -109,6 +108,7 @@ class UserComponent extends React.Component{
       return (null);
     }
   }
+
 
 
 }

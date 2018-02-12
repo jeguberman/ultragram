@@ -1,4 +1,5 @@
 export const postFollow = (username) => {
+  console.log("follow util before ajax");
   return (
     $.ajax({
       url:`api/${username}/follows`,
@@ -8,6 +9,8 @@ export const postFollow = (username) => {
 };
 
 export const deleteFollow = (username) => {
+  console.log("follow util before ajax");
+
   return (
     $.ajax({
       url:`api/${username}/follows`,

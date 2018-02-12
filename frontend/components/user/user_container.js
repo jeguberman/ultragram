@@ -15,17 +15,15 @@ const mapStateToProps = (state,ownProps) => {
   if(user){
     currentUserFollowing = state.users[currentUserID].following;
     following = currentUserFollowing.includes(user.id);
-    // debugger
     images = images.filter(img=>img.author_id===user.id);
   }
-    return {
-      username: ownProps.match.params.username,
-      user,
-      images,
-      currentUserID,
-      following,
-      currentUserFollowing
-    };
+  return {
+    username: ownProps.match.params.username,
+    user,
+    images,
+    currentUserID,
+    currentUserFollowing
+  };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
