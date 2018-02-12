@@ -48,7 +48,7 @@ class UserComponent extends React.Component{
       if(this.followState()){
         return (<button className="follow-button session-button" onClick={this.handleFollow}>Following</button>);
       }else{
-        return (<button className="session-button" onClick={this.handleFollow}>Follow</button>);
+        return (<button className="follow-button session-button" onClick={this.handleFollow}>Follow</button>);
       }
     }
   }
@@ -72,17 +72,21 @@ class UserComponent extends React.Component{
           src={this.props.user.profile_image_url} />
         <div className="user-show-info">
 
-          <div className="user-show-name">{this.props.user.username}</div>
 
-          {this.followButton()}
+            <div className="user-show-name">{this.props.user.username}</div>
+            {this.followButton()}
 
-          <div className="user-show-count"><div className="posts">{this.props.images.length}</div>&nbsp;posts</div>
 
-          <div className="user-show-count"><div className="posts">{this.props.user.followed_by.length}</div>&nbsp;followers</div>
+            <br/>
 
-          <div className="user-show-count"><div className="posts">{this.props.user.following.length}</div>&nbsp;following</div>
+            <div className="user-show-count"><div className="posts">{this.props.images.length}</div>&nbsp;posts</div>
 
-        <br/>
+            <div className="user-show-count"><div className="posts">{this.props.user.followed_by.length}</div>&nbsp;followers</div>
+
+            <div className="user-show-count"><div className="posts">{this.props.user.following.length}</div>&nbsp;following</div>
+
+
+            <br/>
 
           <div className="author-name user-show-personal"> {this.props.user.fullname} </div>
 &nbsp;
