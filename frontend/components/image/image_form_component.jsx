@@ -23,7 +23,6 @@ class ImageForm extends React.Component{
     return (
       <form className="image-form form" onSubmit={this.handleSubmit}>
 
-
         <div className="image-form-buffer"></div>
         <img className='image-form-image' src={this.state.image_url} />
 
