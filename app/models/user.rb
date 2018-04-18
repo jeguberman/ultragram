@@ -52,10 +52,12 @@ class User < ApplicationRecord
 
   def password=(password) #creates instance variable of given password (for validation), then salts and hashes password for password_digest
     @password = password
+    puts password
     self.password_digest = BCrypt::Password.create(password)
   end
 
   def is_password?(password) #returns true if given password, when properly salted and hashed, matches password_digest
+    puts password
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
