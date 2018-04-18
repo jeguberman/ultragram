@@ -5,7 +5,7 @@ class FeedComponent extends React.Component{
   render(){
     return(
       <div>
-        future sight of feed component. In the meantime, why don't you  {this.logoutButton()}? Or visit your fake {this.userLink()}
+        future sight of feed component. In the meantime, why don't you try {this.logoutButton()}? Or visit your fake {this.userLink()}
       </div>);
   }
 

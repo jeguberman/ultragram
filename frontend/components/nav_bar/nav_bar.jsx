@@ -30,18 +30,26 @@ class NavBarComponent extends React.Component{
   }
 
   navUserTools(){
+    let sprites = window.staticImages.igSprites;
 
     return (
-      <div className="nav-user-tools">
+      <div className="nav-user-tools"
+      >
 
         <button className="nav-tool nav-signout"
           onClick={this.props.logout}>
-                    <img className="nav-signout-image" src={window.staticImages.logOut}/>
+            <img className="nav-signout-image" src={window.staticImages.logOut}/>
         </button>
 
-        <Link to="/newImage">
-          <div className="nav-tool nav-camera"></div>
-        </Link>
+
+
+          <Link to="/newImage"
+            className="nav-tool nav-camera"
+            style={ { backgroundImage: "url(" + window.staticImages.igSprites + ")" } }
+          >
+          </Link>
+
+
 
         {this.navUser()}
 
@@ -50,13 +58,16 @@ class NavBarComponent extends React.Component{
     );
   }
 
+
   navUser(){
 
     if(this.props.user){
 
       return(
-        <Link to={`/${this.props.user.username}`}>
-          <div className="nav-tool nav-user user"></div>
+        <Link to={`/${this.props.user.username}`}
+          className="nav-tool nav-user user"
+          style={ { backgroundImage: "url(" + window.staticImages.igSprites + ")" } }
+          >
         </Link>
       );
     }else{

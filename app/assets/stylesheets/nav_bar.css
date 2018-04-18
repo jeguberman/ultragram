@@ -72,16 +72,18 @@
 .nav-user {
   width: 24px;
   height: 24px;
-  background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
-background-position-x: -391px;
-background-position-y: -130px;
+  /* background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png); */
+  background-position-x: -391px;
+  background-position-y: -130px;
 }
 
 .nav-camera {
-    background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/fb48443ec9d3.png);
-    background-position: -52px -380px;
-    width: 24px;
-    height: 24px;
+  /* border: solid red 1px; */
+  /* background-color: blue; */
+  background-position: -52px -380px;
+  width: 24px;
+  height: 24px;
+
 }
 
 .nav-signout {

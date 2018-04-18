@@ -3,7 +3,9 @@ class User < ApplicationRecord
   attr_reader :password
 
   validates :username, :password_digest, :session_token, :fullname, presence: true
+
   validates :username, :session_token, uniqueness: true
+
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   has_attached_file :profile_image_url, default_url: "//s3.amazonaws.com/ULTRAGRAM-DEV/images/image_urls/000/000/013/original/anonymous.jpg"
@@ -21,7 +23,6 @@ class User < ApplicationRecord
 
   has_many :likes
 
-
   has_many :following_associations,
     class_name: :Follow,
     foreign_key: :follower_id
@@ -29,11 +30,10 @@ class User < ApplicationRecord
   has_many :following, through: :following_associations,
     source: :followee
 
-
   has_many :followed_by_associations,
     class_name: :Follow,
     foreign_key: :followee_id
-  #
+
   has_many :followed_by, through: :followed_by_associations,
     source: :follower
 
