@@ -6,10 +6,11 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'nokogiri', '~> 1.12'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 6.1.4'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -33,6 +34,8 @@ gem 'aws-sdk', '< 3.0.1'
 gem 'pry-rails'
 gem 'figaro'
 gem 'zalgo'
+
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -60,3 +63,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "pg", "~> 1.2"
