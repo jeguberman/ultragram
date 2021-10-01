@@ -3,7 +3,6 @@ def create_users
     username:"demo",
     password:"password",
     fullname:"demo user",
-    # personal_statement:"I am a fictitious hypothetical entitity who's existence is temporally bound between login and logout"
     personal_statement:"I am a fictitious hypothetical entitity who's existence is temporally bound between login and logout",
     profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/The-Neverending-Dreamer1.jpg'
   )
@@ -11,7 +10,6 @@ def create_users
   User.create!(
     username:"Cthulu",
     fullname:"error", password:"passwordryleh",
-    # personal_statement:"I am a priest of higher dimensional entities, I will destroy the world merely by awakening from my millienia long slumber."
     personal_statement:"I am a priest of higher dimensional entities, I will destroy the world merely by awakening from my millienia long slumber.",
     profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/cthuluselfie.jpg'
   )
@@ -19,7 +17,6 @@ def create_users
   User.create!(
     username:"thanos",
     password:"deathandjewels",
-    # fullname:"dione"
     fullname:"dione",
     profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/thanos1.png'
   )
@@ -27,7 +24,6 @@ def create_users
   User.create!(
     username:"monkeyking",
     password:"journeytothewest",
-    # fullname:"SunWukong"
     fullname:"SunWukong",
     profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/sunwukong3.jpg'
   )
@@ -36,7 +32,6 @@ def create_users
     username:"dirtysanchez42",
     password:"picklerick",
     fullname:"Rick Sanchez",
-    # personal_statement: "I'm Rick Sanchez from universe D-42, I enjoy scientific engineering and forming meaningful human connections through internet social media!"
     personal_statement: "I'm Rick Sanchez from universe D-42, I enjoy scientific engineering and forming meaningful human connections through internet social media!",
     profile_image_url: 'https://s3.amazonaws.com/ULTRAGRAM-DEV/schwifty.jpg'
   )
