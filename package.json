@@ -18,7 +18,7 @@
     "react-scroll": "^1.7.5",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "webpack": "^3.10.0"
+    "webpack": "^5.53.0"
   },
   "description": "A clone of instagram created as a full stack project for App Academy. I am not affiliated with instagram or facebook. This is intended to be educational. Also it's specifically for earth-shattering supervillains. ULTRAGRAM",
   "version": "1.0.0",
