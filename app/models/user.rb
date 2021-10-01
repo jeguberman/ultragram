@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  # copied from bench bnb solutions, edited to match my own style
+
   attr_reader :password
 
   validates :username, :password_digest, :session_token, :fullname, presence: true
