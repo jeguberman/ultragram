@@ -2,8 +2,6 @@
 
 Ultragram is a single page photosharing app inspired by Instagram. With Ultragram users can upload and share images.
 
-https://ultragram.herokuapp.com/#/
-
 Ultragram was built with a Ruby on Rails server with a PostgreSQL database on the backend, and React running in node.js on the front end. Front end state is managed with the React-Redux library, and React-Router is also used.
 
 http://rubyonrails.org/
