@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'nokogiri', '~> 1.12'
+gem 'nokogiri', '~> 1.13'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.4'
